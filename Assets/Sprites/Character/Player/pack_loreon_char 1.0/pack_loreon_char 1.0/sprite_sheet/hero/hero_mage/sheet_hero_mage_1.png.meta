@@ -1,0 +1,1808 @@
+fileFormatVersion: 2
+guid: 4e3a6a427eacd7344a87bffb51de1938
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6401053055469151475
+    second: sheet_hero_mage_1_0
+  - first:
+      213: -1770654426745465141
+    second: sheet_hero_mage_1_1
+  - first:
+      213: 607625158576684328
+    second: sheet_hero_mage_1_2
+  - first:
+      213: -717029782080293020
+    second: sheet_hero_mage_1_3
+  - first:
+      213: 2776029548624986771
+    second: sheet_hero_mage_1_4
+  - first:
+      213: 794903854927930615
+    second: sheet_hero_mage_1_5
+  - first:
+      213: 8763173658843796102
+    second: sheet_hero_mage_1_6
+  - first:
+      213: 2317006920867876748
+    second: sheet_hero_mage_1_7
+  - first:
+      213: 8447374592348489425
+    second: sheet_hero_mage_1_8
+  - first:
+      213: 4240674817686177516
+    second: sheet_hero_mage_1_9
+  - first:
+      213: 433146766620547225
+    second: sheet_hero_mage_1_10
+  - first:
+      213: 8284610290577992681
+    second: sheet_hero_mage_1_11
+  - first:
+      213: 6940420639177102033
+    second: sheet_hero_mage_1_12
+  - first:
+      213: -5413567122740891592
+    second: sheet_hero_mage_1_13
+  - first:
+      213: -4944928586943916099
+    second: sheet_hero_mage_1_14
+  - first:
+      213: 8981179733189058666
+    second: sheet_hero_mage_1_15
+  - first:
+      213: -2514874342406991946
+    second: sheet_hero_mage_1_16
+  - first:
+      213: -8632955650770100561
+    second: sheet_hero_mage_1_17
+  - first:
+      213: 8191184016817922694
+    second: sheet_hero_mage_1_18
+  - first:
+      213: -615637857485608017
+    second: sheet_hero_mage_1_19
+  - first:
+      213: 1955567068439690141
+    second: sheet_hero_mage_1_20
+  - first:
+      213: -3075716969164763222
+    second: sheet_hero_mage_1_21
+  - first:
+      213: 9055701354586807076
+    second: sheet_hero_mage_1_22
+  - first:
+      213: 3091444646368772533
+    second: sheet_hero_mage_1_23
+  - first:
+      213: -5928985230658791871
+    second: sheet_hero_mage_1_24
+  - first:
+      213: 6602683987205736838
+    second: sheet_hero_mage_1_25
+  - first:
+      213: -628311073499751490
+    second: sheet_hero_mage_1_26
+  - first:
+      213: -1153215809174538852
+    second: sheet_hero_mage_1_27
+  - first:
+      213: 2707031083477891761
+    second: sheet_hero_mage_1_28
+  - first:
+      213: 8856608992588631265
+    second: sheet_hero_mage_1_29
+  - first:
+      213: 6335064639414959255
+    second: sheet_hero_mage_1_30
+  - first:
+      213: -4732535827643753868
+    second: sheet_hero_mage_1_31
+  - first:
+      213: 5985852386618536375
+    second: sheet_hero_mage_1_32
+  - first:
+      213: 6150128314740572687
+    second: sheet_hero_mage_1_33
+  - first:
+      213: -8014249300355822086
+    second: sheet_hero_mage_1_34
+  - first:
+      213: -3997562605096257427
+    second: sheet_hero_mage_1_35
+  - first:
+      213: 307295616017232142
+    second: sheet_hero_mage_1_36
+  - first:
+      213: -8446748885757959761
+    second: sheet_hero_mage_1_37
+  - first:
+      213: -6353051993677304674
+    second: sheet_hero_mage_1_38
+  - first:
+      213: 5690474119941042068
+    second: sheet_hero_mage_1_39
+  - first:
+      213: -3369890097872975445
+    second: sheet_hero_mage_1_40
+  - first:
+      213: 4007404815209916129
+    second: sheet_hero_mage_1_41
+  - first:
+      213: 2133511916819760985
+    second: sheet_hero_mage_1_42
+  - first:
+      213: -1488778425994426835
+    second: sheet_hero_mage_1_43
+  - first:
+      213: 2766813712790578258
+    second: sheet_hero_mage_1_44
+  - first:
+      213: -539455731097624352
+    second: sheet_hero_mage_1_45
+  - first:
+      213: -116576648210280302
+    second: sheet_hero_mage_1_46
+  - first:
+      213: 4439076578399287915
+    second: sheet_hero_mage_1_47
+  - first:
+      213: -693542787527414215
+    second: sheet_hero_mage_1_48
+  - first:
+      213: 6732603572128926069
+    second: sheet_hero_mage_1_49
+  - first:
+      213: -361569608902071476
+    second: sheet_hero_mage_1_50
+  - first:
+      213: 1333834576184681173
+    second: sheet_hero_mage_1_51
+  - first:
+      213: -7836446412217709058
+    second: sheet_hero_mage_1_52
+  - first:
+      213: 5914660709414258446
+    second: sheet_hero_mage_1_53
+  - first:
+      213: 7339434357881971598
+    second: sheet_hero_mage_1_54
+  - first:
+      213: -6911116615471996809
+    second: sheet_hero_mage_1_55
+  - first:
+      213: -5222635405260967628
+    second: sheet_hero_mage_1_56
+  - first:
+      213: -665814194634864754
+    second: sheet_hero_mage_1_57
+  - first:
+      213: 2956687982141223262
+    second: sheet_hero_mage_1_58
+  - first:
+      213: -766368609502758150
+    second: sheet_hero_mage_1_59
+  - first:
+      213: 813067569320174147
+    second: sheet_hero_mage_1_60
+  - first:
+      213: 7054043606607769250
+    second: sheet_hero_mage_1_61
+  - first:
+      213: 4674999856729965754
+    second: sheet_hero_mage_1_62
+  - first:
+      213: 4808192774011941587
+    second: sheet_hero_mage_1_63
+  - first:
+      213: -8553501503416943774
+    second: sheet_hero_mage_1_64
+  - first:
+      213: -7411012219328663278
+    second: sheet_hero_mage_1_65
+  - first:
+      213: -7989352934573541935
+    second: sheet_hero_mage_1_66
+  - first:
+      213: -5608742830806387160
+    second: sheet_hero_mage_1_67
+  - first:
+      213: 6211810749783798449
+    second: sheet_hero_mage_1_68
+  - first:
+      213: -6761034258395777509
+    second: sheet_hero_mage_1_69
+  - first:
+      213: 61700647370922227
+    second: sheet_hero_mage_1_70
+  - first:
+      213: 8179663283857360864
+    second: sheet_hero_mage_1_71
+  - first:
+      213: 8042990657548831562
+    second: sheet_hero_mage_1_72
+  - first:
+      213: -580322305771121469
+    second: sheet_hero_mage_1_73
+  - first:
+      213: 6254971352834258094
+    second: sheet_hero_mage_1_74
+  - first:
+      213: -6816441977830117924
+    second: sheet_hero_mage_1_75
+  - first:
+      213: 5524506428452393230
+    second: sheet_hero_mage_1_76
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b15580924ea27a0800000000000000
+      internalID: -6401053055469151475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc61dd12e2f5d67e0800000000000000
+      internalID: -1770654426745465141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dbd85ccd7be6800800000000000000
+      internalID: 607625158576684328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4677ab156399c06f0800000000000000
+      internalID: -717029782080293020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 656
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392c7cb9a20768620800000000000000
+      internalID: 2776029548624986771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_5
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 656
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4619f28d0180b00800000000000000
+      internalID: 794903854927930615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_6
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 656
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682d170730c0d9970800000000000000
+      internalID: 8763173658843796102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f837cb489a72020800000000000000
+      internalID: 2317006920867876748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d687958f6a1b3570800000000000000
+      internalID: 8447374592348489425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_9
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce601245747e9da30800000000000000
+      internalID: 4240674817686177516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998d60870b8d20600800000000000000
+      internalID: 433146766620547225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb62706a29d8f270800000000000000
+      internalID: 8284610290577992681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2d0f5acc3515060800000000000000
+      internalID: 6940420639177102033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830bb4952652fd4b0800000000000000
+      internalID: -5413567122740891592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7988746a5106bb0800000000000000
+      internalID: -4944928586943916099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_15
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60ebac026f83ac70800000000000000
+      internalID: 8981179733189058666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_16
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf46162c1f591dd0800000000000000
+      internalID: -2514874342406991946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae95223394913880800000000000000
+      internalID: -8632955650770100561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6822a4ce67eeca170800000000000000
+      internalID: 8191184016817922694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faba94261a0d477f0800000000000000
+      internalID: -615637857485608017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_20
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bbcc043e1932b10800000000000000
+      internalID: 1955567068439690141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf0b4f56bbd055d0800000000000000
+      internalID: -3075716969164763222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_22
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b9b2027605cad70800000000000000
+      internalID: 9055701354586807076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_23
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b10895d68407ea20800000000000000
+      internalID: 3091444646368772533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_24
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1469b08885308bda0800000000000000
+      internalID: -5928985230658791871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_25
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689ce859a1271ab50800000000000000
+      internalID: 6602683987205736838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_26
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb5a97586ac747f0800000000000000
+      internalID: -628311073499751490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9579c0e454feffe0800000000000000
+      internalID: -1153215809174538852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_28
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baf3ae8d6e419520800000000000000
+      internalID: 2707031083477891761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec86c554fef8ea70800000000000000
+      internalID: 8856608992588631265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_30
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c777599bbaae750800000000000000
+      internalID: 6335064639414959255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a1c722db7a25eb0800000000000000
+      internalID: -4732535827643753868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_32
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1725ef705021350800000000000000
+      internalID: 5985852386618536375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_33
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f020f231e15a95550800000000000000
+      internalID: 6150128314740572687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_34
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd4edef8baa7c090800000000000000
+      internalID: -8014249300355822086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_35
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d683adb9dfdc588c0800000000000000
+      internalID: -3997562605096257427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_36
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01fdb11cbbb34400800000000000000
+      internalID: 307295616017232142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1687524ae17ca80800000000000000
+      internalID: -8446748885757959761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_38
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ce6452fdc65d7a0800000000000000
+      internalID: -6353051993677304674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_39
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fa3aa0010a8fe40800000000000000
+      internalID: 5690474119941042068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_40
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9cc287fcebb31d0800000000000000
+      internalID: -3369890097872975445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6e6c182792d9730800000000000000
+      internalID: 4007404815209916129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_42
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957ca16d8c1cb9d10800000000000000
+      internalID: 2133511916819760985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_43
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d264651d8ebc65be0800000000000000
+      internalID: -1488778425994426835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_44
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254ef8e9962b56620800000000000000
+      internalID: 2766813712790578258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_45
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0a0e7eed77388f0800000000000000
+      internalID: -539455731097624352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2901256f726d16ef0800000000000000
+      internalID: -116576648210280302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_47
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6afe3af0a4ca9d30800000000000000
+      internalID: 4439076578399287915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_48
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ee4e0628a0066f0800000000000000
+      internalID: -693542787527414215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_49
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579454a27430f6d50800000000000000
+      internalID: 6732603572128926069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ba0db3b527bfaf0800000000000000
+      internalID: -361569608902071476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_51
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d22f96ea7bb28210800000000000000
+      internalID: 1333834576184681173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_52
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd0162e1895f3390800000000000000
+      internalID: -7836446412217709058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_53
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07c897f398151250800000000000000
+      internalID: 5914660709414258446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_54
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e832ad999a8ead560800000000000000
+      internalID: 7339434357881971598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_55
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770ed7d0e08c610a0800000000000000
+      internalID: -6911116615471996809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_56
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 352
+        width: 50
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5001545, y: 0.48009032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431ba0605c87587b0800000000000000
+      internalID: -5222635405260967628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_57
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 352
+        width: 50
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49880067, y: 0.47082877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e874062848d82c6f0800000000000000
+      internalID: -665814194634864754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_58
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 352
+        width: 50
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48009095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51b137fd04480920800000000000000
+      internalID: 2956687982141223262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_59
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 352
+        width: 50
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49839234, y: 0.47125006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afaf39f5fcf4d55f0800000000000000
+      internalID: -766368609502758150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_60
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 352
+        width: 50
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49914247, y: 0.47094488}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34228bf75a8984b00800000000000000
+      internalID: 813067569320174147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_61
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 352
+        width: 50
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4996643, y: 0.48000306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aea8f9494ff4e160800000000000000
+      internalID: 7054043606607769250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_62
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 286
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab44469b99fe0e040800000000000000
+      internalID: 4674999856729965754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_63
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 286
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2f4926ad12ab240800000000000000
+      internalID: 4808192774011941587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_64
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 286
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b301773bbdb4980800000000000000
+      internalID: -8553501503416943774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_65
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 286
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211f5d8d6abc62990800000000000000
+      internalID: -7411012219328663278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_72
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 221
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bcbf2b3617e9f60800000000000000
+      internalID: 8042990657548831562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_73
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 221
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4d64500f742f7f0800000000000000
+      internalID: -580322305771121469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_mage_1_75
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 221
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddef5fd2222761a0800000000000000
+      internalID: -6816441977830117924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

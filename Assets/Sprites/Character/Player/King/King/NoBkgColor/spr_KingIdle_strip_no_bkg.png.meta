@@ -1,0 +1,745 @@
+fileFormatVersion: 2
+guid: 80508654a3dbe464ebf9000999c8c852
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6442420224863997586
+    second: spr_KingIdle_strip_no_bkg_0
+  - first:
+      213: -1925104427962459477
+    second: spr_KingIdle_strip_no_bkg_1
+  - first:
+      213: -4213395316994854409
+    second: spr_KingIdle_strip_no_bkg_2
+  - first:
+      213: -2388840336980169268
+    second: spr_KingIdle_strip_no_bkg_3
+  - first:
+      213: -819579042697620640
+    second: spr_KingIdle_strip_no_bkg_4
+  - first:
+      213: -2934700441926371141
+    second: spr_KingIdle_strip_no_bkg_5
+  - first:
+      213: -5293275501755673497
+    second: spr_KingIdle_strip_no_bkg_6
+  - first:
+      213: 6957874771598453071
+    second: spr_KingIdle_strip_no_bkg_0
+  - first:
+      213: 6648174407301243981
+    second: spr_KingIdle_strip_no_bkg_1
+  - first:
+      213: 5000094968975443898
+    second: spr_KingIdle_strip_no_bkg_2
+  - first:
+      213: 2370079886874697523
+    second: spr_KingIdle_strip_no_bkg_3
+  - first:
+      213: -4536213896343150878
+    second: spr_KingIdle_strip_no_bkg_4
+  - first:
+      213: 5629491199167162525
+    second: spr_KingIdle_strip_no_bkg_5
+  - first:
+      213: 1231541876320083755
+    second: spr_KingIdle_strip_no_bkg_6
+  - first:
+      213: 322870677478634656
+    second: spr_KingIdle_strip_no_bkg_7
+  - first:
+      213: 3213211423227106617
+    second: spr_KingIdle_strip_no_bkg_8
+  - first:
+      213: -4521642969626449327
+    second: spr_KingIdle_strip_no_bkg_9
+  - first:
+      213: -4965232834822291082
+    second: spr_KingIdle_strip_no_bkg_10
+  - first:
+      213: -4471284408317928767
+    second: spr_KingIdle_strip_no_bkg_11
+  - first:
+      213: -443897859425391462
+    second: spr_KingIdle_strip_no_bkg_12
+  - first:
+      213: -9100436283037870598
+    second: spr_KingIdle_strip_no_bkg_13
+  - first:
+      213: -5155314265909268356
+    second: spr_KingIdle_strip_no_bkg_14
+  - first:
+      213: 7418123982225022244
+    second: spr_KingIdle_strip_no_bkg_15
+  - first:
+      213: 4016450747696600146
+    second: spr_KingIdle_strip_no_bkg_16
+  - first:
+      213: 2006687762417350082
+    second: spr_KingIdle_strip_no_bkg_17
+  - first:
+      213: 8613327538546621596
+    second: spr_KingIdle_strip_no_bkg_18
+  - first:
+      213: 1478804494607375328
+    second: spr_KingIdle_strip_no_bkg_19
+  - first:
+      213: -7351779216801052861
+    second: spr_KingIdle_strip_no_bkg_20
+  - first:
+      213: -8107033854563384629
+    second: spr_KingIdle_strip_no_bkg_21
+  - first:
+      213: 2976679540534735457
+    second: spr_KingIdle_strip_no_bkg_22
+  - first:
+      213: 183460474985212133
+    second: spr_KingIdle_strip_no_bkg_23
+  - first:
+      213: 1613064915231314995
+    second: spr_KingIdle_strip_no_bkg_24
+  - first:
+      213: -362563875208799894
+    second: spr_KingIdle_strip_no_bkg_25
+  - first:
+      213: 2862853765764142784
+    second: spr_KingIdle_strip_no_bkg_26
+  - first:
+      213: -1366564509637755949
+    second: spr_KingIdle_strip_no_bkg_27
+  - first:
+      213: -1044143473713067473
+    second: spr_KingIdle_strip_no_bkg_28
+  - first:
+      213: -6761644770636193265
+    second: spr_KingIdle_strip_no_bkg_29
+  - first:
+      213: 2296810727647885692
+    second: spr_KingIdle_strip_no_bkg_30
+  - first:
+      213: -5449697957044907422
+    second: spr_KingIdle_strip_no_bkg_31
+  - first:
+      213: 9207796159712425692
+    second: spr_KingIdle_strip_no_bkg_32
+  - first:
+      213: 4790101920684527268
+    second: spr_KingIdle_strip_no_bkg_33
+  - first:
+      213: -600418316166531583
+    second: spr_KingIdle_strip_no_bkg_34
+  - first:
+      213: 6179629160522551525
+    second: spr_KingIdle_strip_no_bkg_35
+  - first:
+      213: -3636526158042293260
+    second: spr_KingIdle_strip_no_bkg_36
+  - first:
+      213: -2614923643368113942
+    second: spr_KingIdle_strip_no_bkg_37
+  - first:
+      213: 1590716319978562608
+    second: spr_KingIdle_strip_no_bkg_38
+  - first:
+      213: 7832730982638818828
+    second: spr_KingIdle_strip_no_bkg_39
+  - first:
+      213: 275001839996342215
+    second: spr_KingIdle_strip_no_bkg_40
+  - first:
+      213: 3064552217645390808
+    second: spr_KingIdle_strip_no_bkg_41
+  - first:
+      213: 795380098011383561
+    second: spr_KingIdle_strip_no_bkg_42
+  - first:
+      213: -466787663457511678
+    second: spr_KingIdle_strip_no_bkg_43
+  - first:
+      213: 1299327485916634095
+    second: spr_KingIdle_strip_no_bkg_44
+  - first:
+      213: 7664134540054500080
+    second: spr_KingIdle_strip_no_bkg_45
+  - first:
+      213: 6425017668773720225
+    second: spr_KingIdle_strip_no_bkg_46
+  - first:
+      213: 4369037769110812679
+    second: spr_KingIdle_strip_no_bkg_47
+  - first:
+      213: -806096897764338451
+    second: spr_KingIdle_strip_no_bkg_48
+  - first:
+      213: 4627018842861451518
+    second: spr_KingIdle_strip_no_bkg_49
+  - first:
+      213: -9088006627503843385
+    second: spr_KingIdle_strip_no_bkg_50
+  - first:
+      213: 7539332958733177534
+    second: spr_KingIdle_strip_no_bkg_51
+  - first:
+      213: -984737775001476313
+    second: spr_KingIdle_strip_no_bkg_52
+  - first:
+      213: 8609195462159692237
+    second: spr_KingIdle_strip_no_bkg_53
+  - first:
+      213: -428846899675388336
+    second: spr_KingIdle_strip_no_bkg_54
+  - first:
+      213: 7494079951084673832
+    second: spr_KingIdle_strip_no_bkg_55
+  - first:
+      213: 6971939989543165082
+    second: spr_KingIdle_strip_no_bkg_56
+  - first:
+      213: 5716546786463811453
+    second: spr_KingIdle_strip_no_bkg_57
+  - first:
+      213: 8426471821592529602
+    second: spr_KingIdle_strip_no_bkg_58
+  - first:
+      213: -4057759392912703346
+    second: spr_KingIdle_strip_no_bkg_59
+  - first:
+      213: -8424136660795567010
+    second: spr_KingIdle_strip_no_bkg_60
+  - first:
+      213: -8576445200247954297
+    second: spr_KingIdle_strip_no_bkg_61
+  - first:
+      213: -8911870527254170345
+    second: spr_KingIdle_strip_no_bkg_62
+  - first:
+      213: -537002066164336936
+    second: spr_KingIdle_strip_no_bkg_63
+  - first:
+      213: 6661032907181480049
+    second: spr_KingIdle_strip_no_bkg_64
+  - first:
+      213: 8287444045462289897
+    second: spr_KingIdle_strip_no_bkg_65
+  - first:
+      213: -8534356417458339936
+    second: spr_KingIdle_strip_no_bkg_66
+  - first:
+      213: 4072861315782972812
+    second: spr_KingIdle_strip_no_bkg_67
+  - first:
+      213: -3069868142072870499
+    second: spr_KingIdle_strip_no_bkg_68
+  - first:
+      213: 1566701471173588015
+    second: spr_KingIdle_strip_no_bkg_69
+  - first:
+      213: -1316142762491454668
+    second: spr_KingIdle_strip_no_bkg_70
+  - first:
+      213: -6268251982722879874
+    second: spr_KingIdle_strip_no_bkg_71
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4927c88d365f8060800000000000000
+      internalID: 6957874771598453071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44a800666f034c50800000000000000
+      internalID: 6648174407301243981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7cff4f1e7e36540800000000000000
+      internalID: 5000094968975443898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fd672991734e020800000000000000
+      internalID: 2370079886874697523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee9643ce712c01c0800000000000000
+      internalID: -4536213896343150878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98eb885b68ff1e40800000000000000
+      internalID: 5629491199167162525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f9310cfc0571110800000000000000
+      internalID: 1231541876320083755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4f087ab211b7400800000000000000
+      internalID: 322870677478634656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935ddadd3ce979c20800000000000000
+      internalID: 3213211423227106617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ae5420da5ef31c0800000000000000
+      internalID: -4521642969626449327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671cf4d2b03f71bb0800000000000000
+      internalID: -4965232834822291082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca9770458ec2f1c0800000000000000
+      internalID: -4471284408317928767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ca46caf35f6d9f0800000000000000
+      internalID: -443897859425391462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af59370ba61c4b180800000000000000
+      internalID: -9100436283037870598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7079fa3df4a478b0800000000000000
+      internalID: -5155314265909268356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d145c757872f660800000000000000
+      internalID: 7418123982225022244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254de4accac4db730800000000000000
+      internalID: 4016450747696600146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_KingIdle_strip_no_bkg_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5720653ef29db10800000000000000
+      internalID: 2006687762417350082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

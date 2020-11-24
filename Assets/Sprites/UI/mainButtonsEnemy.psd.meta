@@ -1,0 +1,922 @@
+fileFormatVersion: 2
+guid: 47942ff20cd1b854d83055d303e0867e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8684649293119064232
+    second: mainButtonsEnemy_0
+  - first:
+      213: -6896184872468032745
+    second: mainButtonsEnemy_1
+  - first:
+      213: 3136839665183751713
+    second: mainButtonsEnemy_2
+  - first:
+      213: -5383973717226132250
+    second: mainButtonsEnemy_3
+  - first:
+      213: -6237560780237548006
+    second: mainButtonsEnemy_4
+  - first:
+      213: 7904729755607816108
+    second: mainButtonsEnemy_5
+  - first:
+      213: -4753079928721101438
+    second: mainButtonsEnemy_6
+  - first:
+      213: 6838525563646860603
+    second: mainButtonsEnemy_7
+  - first:
+      213: 7241452644326226538
+    second: mainButtonsEnemy_8
+  - first:
+      213: -1679028986764546771
+    second: mainButtonsEnemy_9
+  - first:
+      213: -4662911044510142199
+    second: mainButtonsEnemy_10
+  - first:
+      213: 8898269576934116531
+    second: mainButtonsEnemy_11
+  - first:
+      213: -7772515869078724723
+    second: mainButtonsEnemy_12
+  - first:
+      213: -5734619865166267860
+    second: mainButtonsEnemy_13
+  - first:
+      213: -4505647292956500226
+    second: mainButtonsEnemy_14
+  - first:
+      213: 4804804956580786451
+    second: mainButtonsEnemy_15
+  - first:
+      213: 2279988247239001901
+    second: mainButtonsEnemy_16
+  - first:
+      213: 1587471655729733103
+    second: mainButtonsEnemy_17
+  - first:
+      213: -7216739325118256623
+    second: mainButtonsEnemy_18
+  - first:
+      213: -5941498466451835915
+    second: mainButtonsEnemy_19
+  - first:
+      213: -6985134763961360934
+    second: mainButtonsEnemy_20
+  - first:
+      213: -5371085777121086960
+    second: mainButtonsEnemy_21
+  - first:
+      213: 7470649965110386252
+    second: mainButtonsEnemy_22
+  - first:
+      213: 2907854110908972693
+    second: mainButtonsEnemy_23
+  - first:
+      213: -2061606676646339072
+    second: mainButtonsEnemy_24
+  - first:
+      213: 4905201960700386075
+    second: mainButtonsEnemy_25
+  - first:
+      213: 6807773066274253478
+    second: mainButtonsEnemy_26
+  - first:
+      213: -3920823055502194945
+    second: mainButtonsEnemy_27
+  - first:
+      213: -2329218370254173170
+    second: mainButtonsEnemy_28
+  - first:
+      213: -6232554803467537448
+    second: mainButtonsEnemy_29
+  - first:
+      213: 630405487178286714
+    second: mainButtonsEnemy_30
+  - first:
+      213: 7798982523132106561
+    second: mainButtonsEnemy_31
+  - first:
+      213: -2703673043457998724
+    second: mainButtonsEnemy_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mainButtonsEnemy_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 895
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a88533d482168870800000000000000
+      internalID: 8684649293119064232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 894
+        width: 95
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713de136564db40a0800000000000000
+      internalID: -6896184872468032745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 900
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ef1a84e0b488b20800000000000000
+      internalID: 3136839665183751713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_3
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 899
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec62b00e684845b0800000000000000
+      internalID: -5383973717226132250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 772
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a165805b48bbf69a0800000000000000
+      internalID: -6237560780237548006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_5
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 771
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7d678e4dd33bd60800000000000000
+      internalID: 7904729755607816108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_6
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 777
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d2a8bdcfaa90eb0800000000000000
+      internalID: -4753079928721101438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_7
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 776
+        width: 101
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d5990a4c257ee50800000000000000
+      internalID: 6838525563646860603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_8
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 778
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ab0ea20dece7460800000000000000
+      internalID: 7241452644326226538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_9
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 777
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2da05c4804e2b8e0800000000000000
+      internalID: -1679028986764546771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 651
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9013ab43c130a4fb0800000000000000
+      internalID: -4662911044510142199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_11
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 650
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bcc2d009010d7b70800000000000000
+      internalID: 8898269576934116531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_12
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 656
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fd9746ff9722490800000000000000
+      internalID: -7772515869078724723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_13
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 652
+        width: 85
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2abddead998a60b0800000000000000
+      internalID: -5734619865166267860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_14
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 657
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe9024b8a9b871c0800000000000000
+      internalID: -4505647292956500226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_15
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 656
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311b80ca6a81ea240800000000000000
+      internalID: 4804804956580786451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 526
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d270fb02b3524af10800000000000000
+      internalID: 2279988247239001901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_17
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 525
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed95c26f05d70610800000000000000
+      internalID: 1587471655729733103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_18
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 531
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11aebb9d1ddf8db90800000000000000
+      internalID: -7216739325118256623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_19
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 530
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f33c99cf9e8b8da0800000000000000
+      internalID: -5941498466451835915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_20
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 532
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: addd9d5e0f0df0f90800000000000000
+      internalID: -6985134763961360934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_21
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 531
+        width: 85
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0127b8461f11675b0800000000000000
+      internalID: -5371085777121086960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 409
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e50b3ef841da760800000000000000
+      internalID: 7470649965110386252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_23
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 408
+        width: 85
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e736b48e5ca5820800000000000000
+      internalID: 2907854110908972693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 187
+        width: 97
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00edbe386a3b363e0800000000000000
+      internalID: -2061606676646339072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_25
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 187
+        width: 97
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b9813c137c21440800000000000000
+      internalID: 4905201960700386075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_26
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 186
+        width: 97
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaafbed8811a7e50800000000000000
+      internalID: 6807773066274253478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_27
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 187
+        width: 97
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff641a554307699c0800000000000000
+      internalID: -3920823055502194945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_28
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 81
+        width: 93
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c8fa4ab34fcafd0800000000000000
+      internalID: -2329218370254173170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_29
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 81
+        width: 93
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3b9208d648189a0800000000000000
+      internalID: -6232554803467537448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_30
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 77
+        width: 93
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7608b75376afb800800000000000000
+      internalID: 630405487178286714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_31
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 36
+        width: 79
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147d4c4b84d8b3c60800000000000000
+      internalID: 7798982523132106561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainButtonsEnemy_32
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 36
+        width: 79
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7003ef01bf9a7ad0800000000000000
+      internalID: -2703673043457998724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

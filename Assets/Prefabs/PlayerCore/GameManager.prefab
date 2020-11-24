@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8768405385437239575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8768405385437239577}
+  - component: {fileID: 8768405385437239574}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8768405385437239577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768405385437239575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6369446, y: -1.1020845, z: 97.30541}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8149770226726469605}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8768405385437239574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768405385437239575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8bab4e88b167041b2c1ecc8acc78c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 5302595476687113258, guid: 97768a0f0670a95468a04e01e13f4ddb,
+    type: 3}
+  backgrounds:
+  - {fileID: 21300000, guid: 02ec12816b205404795c11a00a3fa1e6, type: 3}
+  - {fileID: 21300000, guid: 50788c9ac88a91d42bf528382e81417f, type: 3}
+  backgroundImage: {fileID: 0}
+  tipsText: {fileID: 0}
+  tips:
+  - No one ever left the Narrow World...
+  - Protect archers with your shield units
+  - Using only one unit type brings huge weaknesses into your army
+  - Saving money for King's Potion is always a good choice
+  - Always keep an eye on the enemy
+  transitionTime: 1
+  canvasGroup: {fileID: 0}
+  player: {fileID: 0}
+  tipCount: 0
+--- !u!1001 &4075571477457581000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8768405385437239577}
+    m_Modifications:
+    - target: {fileID: 5302595476687113258, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_Name
+      value: Loadingscreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1455222
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.609827
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 713.82184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476734919464, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302595476734919464, guid: 97768a0f0670a95468a04e01e13f4ddb,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 97768a0f0670a95468a04e01e13f4ddb, type: 3}
+--- !u!4 &8149770226726469605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5302595476687113261, guid: 97768a0f0670a95468a04e01e13f4ddb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4075571477457581000}
+  m_PrefabAsset: {fileID: 0}

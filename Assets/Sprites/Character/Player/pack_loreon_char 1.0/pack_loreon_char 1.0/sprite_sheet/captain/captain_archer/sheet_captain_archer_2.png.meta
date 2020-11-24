@@ -1,0 +1,2270 @@
+fileFormatVersion: 2
+guid: 9b95d87a48abb1043adecaacd4771b50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9030290757406160985
+    second: sheet_captain_archer_2_0
+  - first:
+      213: 4401270740881892318
+    second: sheet_captain_archer_2_1
+  - first:
+      213: 8928531592440771475
+    second: sheet_captain_archer_2_2
+  - first:
+      213: 7036401892324308778
+    second: sheet_captain_archer_2_3
+  - first:
+      213: -5595473629787824368
+    second: sheet_captain_archer_2_4
+  - first:
+      213: 796001675013379385
+    second: sheet_captain_archer_2_5
+  - first:
+      213: -761406371119128218
+    second: sheet_captain_archer_2_6
+  - first:
+      213: -5845022458296066526
+    second: sheet_captain_archer_2_7
+  - first:
+      213: 7757893120862935659
+    second: sheet_captain_archer_2_8
+  - first:
+      213: -1741089088203964279
+    second: sheet_captain_archer_2_9
+  - first:
+      213: -4463839337003992265
+    second: sheet_captain_archer_2_10
+  - first:
+      213: 1065884918593337781
+    second: sheet_captain_archer_2_11
+  - first:
+      213: 2765114460140058383
+    second: sheet_captain_archer_2_12
+  - first:
+      213: -6634339741675202965
+    second: sheet_captain_archer_2_13
+  - first:
+      213: 7451383810490232399
+    second: sheet_captain_archer_2_14
+  - first:
+      213: 5719581050745661809
+    second: sheet_captain_archer_2_15
+  - first:
+      213: -2167073397494173811
+    second: sheet_captain_archer_2_16
+  - first:
+      213: -8813387065029225902
+    second: sheet_captain_archer_2_17
+  - first:
+      213: -4045202113622098669
+    second: sheet_captain_archer_2_18
+  - first:
+      213: -8118305475406393271
+    second: sheet_captain_archer_2_19
+  - first:
+      213: 3176607183653554472
+    second: sheet_captain_archer_2_20
+  - first:
+      213: -3197246696005671837
+    second: sheet_captain_archer_2_21
+  - first:
+      213: 7070389280752968252
+    second: sheet_captain_archer_2_22
+  - first:
+      213: -8918341808186595115
+    second: sheet_captain_archer_2_23
+  - first:
+      213: -8993316199111743230
+    second: sheet_captain_archer_2_24
+  - first:
+      213: -687594705945838328
+    second: sheet_captain_archer_2_25
+  - first:
+      213: 8767343848554427503
+    second: sheet_captain_archer_2_26
+  - first:
+      213: -5110112327365300957
+    second: sheet_captain_archer_2_27
+  - first:
+      213: 1510284618318580770
+    second: sheet_captain_archer_2_28
+  - first:
+      213: -2597927276349028713
+    second: sheet_captain_archer_2_29
+  - first:
+      213: 4443859390627085882
+    second: sheet_captain_archer_2_30
+  - first:
+      213: -5291276641835788956
+    second: sheet_captain_archer_2_31
+  - first:
+      213: 7112246899813964955
+    second: sheet_captain_archer_2_32
+  - first:
+      213: 4993944302178583020
+    second: sheet_captain_archer_2_33
+  - first:
+      213: -1176720525953726481
+    second: sheet_captain_archer_2_34
+  - first:
+      213: 7580766741218053863
+    second: sheet_captain_archer_2_35
+  - first:
+      213: 1477006840992389365
+    second: sheet_captain_archer_2_36
+  - first:
+      213: 921118245512409818
+    second: sheet_captain_archer_2_37
+  - first:
+      213: -7227372679551332190
+    second: sheet_captain_archer_2_38
+  - first:
+      213: -2148786915489498156
+    second: sheet_captain_archer_2_39
+  - first:
+      213: 5313986574659260577
+    second: sheet_captain_archer_2_40
+  - first:
+      213: -1501234454252756814
+    second: sheet_captain_archer_2_41
+  - first:
+      213: 3078456862751695401
+    second: sheet_captain_archer_2_42
+  - first:
+      213: -2858322311654801152
+    second: sheet_captain_archer_2_43
+  - first:
+      213: -5971142400472502042
+    second: sheet_captain_archer_2_44
+  - first:
+      213: 4316393644206949734
+    second: sheet_captain_archer_2_45
+  - first:
+      213: 5503355754656186101
+    second: sheet_captain_archer_2_46
+  - first:
+      213: 4196966005726773259
+    second: sheet_captain_archer_2_47
+  - first:
+      213: 6035428763527822777
+    second: sheet_captain_archer_2_48
+  - first:
+      213: -6974706807182608681
+    second: sheet_captain_archer_2_49
+  - first:
+      213: -6147850345511454449
+    second: sheet_captain_archer_2_50
+  - first:
+      213: 5160464911384992211
+    second: sheet_captain_archer_2_51
+  - first:
+      213: -1615869129468497335
+    second: sheet_captain_archer_2_52
+  - first:
+      213: -2999670000506374611
+    second: sheet_captain_archer_2_53
+  - first:
+      213: 1662152152875171059
+    second: sheet_captain_archer_2_54
+  - first:
+      213: -4721628185958996077
+    second: sheet_captain_archer_2_55
+  - first:
+      213: 2561344438036975823
+    second: sheet_captain_archer_2_56
+  - first:
+      213: 7515726908786567742
+    second: sheet_captain_archer_2_57
+  - first:
+      213: 5067551890930255717
+    second: sheet_captain_archer_2_58
+  - first:
+      213: 1332277067451083673
+    second: sheet_captain_archer_2_59
+  - first:
+      213: 4474815877049436295
+    second: sheet_captain_archer_2_60
+  - first:
+      213: -7115048267543448468
+    second: sheet_captain_archer_2_61
+  - first:
+      213: -5819665305322496588
+    second: sheet_captain_archer_2_62
+  - first:
+      213: 1907301575813512306
+    second: sheet_captain_archer_2_63
+  - first:
+      213: 1038834239803034592
+    second: sheet_captain_archer_2_64
+  - first:
+      213: -2019606586756014043
+    second: sheet_captain_archer_2_65
+  - first:
+      213: -5283120416649531786
+    second: sheet_captain_archer_2_66
+  - first:
+      213: 8714913240380477919
+    second: sheet_captain_archer_2_67
+  - first:
+      213: -1041164706148398379
+    second: sheet_captain_archer_2_68
+  - first:
+      213: -1102719891143626701
+    second: sheet_captain_archer_2_69
+  - first:
+      213: 1728860877737448992
+    second: sheet_captain_archer_2_70
+  - first:
+      213: 6376403889507574331
+    second: sheet_captain_archer_2_71
+  - first:
+      213: -1416021765280574472
+    second: sheet_captain_archer_2_72
+  - first:
+      213: 1456020227161518221
+    second: sheet_captain_archer_2_73
+  - first:
+      213: -6191922078076032572
+    second: sheet_captain_archer_2_74
+  - first:
+      213: -5270317788993509853
+    second: sheet_captain_archer_2_75
+  - first:
+      213: -7582194648060648865
+    second: sheet_captain_archer_2_76
+  - first:
+      213: -5439773992732191189
+    second: sheet_captain_archer_2_77
+  - first:
+      213: -420199993705386434
+    second: sheet_captain_archer_2_78
+  - first:
+      213: -7346154573357231413
+    second: sheet_captain_archer_2_79
+  - first:
+      213: -403197166432717408
+    second: sheet_captain_archer_2_80
+  - first:
+      213: 5308447068785071283
+    second: sheet_captain_archer_2_81
+  - first:
+      213: -5107839253929957446
+    second: sheet_captain_archer_2_82
+  - first:
+      213: -1010259618599187234
+    second: sheet_captain_archer_2_83
+  - first:
+      213: -1812666568537827863
+    second: sheet_captain_archer_2_84
+  - first:
+      213: 5653701950755588013
+    second: sheet_captain_archer_2_85
+  - first:
+      213: 7064630995545561450
+    second: sheet_captain_archer_2_86
+  - first:
+      213: -5457757549070501655
+    second: sheet_captain_archer_2_87
+  - first:
+      213: -2864664318801704064
+    second: sheet_captain_archer_2_88
+  - first:
+      213: -6031045694530561176
+    second: sheet_captain_archer_2_89
+  - first:
+      213: -1568754721187057212
+    second: sheet_captain_archer_2_90
+  - first:
+      213: 5235959741239801030
+    second: sheet_captain_archer_2_91
+  - first:
+      213: -3667021923917041602
+    second: sheet_captain_archer_2_92
+  - first:
+      213: 2781209256764872123
+    second: sheet_captain_archer_2_93
+  - first:
+      213: 6514397080771641943
+    second: sheet_captain_archer_2_94
+  - first:
+      213: 4359618531034396011
+    second: sheet_captain_archer_2_95
+  - first:
+      213: -4220795936342433808
+    second: sheet_captain_archer_2_96
+  - first:
+      213: 1926242429885562883
+    second: sheet_captain_archer_2_97
+  - first:
+      213: 5191749716038942821
+    second: sheet_captain_archer_2_98
+  - first:
+      213: 5278004676552188929
+    second: sheet_captain_archer_2_99
+  - first:
+      213: -1243032004424859785
+    second: sheet_captain_archer_2_100
+  - first:
+      213: 6311522128214625530
+    second: sheet_captain_archer_2_101
+  - first:
+      213: -4994136500952863891
+    second: sheet_captain_archer_2_102
+  - first:
+      213: 2949060331347230210
+    second: sheet_captain_archer_2_103
+  - first:
+      213: -7962916914019375561
+    second: sheet_captain_archer_2_104
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a700529666fda280800000000000000
+      internalID: -9030290757406160985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3e59e7b64741d30800000000000000
+      internalID: 4401270740881892318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393f84d8d2488eb70800000000000000
+      internalID: 8928531592440771475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 704
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2770e89d3256a160800000000000000
+      internalID: 7036401892324308778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 655
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f5e6a3162e852b0800000000000000
+      internalID: -5595473629787824368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 655
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935d9c75e47fb0b00800000000000000
+      internalID: 796001675013379385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 655
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661a9b780f0fe65f0800000000000000
+      internalID: -761406371119128218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e151dda0f42eea0800000000000000
+      internalID: -5845022458296066526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_8
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a5b7ab0b299ab60800000000000000
+      internalID: 7757893120862935659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9804b4fe2b866d7e0800000000000000
+      internalID: -1741089088203964279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_10
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 654
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b367ff5c14d02c0800000000000000
+      internalID: -4463839337003992265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9b338afa8cace00800000000000000
+      internalID: 1065884918593337781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07b1f783f8af5620800000000000000
+      internalID: 2765114460140058383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66513ab7271ee3a0800000000000000
+      internalID: -6634339741675202965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4eed55b812a86760800000000000000
+      internalID: 7451383810490232399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_15
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17920c979a8006f40800000000000000
+      internalID: 5719581050745661809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_16
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 608
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f29240a320de1e0800000000000000
+      internalID: -2167073397494173811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 609
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25219e0e82f80b580800000000000000
+      internalID: -8813387065029225902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 609
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d35ec2c1e8cd7c0800000000000000
+      internalID: -4045202113622098669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_19
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 609
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9401b48ce2cf55f80800000000000000
+      internalID: -8118305475406393271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 609
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829cf943763951c20800000000000000
+      internalID: 3176607183653554472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_21
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 609
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3646a49d11911a3d0800000000000000
+      internalID: -3197246696005671837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 554
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32a20f17911f1260800000000000000
+      internalID: 7070389280752968252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_23
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 554
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8e589706fab3480800000000000000
+      internalID: -8918341808186595115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_24
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 554
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209ad27c092513380800000000000000
+      internalID: -8993316199111743230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_25
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 554
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80db8aa024c2576f0800000000000000
+      internalID: -687594705945838328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 554
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64fac467ccdba970800000000000000
+      internalID: 8767343848554427503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_27
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 554
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32deb0da9eb3519b0800000000000000
+      internalID: -5110112327365300957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c8d98cbdb95f410800000000000000
+      internalID: 1510284618318580770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_29
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7960be418ee42fbd0800000000000000
+      internalID: -2597927276349028713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_30
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e7c1a3292cbad30800000000000000
+      internalID: 4443859390627085882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_31
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 560
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4655e0bbdeb9196b0800000000000000
+      internalID: -5291276641835788956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cd8428fd6c3b260800000000000000
+      internalID: 7112246899813964955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_33
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1c07f32ed0e4540800000000000000
+      internalID: 4993944302178583020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_34
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe70e9a8ae27bafe0800000000000000
+      internalID: -1176720525953726481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_35
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eec56fbf2b443960800000000000000
+      internalID: 7580766741218053863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_36
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f85c2875e16f7410800000000000000
+      internalID: 1477006840992389365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_37
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2f5ebf92878cc00800000000000000
+      internalID: 921118245512409818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_38
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0daf717d633bb90800000000000000
+      internalID: -7227372679551332190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_39
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbbd346fa9fd22e0800000000000000
+      internalID: -2148786915489498156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_40
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a092cb82a21fb940800000000000000
+      internalID: 5313986574659260577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_41
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 504
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0efadb73b8a2be0800000000000000
+      internalID: -1501234454252756814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922ada0d430e8ba20800000000000000
+      internalID: 3078456862751695401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_43
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0010e3860033558d0800000000000000
+      internalID: -2858322311654801152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_44
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0309c8f9d322da0800000000000000
+      internalID: -5971142400472502042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_45
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66585b17629e6eb30800000000000000
+      internalID: 4316393644206949734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_46
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 454
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe32ec96e8df5c40800000000000000
+      internalID: 5503355754656186101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b000cb1885e9e3a30800000000000000
+      internalID: 4196966005726773259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_48
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd304dbb7622c350800000000000000
+      internalID: 6035428763527822777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_49
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6b169cc1dd43f90800000000000000
+      internalID: -6974706807182608681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_50
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09f687fea27eaaa0800000000000000
+      internalID: -6147850345511454449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_51
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d958fede77ad9740800000000000000
+      internalID: 5160464911384992211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_52
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942b28686974399e0800000000000000
+      internalID: -1615869129468497335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_53
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26fb6807080f56d0800000000000000
+      internalID: -2999670000506374611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_54
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc76ca9396211710800000000000000
+      internalID: 1662152152875171059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_55
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397217e5e28697eb0800000000000000
+      internalID: -4721628185958996077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_56
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 404
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0dd902239bb8320800000000000000
+      internalID: 2561344438036975823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a6113bdc93d4860800000000000000
+      internalID: 7515726908786567742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_58
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567c1c3889f835640800000000000000
+      internalID: 5067551890930255717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_59
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b22d32fe23d7210800000000000000
+      internalID: 1332277067451083673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_60
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7884fc2e45db91e30800000000000000
+      internalID: 4474815877049436295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64705d3c45424d90800000000000000
+      internalID: -7115048267543448468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_62
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd569c1d356c3fa0800000000000000
+      internalID: -5819665305322496588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_63
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c38e98da8187a10800000000000000
+      internalID: 1907301575813512306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_64
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb09f3bc3eaa6e00800000000000000
+      internalID: 1038834239803034592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_65
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5206e5a728ae8f3e0800000000000000
+      internalID: -2019606586756014043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_66
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67eadf3e8f59ea6b0800000000000000
+      internalID: -5283120416649531786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_67
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd11a352b6791f870800000000000000
+      internalID: 8714913240380477919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_68
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 354
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dac951573a0d81f0800000000000000
+      internalID: -1041164706148398379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_69
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 285
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33070a9f91a52b0f0800000000000000
+      internalID: -1102719891143626701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_73
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 285
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80feb9aea2d43410800000000000000
+      internalID: 1456020227161518221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_75
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 285
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326ae9de4e11cd6b0800000000000000
+      internalID: -5270317788993509853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_77
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 285
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b261ac0ff5a0284b0800000000000000
+      internalID: -5439773992732191189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_79
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 285
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc25eed46573d0a90800000000000000
+      internalID: -7346154573357231413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_84
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 285
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5931e1c5d18d6e0800000000000000
+      internalID: -1812666568537827863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb59f736517d89620800000000000000
+      internalID: 2781209256764872123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_94
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7524c3551a9c76a50800000000000000
+      internalID: 6514397080771641943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_95
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65f38aa4f9708c30800000000000000
+      internalID: 4359618531034396011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_96
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff95e86578bc65c0800000000000000
+      internalID: -4220795936342433808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_97
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3004d98c8436bba10800000000000000
+      internalID: 1926242429885562883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_98
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5608c331cdccc0840800000000000000
+      internalID: 5191749716038942821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_99
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1046ebc0a4d3f3940800000000000000
+      internalID: 5278004676552188929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_100
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f70d35afcdfbee0800000000000000
+      internalID: -1243032004424859785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_101
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc004c8fe7079750800000000000000
+      internalID: 6311522128214625530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_102
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b64ecff4341bab0800000000000000
+      internalID: -4994136500952863891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_103
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20eb52f1fba2de820800000000000000
+      internalID: 2949060331347230210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_captain_archer_2_104
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 204
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736eceb81490e7190800000000000000
+      internalID: -7962916914019375561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

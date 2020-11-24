@@ -1,0 +1,47 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:2be39ead3e1a0664413d60608c86f1ac:165d7364af5fae97aa47051d96c95191:51a01d57cb5ec04de3b41899a738e7ee$
+#
+:format=40300
+:texture=orange_shamanRM.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+attack1_1emission;0;447;100;65; 0.5;0.5; 0;0;0;0
+attack1_2emission;100;447;100;65; 0.5;0.5; 0;0;0;0
+attack1_3emission;200;447;100;65; 0.5;0.5; 0;0;0;0
+attack1_4em;300;447;100;65; 0.5;0.5; 0;0;0;0
+attack1_5em;400;447;100;65; 0.5;0.5; 0;0;0;0
+attack1_6em;0;382;100;65; 0.5;0.5; 0;0;0;0
+attack1_7em;100;382;100;65; 0.5;0.5; 0;0;0;0
+attack1_8em;200;382;100;65; 0.5;0.5; 0;0;0;0
+attack2_1em;300;382;100;65; 0.5;0.5; 0;0;0;0
+attack2_2em;400;382;100;65; 0.5;0.5; 0;0;0;0
+attack2_3em;0;317;100;65; 0.5;0.5; 0;0;0;0
+attack2_4em;400;382;100;65; 0.5;0.5; 0;0;0;0
+attack3_1em;300;382;100;65; 0.5;0.5; 0;0;0;0
+attack3_2em;100;317;100;65; 0.5;0.5; 0;0;0;0
+attack3_3em;200;317;100;65; 0.5;0.5; 0;0;0;0
+fall_back_1em;300;334;50;48; 0.5;0.5; 0;0;0;0
+fall_back_2em;400;334;50;48; 0.5;0.5; 0;0;0;0
+fall_back_3em;0;269;50;48; 0.5;0.5; 0;0;0;0
+fall_back_4en;100;269;50;48; 0.5;0.5; 0;0;0;0
+fall_back_5em;200;269;50;48; 0.5;0.5; 0;0;0;0
+ready_1em;300;334;50;48; 0.5;0.5; 0;0;0;0
+ready_2em;300;269;50;48; 0.5;0.5; 0;0;0;0
+ready_3em;400;269;50;48; 0.5;0.5; 0;0;0;0
+ready_4en;400;269;50;48; 0.5;0.5; 0;0;0;0
+ready_5em;300;269;50;48; 0.5;0.5; 0;0;0;0
+ready_6em;300;334;50;48; 0.5;0.5; 0;0;0;0
+walk_1em;0;204;50;48; 0.5;0.5; 0;0;0;0
+walk_2em;300;334;50;48; 0.5;0.5; 0;0;0;0
+walk_3em;300;269;50;48; 0.5;0.5; 0;0;0;0
+walk_4em;0;204;50;48; 0.5;0.5; 0;0;0;0
+walk_5em;300;334;50;48; 0.5;0.5; 0;0;0;0
+walk_6em;300;269;50;48; 0.5;0.5; 0;0;0;0

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - EnemyCollider
+  - PlayerCollider
+  - Death
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - Player
+  - EnemySprite
+  - PlayerSprite
+  - Death
+  - PlayerArcherSprite
+  - castleRoom
+  - PlayerCastle
+  - EnemyCastle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackgroundClouds
+    uniqueID: 4096104395
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: DefaultLighted
+    uniqueID: 3662136077
+    locked: 0
+  - name: castleRoom
+    uniqueID: 1306264655
+    locked: 0
+  - name: Castle
+    uniqueID: 3154565431
+    locked: 0
+  - name: Enviroment
+    uniqueID: 961415343
+    locked: 0
+  - name: Units
+    uniqueID: 3474621665
+    locked: 0
+  - name: Collectables
+    uniqueID: 2697226983
+    locked: 0
+  - name: EnviromentForeground
+    uniqueID: 4064756377
+    locked: 0
+  - name: CastlExtraLayer
+    uniqueID: 2540079841
+    locked: 0
+  - name: UI
+    uniqueID: 1268730935
+    locked: 0

@@ -1,0 +1,1334 @@
+fileFormatVersion: 2
+guid: 69325021620c4054ea247456fecd1522
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9157628950740294548
+    second: dark_rune_icons_0
+  - first:
+      213: 7580405364547904389
+    second: dark_rune_icons_1
+  - first:
+      213: 8008518460953366083
+    second: dark_rune_icons_2
+  - first:
+      213: 264137078652850422
+    second: dark_rune_icons_3
+  - first:
+      213: 570742580859683088
+    second: dark_rune_icons_4
+  - first:
+      213: -3371687528804296178
+    second: dark_rune_icons_5
+  - first:
+      213: 4289837664845796577
+    second: dark_rune_icons_6
+  - first:
+      213: -4213852275426898165
+    second: dark_rune_icons_7
+  - first:
+      213: 4329151944314504553
+    second: dark_rune_icons_8
+  - first:
+      213: 8952271268850064461
+    second: dark_rune_icons_9
+  - first:
+      213: 5642318642609059941
+    second: dark_rune_icons_10
+  - first:
+      213: -858449086873260751
+    second: dark_rune_icons_11
+  - first:
+      213: -4526210025661751524
+    second: dark_rune_icons_12
+  - first:
+      213: 1575015474914253486
+    second: dark_rune_icons_13
+  - first:
+      213: -157253022887490027
+    second: dark_rune_icons_14
+  - first:
+      213: -8905603815302338267
+    second: dark_rune_icons_15
+  - first:
+      213: -1749396623500024488
+    second: dark_rune_icons_16
+  - first:
+      213: 2161098325177298979
+    second: dark_rune_icons_17
+  - first:
+      213: -5823186708717383922
+    second: dark_rune_icons_18
+  - first:
+      213: 3795345459262703642
+    second: dark_rune_icons_19
+  - first:
+      213: 7551081307395659544
+    second: dark_rune_icons_20
+  - first:
+      213: 7793520213168084638
+    second: dark_rune_icons_21
+  - first:
+      213: -4892511775349806539
+    second: dark_rune_icons_22
+  - first:
+      213: 3717001872918520633
+    second: dark_rune_icons_23
+  - first:
+      213: -8542398111892222471
+    second: dark_rune_icons_24
+  - first:
+      213: -5353797639169557199
+    second: dark_rune_icons_25
+  - first:
+      213: -5577082965408563999
+    second: dark_rune_icons_26
+  - first:
+      213: 952316387380026057
+    second: dark_rune_icons_27
+  - first:
+      213: 8040917876416265848
+    second: dark_rune_icons_28
+  - first:
+      213: 8962565332567090337
+    second: dark_rune_icons_29
+  - first:
+      213: -1706412131436715867
+    second: dark_rune_icons_30
+  - first:
+      213: 4212700526706235179
+    second: dark_rune_icons_31
+  - first:
+      213: -3798956220477025372
+    second: dark_rune_icons_32
+  - first:
+      213: 7573684603783644493
+    second: dark_rune_icons_33
+  - first:
+      213: -7527883707248635139
+    second: dark_rune_icons_34
+  - first:
+      213: 4979177759233122079
+    second: dark_rune_icons_35
+  - first:
+      213: 9078889466453377990
+    second: dark_rune_icons_36
+  - first:
+      213: -8996443260612970781
+    second: dark_rune_icons_37
+  - first:
+      213: -192773182180006436
+    second: dark_rune_icons_38
+  - first:
+      213: 5180543367509291248
+    second: dark_rune_icons_39
+  - first:
+      213: 5481305179417388592
+    second: dark_rune_icons_40
+  - first:
+      213: -15756558635410963
+    second: dark_rune_icons_41
+  - first:
+      213: -1225720275527180135
+    second: dark_rune_icons_42
+  - first:
+      213: 2308641959303951701
+    second: dark_rune_icons_43
+  - first:
+      213: 468948067460249821
+    second: dark_rune_icons_44
+  - first:
+      213: -72983594354091201
+    second: dark_rune_icons_45
+  - first:
+      213: -4535159225398421649
+    second: dark_rune_icons_46
+  - first:
+      213: 5439073649801786349
+    second: dark_rune_icons_47
+  - first:
+      213: -7108930332856114807
+    second: dark_rune_icons_48
+  - first:
+      213: 2789101451870782635
+    second: dark_rune_icons_49
+  - first:
+      213: -3209312579350572043
+    second: dark_rune_icons_50
+  - first:
+      213: 857666524679907379
+    second: dark_rune_icons_51
+  - first:
+      213: 4048923838058947615
+    second: dark_rune_icons_52
+  - first:
+      213: 7712743240741992261
+    second: dark_rune_icons_53
+  - first:
+      213: 4227671598517586094
+    second: dark_rune_icons_54
+  - first:
+      213: -8904360438764248953
+    second: dark_rune_icons_55
+  - first:
+      213: 9049420228838863412
+    second: dark_rune_icons_56
+  - first:
+      213: 2105718963937571482
+    second: dark_rune_icons_57
+  - first:
+      213: 6806048941373325400
+    second: dark_rune_icons_58
+  - first:
+      213: -7315973021844775323
+    second: dark_rune_icons_59
+  - first:
+      213: -8672736984797711919
+    second: dark_rune_icons_60
+  - first:
+      213: 6978116243857295452
+    second: dark_rune_icons_61
+  - first:
+      213: 8572226629302589886
+    second: dark_rune_icons_62
+  - first:
+      213: -2204584513606701176
+    second: dark_rune_icons_63
+  - first:
+      213: 1490513729562357596
+    second: dark_rune_icons_64
+  - first:
+      213: -2449468627543922579
+    second: dark_rune_icons_65
+  - first:
+      213: -3036184906333746854
+    second: dark_rune_icons_66
+  - first:
+      213: 6936097417203521649
+    second: dark_rune_icons_67
+  - first:
+      213: -6197347229364932813
+    second: dark_rune_icons_68
+  - first:
+      213: 6107034090122725763
+    second: dark_rune_icons_69
+  - first:
+      213: -2666933763375408882
+    second: dark_rune_icons_70
+  - first:
+      213: -7372505907498075569
+    second: dark_rune_icons_71
+  - first:
+      213: 5039361457597803016
+    second: dark_rune_icons_72
+  - first:
+      213: 5906760701026441292
+    second: dark_rune_icons_73
+  - first:
+      213: -4318206594880312200
+    second: dark_rune_icons_74
+  - first:
+      213: 2490139151593052052
+    second: dark_rune_icons_75
+  - first:
+      213: -936372648239675830
+    second: dark_rune_icons_76
+  - first:
+      213: -4985838457986802874
+    second: dark_rune_icons_77
+  - first:
+      213: -8947055196975540027
+    second: dark_rune_icons_78
+  - first:
+      213: 8812792484209637804
+    second: dark_rune_icons_79
+  - first:
+      213: -7966175010428634364
+    second: dark_rune_icons_80
+  - first:
+      213: -9222836078225699370
+    second: dark_rune_icons_81
+  - first:
+      213: -3695655424025763561
+    second: dark_rune_icons_82
+  - first:
+      213: -1929192063278512693
+    second: dark_rune_icons_83
+  - first:
+      213: 4738732946904224330
+    second: dark_rune_icons_84
+  - first:
+      213: 7416432913114269713
+    second: dark_rune_icons_85
+  - first:
+      213: -233167113989577843
+    second: dark_rune_icons_86
+  - first:
+      213: -7090464656476454056
+    second: dark_rune_icons_87
+  - first:
+      213: -7748931324492864801
+    second: dark_rune_icons_88
+  - first:
+      213: -801188055777352424
+    second: dark_rune_icons_89
+  - first:
+      213: 6681827480755215998
+    second: dark_rune_icons_90
+  - first:
+      213: -5450766500148104024
+    second: dark_rune_icons_91
+  - first:
+      213: -3817299016316467320
+    second: dark_rune_icons_92
+  - first:
+      213: -3093347996698006488
+    second: dark_rune_icons_93
+  - first:
+      213: 2834475178401705047
+    second: dark_rune_icons_94
+  - first:
+      213: 8397521728180664656
+    second: dark_rune_icons_95
+  - first:
+      213: -2394016595563810371
+    second: dark_rune_icons_96
+  - first:
+      213: 426880445265962084
+    second: dark_rune_icons_97
+  - first:
+      213: -7585794675234218996
+    second: dark_rune_icons_98
+  - first:
+      213: 8723576281649075403
+    second: dark_rune_icons_99
+  - first:
+      213: -379649636800986103
+    second: dark_rune_icons_100
+  - first:
+      213: -3547915866808179137
+    second: dark_rune_icons_101
+  - first:
+      213: -9031355746399543888
+    second: dark_rune_icons_102
+  - first:
+      213: 6820173075026277364
+    second: dark_rune_icons_103
+  - first:
+      213: -5959333205896468964
+    second: dark_rune_icons_104
+  - first:
+      213: -2319239967939090772
+    second: dark_rune_icons_105
+  - first:
+      213: -5091902265820069651
+    second: dark_rune_icons_106
+  - first:
+      213: -1448806268754351246
+    second: dark_rune_icons_0
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_rune_icons_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 341
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ba98aef5ec4ebe0800000000000000
+      internalID: -1448806268754351246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 344
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583e75f2482033960800000000000000
+      internalID: 7580405364547904389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 345
+        width: 55
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e884afb19f32f60800000000000000
+      internalID: 8008518460953366083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_3
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 342
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0dc1906476aa300800000000000000
+      internalID: 264137078652850422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 343
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011c4567a5fabe700800000000000000
+      internalID: 570742580859683088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 344
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a51087e0c5531d0800000000000000
+      internalID: -3371687528804296178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_6
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 344
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4993da0a0988b30800000000000000
+      internalID: 4289837664845796577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_7
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 376
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f45337ea36585c0800000000000000
+      internalID: -4213852275426898165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 364
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965ce8ba1cc341c30800000000000000
+      internalID: 4329151944314504553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 300
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c5eb0b94bdc3c70800000000000000
+      internalID: 8952271268850064461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_10
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 274
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568f64249ea8d4e40800000000000000
+      internalID: 5642318642609059941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_11
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 276
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d292f8a1d2614f0800000000000000
+      internalID: -858449086873260751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_12
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 283
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f9e9966fbaf21c0800000000000000
+      internalID: -4526210025661751524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 282
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad10aca349bd510800000000000000
+      internalID: 1575015474914253486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_14
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 277
+        width: 49
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e4fe6753351ddf0800000000000000
+      internalID: -157253022887490027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5296a8e8380f86480800000000000000
+      internalID: -8905603815302338267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 272
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85563052a05e8b7e0800000000000000
+      internalID: -1749396623500024488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_17
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 272
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32072ec0a73cdfd10800000000000000
+      internalID: 2161098325177298979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 265
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fcf1e7a82ef2fa0800000000000000
+      internalID: -5823186708717383922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 198
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18ce3b2696cba430800000000000000
+      internalID: 3795345459262703642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_20
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 198
+        width: 159
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81719651174dac860800000000000000
+      internalID: 7551081307395659544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_21
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 206
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96d5bf8755282c60800000000000000
+      internalID: 7793520213168084638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_22
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 205
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aebd2467e4a1cb0800000000000000
+      internalID: -4892511775349806539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 195
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93325c88281759330800000000000000
+      internalID: 3717001872918520633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_24
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 196
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd42b24d2e437980800000000000000
+      internalID: -8542398111892222471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_25
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 196
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d39fda96d73b5b0800000000000000
+      internalID: -5353797639169557199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_26
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 133
+        width: 218
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecb0f377983a92b0800000000000000
+      internalID: -5577082965408563999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_27
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 134
+        width: 111
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cad19f65be473d00800000000000000
+      internalID: 952316387380026057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_28
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 62
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e31ebb434179f60800000000000000
+      internalID: 8040917876416265848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_29
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 59
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a464eb2fad616c70800000000000000
+      internalID: 8962565332567090337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_30
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 62
+        width: 134
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a02c49153b9158e0800000000000000
+      internalID: -1706412131436715867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_31
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 63
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b271d672fc4867a30800000000000000
+      internalID: 4212700526706235179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_32
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 19
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3d439f175674bc0800000000000000
+      internalID: -3798956220477025372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_33
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 4
+        width: 86
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d458e5125022b1960800000000000000
+      internalID: 7573684603783644493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_34
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 5
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df29ef617a5978790800000000000000
+      internalID: -7527883707248635139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_35
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 7
+        width: 51
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f9d9c8ac7991540800000000000000
+      internalID: 4979177759233122079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 5
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c34df22ed1befd70800000000000000
+      internalID: 9078889466453377990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_37
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 6
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6f4390586362380800000000000000
+      internalID: -8996443260612970781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_38
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 5
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd560f9efc1235df0800000000000000
+      internalID: -192773182180006436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_39
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0b5ebbebcf4e740800000000000000
+      internalID: 5180543367509291248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_40
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 279
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036aeacf402811c40800000000000000
+      internalID: 5481305179417388592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_rune_icons_41
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 242
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de957af4e7508cff0800000000000000
+      internalID: -15756558635410963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
