@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
+using Mirror;
 
 
 public class PopUpSystem : MonoBehaviour
@@ -21,10 +22,14 @@ public class PopUpSystem : MonoBehaviour
     public GameObject cancelButton;
 
     public GameManager sceneLoader;
+    private NarrowNetwork network;
+
+    public bool onlineMatch;
 
     private void Start() {
 
         sceneLoader = GameObject.Find("GameManager").GetComponent<GameManager>();
+        network = GameObject.Find("NetworkManager").GetComponent<NarrowNetwork>();
     }
 
 
@@ -37,15 +42,19 @@ public class PopUpSystem : MonoBehaviour
 
 
     public void ScenePopUp(string text, int sceneIndex, float scale) {
-       
+
         popUpBox.transform.DOScale(scale, 0.3f);
         sceneBox.SetActive(true);
-        
+
         sceneBox.GetComponentInChildren<TMP_Text>().text = text;
 
         sceneBox.transform.GetChild(4).GetComponent<Button>().onClick.AddListener(() =>
-        
-        SceneSwitch(sceneIndex)
+
+
+     
+            SceneSwitch(sceneIndex)
+       
+      
 
          );
 

@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -8977238946454580888
     second: Headings_5
+  - first:
+      213: -5267662337009442089
+    second: Headings_6
+  - first:
+      213: -3765269551696812419
+    second: Headings_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,6 +47,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -75,6 +82,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -250,6 +258,48 @@ TextureImporter:
       bones: []
       spriteID: 861d5ccddb07a6380800000000000000
       internalID: -8977238946454580888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Headings_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 403
+        width: 127
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d229d5830185e6b0800000000000000
+      internalID: -5267662337009442089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Headings_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 409
+        width: 178
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76648fba431fbbc0800000000000000
+      internalID: -3765269551696812419
       vertices: []
       indices: 
       edges: []

@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using RTS;
 using TMPro;
+using Mirror;
 
 
 
-public class UnitButton : MonoBehaviour
+public class UnitButton : NetworkBehaviour
 {
-
+    public bool demon;
     public string buttonName;
     private int unitPrice;
 
@@ -34,7 +35,19 @@ public class UnitButton : MonoBehaviour
             BuyUnit();
         });
 
-        unitPrice = iconPrefab.GetComponent<Icon>().unitPrefab.GetComponent<PlayerValueSetter>().unitPrice;
+        if(!demon) {
+           if(iconPrefab.GetComponent<Icon>().unitPrefab.transform.GetChild(0).GetComponentInChildren<PlayerValueSetter>() != null) {
+                unitPrice = iconPrefab.GetComponent<Icon>().unitPrefab.transform.GetChild(0).GetComponentInChildren<PlayerValueSetter>().unitPrice;
+
+            } else {
+                unitPrice = iconPrefab.GetComponent<Icon>().unitPrefab.GetComponent<PlayerValueSetter>().unitPrice;
+
+            }
+
+        } else {
+            unitPrice = iconPrefab.GetComponent<Icon>().unitPrefab.transform.GetChild(0).GetComponentInChildren<EnemyValueSetter>().unitPrice;
+
+        }
         priceTag = transform.GetChild(0).GetComponentInChildren<TMP_Text>();
         priceTag.SetText(unitPrice.ToString());
     }

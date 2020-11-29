@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerDistanceCombat : MonoBehaviour
+public class PlayerDistanceCombat : NetworkBehaviour
 {
 
     public bool shooter, caster, supercaster;

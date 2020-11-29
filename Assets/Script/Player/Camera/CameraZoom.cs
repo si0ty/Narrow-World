@@ -14,10 +14,27 @@ public class CameraZoom : MonoBehaviour
 
     private bool zoomActive;
 
-    public Button zoomButton;
-  
+    public Button enemyZoomButton;
+    public Button playerZoomButton;
+
 
     private CinemachineVirtualCamera camera;
+
+    void Start() {
+        
+        camera = GetComponent<CinemachineVirtualCamera>();
+
+        playerZoomButton.onClick.AddListener(() =>
+         ZoomFunction()
+        );
+
+        enemyZoomButton.onClick.AddListener(() =>
+     ZoomFunction()
+    );
+
+
+    }
+
 
     IEnumerator ZoomOut() {
         zoomActive = true;
@@ -66,16 +83,7 @@ public class CameraZoom : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        camera = GetComponent<CinemachineVirtualCamera>();
-
-        zoomButton.onClick.AddListener(() =>
-         ZoomFunction()
-        ); 
-
-
-    }
+  
 
   
 

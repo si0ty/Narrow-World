@@ -6,6 +6,7 @@ using DTS;
 using System;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
@@ -36,16 +37,17 @@ public class Player : MonoBehaviour
     public ResourceDisplay ingameDisplay;
     public ResourceDisplay menuDisplay;
 
-    private GameObject enemyUI;
-    private GameObject playerUI;
+    public Transform enemyUI;
+    public Transform playerUI;
 
     public HUD hud;
 
+    private float playerBasePos = -6.37f;
+    private float enemyBasePos = 27.15f;
 
-  
 
 
-     void Awake() {
+    void Awake() {
         CheckSingleton();
       
 
@@ -100,28 +102,38 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator SetScripts() {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.1f);
 
 
         if(GameObject.Find("IngameResourceDisplay") != null) {
 
+            enemyUI = GameObject.Find("EnemyUI").gameObject.transform;
+            playerUI = GameObject.Find("PlayerUI").gameObject.transform;
+
             if (demon) {
+                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(enemyBasePos, 0f);
                 enemyUI.transform.Find("HUD").gameObject.SetActive(true);
+               
+
 
             }
             else {
+                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(playerBasePos, 0f);
+
                 playerUI.transform.Find("HUD").gameObject.SetActive(true);
+
             }
 
-            enemyUI = GameObject.Find("EnemyUI");
-            playerUI = GameObject.Find("PlayerUI");
+          
 
             if (demon) {
-                ingameDisplay = enemyUI.transform.Find("HUD").GetComponentInChildren<ResourceDisplay>();
+                playerUI.gameObject.SetActive(false);
+                ingameDisplay = GameObject.Find("IngameResourceDisplay").GetComponent<ResourceDisplay>();
 
             }
             else {
-                ingameDisplay = playerUI.transform.Find("HUD").GetComponentInChildren<ResourceDisplay>();
+                enemyUI.gameObject.SetActive(false);
+                ingameDisplay = GameObject.Find("IngameResourceDisplay").GetComponent<ResourceDisplay>();
             }
 
             

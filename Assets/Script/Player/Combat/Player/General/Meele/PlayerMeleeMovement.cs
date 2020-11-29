@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerMeleeMovement : MonoBehaviour
+public class PlayerMeleeMovement : NetworkBehaviour
 {
    
     

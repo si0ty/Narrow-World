@@ -51,7 +51,7 @@ public class EnemyValueSetter : MonoBehaviour
     void Awake() {
 
         enemyHealthSystem = GetComponent<EnemyHealthSystem>();
-        resourceManager = GameObject.Find("Enemy").GetComponent<PlayerResourceManager>();
+        resourceManager = GameObject.Find("Player").GetComponent<PlayerResourceManager>();
 
         if (enemyHealthSystem.melee == true) {
             enemyMovement = GetComponent<EnemyMeleeMovement>();

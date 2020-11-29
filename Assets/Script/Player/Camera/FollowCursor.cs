@@ -8,23 +8,45 @@ using RTS;
 public class FollowCursor : MonoBehaviour
 {
 
+    private bool control;
 
+    private void Start() {
+        control = false;
+        StartCoroutine(Delay());
 
-
+        
+    }
 
 
 
     void Follow() {
+        Vector3 screenPos = Input.mousePosition;
 
 
-        Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pz.z = 0;
-        gameObject.transform.position = pz;
+        if (screenPos.x < Screen.width && screenPos.y > 0 && screenPos.y < Screen.height) {
+            Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pz.z = 0;
+            gameObject.transform.position = pz;
+
+        }
+
 
     }
 
+     void OnBecameInvisible() {
+        control = false;
+    }
+
+     void OnBecameVisible() {
+        control = true;
+    }
+    private IEnumerator Delay() {
+        yield return new WaitForSeconds(3f);
+        control = true;
+    }
+
     void FixedUpdate() {
-      
+      if(control)
         Follow();
 
     }

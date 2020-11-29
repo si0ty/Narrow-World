@@ -12,11 +12,10 @@ public class ButtonSelector : MonoBehaviour
 
     private Image image;
 
-
-    void Start()
-    {
+    private void Awake() {
         image = GetComponent<Image>();
     }
+
 
     public void SetGlow() {
         image.material = glowMaterial;

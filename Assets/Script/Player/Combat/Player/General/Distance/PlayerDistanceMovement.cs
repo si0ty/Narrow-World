@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerDistanceMovement : MonoBehaviour
+public class PlayerDistanceMovement : NetworkBehaviour
 {
     public float walkSpeed;
     public float runSpeed;

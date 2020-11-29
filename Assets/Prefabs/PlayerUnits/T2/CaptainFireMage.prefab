@@ -598,6 +598,10 @@ GameObject:
   - component: {fileID: 3321100106720698685}
   - component: {fileID: 3321100106720698673}
   - component: {fileID: 3321100106720698686}
+  - component: {fileID: 4484653166897230483}
+  - component: {fileID: 4523145136797938295}
+  - component: {fileID: 8894354462262847216}
+  - component: {fileID: 1233172399488484655}
   m_Layer: 11
   m_Name: CaptainFireMage
   m_TagString: Player
@@ -765,6 +769,7 @@ MonoBehaviour:
   damagePopUp: {fileID: 3158943827055275246, guid: 7d342830e5aad94479680ea949434326,
     type: 3}
   positionOffset: 0
+  pushback: -40
 --- !u!114 &3321100106720698684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,6 +828,7 @@ MonoBehaviour:
   critMax: 0
   critMin: 0
   critRate: 0
+  pushback: 0
   maxBtwShoot: 0
   maxBtwCast: 0
   maxBtwSuperCast: 0
@@ -909,6 +915,78 @@ MonoBehaviour:
     type: 3}
   largeGoldDrop: {fileID: 0}
   largerGoldDrop: {fileID: 0}
+--- !u!114 &4484653166897230483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321100106720698672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &4523145136797938295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321100106720698672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 3321100106720698674}
+--- !u!114 &8894354462262847216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321100106720698672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 3321100106720698703}
+  clientAuthority: 1
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
+--- !u!114 &1233172399488484655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321100106720698672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!1001 &5550389017755434800
 PrefabInstance:
   m_ObjectHideFlags: 0

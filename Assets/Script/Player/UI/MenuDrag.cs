@@ -22,6 +22,17 @@ public class MenuDrag : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<Player>().GetComponent<Player>();
+
+        popUpSystem = GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>();
+        sceneLoader = player.GetComponent<GameManager>();
+
+      
+    }
+
+    private IEnumerator Initialize() {
+        yield return new WaitForSeconds(0.01f);
+      
+       
     }
 
     private void Whip() {

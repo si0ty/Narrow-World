@@ -23,6 +23,18 @@ TextureImporter:
   - first:
       213: 2789030005029350181
     second: SkillsBG_6
+  - first:
+      213: -3346421456627409923
+    second: SkillsBG_7
+  - first:
+      213: 994459643893025537
+    second: SkillsBG_8
+  - first:
+      213: -1912155686730437251
+    second: SkillsBG_9
+  - first:
+      213: -4038737854218511730
+    second: SkillsBG_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -268,7 +280,7 @@ TextureImporter:
         width: 575
         height: 421
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,6 +288,90 @@ TextureImporter:
       bones: []
       spriteID: 52b2ead3300a4b620800000000000000
       internalID: 2789030005029350181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillsBG_7
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 953
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb5af05a6f1f81d0800000000000000
+      internalID: -3346421456627409923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillsBG_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 953
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b84b9f6c70dcd00800000000000000
+      internalID: 994459643893025537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillsBG_9
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 953
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d6031b888a675e0800000000000000
+      internalID: -1912155686730437251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkillsBG_10
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 953
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ad16ad15583f7c0800000000000000
+      internalID: -4038737854218511730
       vertices: []
       indices: 
       edges: []

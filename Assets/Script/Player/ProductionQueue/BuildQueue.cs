@@ -4,8 +4,9 @@ using UnityEngine;
 using CodeMonkey.Utils;
 using UnityEngine.UI;
 using RTS;
+using Mirror;
 
-public class BuildQueue : MonoBehaviour
+public class BuildQueue : NetworkBehaviour
 {
     private float currentBuildTime;
     public int queueMax;
@@ -105,11 +106,17 @@ public class BuildQueue : MonoBehaviour
         }
     }
 
+    [Command]
     private void SpawnUnit(GameObject unit) {
 
         Vector3 pos = new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, spawnPoint.transform.position.z);
         Instantiate(unit.GetComponent<Icon>().unitPrefab, pos, Quaternion.identity);
-        gate.GetComponent<GateClose>().OpenGate();
+        NetworkServer.Spawn(unit.GetComponent<Icon>().unitPrefab);
+
+        if(gate) {
+            gate.GetComponent<GateClose>().OpenGate();
+        }
+       
         Debug.Log("Object Removed + " + buildQueue[0].gameObject.name);
       
         Destroy(buildQueue[0].gameObject);

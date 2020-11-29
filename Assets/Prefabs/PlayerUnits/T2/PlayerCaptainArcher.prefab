@@ -373,6 +373,10 @@ GameObject:
   - component: {fileID: 2058377525706659151}
   - component: {fileID: 2058377525706659142}
   - component: {fileID: 2058377525706659150}
+  - component: {fileID: 6335970427605209719}
+  - component: {fileID: 5557114737279795335}
+  - component: {fileID: 1911781900824953417}
+  - component: {fileID: 5349554889261807256}
   m_Layer: 11
   m_Name: PlayerCaptainArcher
   m_TagString: Player
@@ -540,6 +544,7 @@ MonoBehaviour:
   damagePopUp: {fileID: 3158943827055275246, guid: 7d342830e5aad94479680ea949434326,
     type: 3}
   positionOffset: 0
+  pushback: -40
 --- !u!114 &2058377525706659137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +603,7 @@ MonoBehaviour:
   critMax: 0
   critMin: 0
   critRate: 0
+  pushback: 0
   maxBtwShoot: 0
   maxBtwCast: 0
   maxBtwSuperCast: 0
@@ -683,6 +689,78 @@ MonoBehaviour:
     type: 3}
   largeGoldDrop: {fileID: 0}
   largerGoldDrop: {fileID: 0}
+--- !u!114 &6335970427605209719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058377525706659147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &5557114737279795335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058377525706659147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
+--- !u!114 &1911781900824953417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058377525706659147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 2058377525706659139}
+  clientAuthority: 1
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
+--- !u!114 &5349554889261807256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058377525706659147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 2058377525706659145}
 --- !u!1 &2058377525814197225
 GameObject:
   m_ObjectHideFlags: 0

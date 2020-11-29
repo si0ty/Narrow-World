@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Mirror;
 
-public class PlayerHealthSystem : MonoBehaviour
+public class PlayerHealthSystem : NetworkBehaviour
 {
     public string unitName;
     public bool melee, mage, distance;

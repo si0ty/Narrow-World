@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class EnemyDistanceAnimations : MonoBehaviour
+public class EnemyDistanceAnimations : NetworkBehaviour
 {
     [HideInInspector]
     public Animator anim;

@@ -30,8 +30,7 @@ public class GameManager : MonoBehaviour
     private PlayerResourceManager resources;
 
 
-    private float playerBasePos = -6.37f;
-    private float enemyBasePos = 27.15f;
+   
 
 
     void Awake()
@@ -80,12 +79,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (sceneIndex == (int)SceneIndexes.MAP) {
-            if(player.demon) {
-                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(enemyBasePos, 0f);
-
-            } else {
-                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(playerBasePos, 0f);
-            }
+         
             resources.SaveResources();
           
 

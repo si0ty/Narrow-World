@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class PlayerUnitHealthBar : MonoBehaviour
+public class PlayerUnitHealthBar : NetworkBehaviour
 {
 
     private PlayerHealthSystem playerHealthSystem;

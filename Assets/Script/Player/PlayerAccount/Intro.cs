@@ -76,6 +76,12 @@ public class Intro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+            beginFadeLength = 1;
+            beginPanLength = 3;
+            panelFadeOutLength = 1;
+        }
+
         if (transform.position.y < 2 && !button.gameObject.activeSelf) {
             button.gameObject.SetActive(true);
             button.DOFade(1, 2);

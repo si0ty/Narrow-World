@@ -116,7 +116,7 @@ public class Projectile : MonoBehaviour
 
                 if (timer <= 0) {
                     gameObject.GetComponentInParent<EnemyMeleeMovement>().moveSpeed = gameObject.GetComponentInParent<EnemyMeleeMovement>().moveSpeed + 0.10f;
-                    Destroy(this);
+                    Destroy(gameObject);
                 }
 
                 timer -= Time.deltaTime;

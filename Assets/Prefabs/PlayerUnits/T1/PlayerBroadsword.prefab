@@ -96,6 +96,10 @@ GameObject:
   - component: {fileID: 3388893247907844647}
   - component: {fileID: 3388893247907844646}
   - component: {fileID: 3388893247907844644}
+  - component: {fileID: 5305847318136552228}
+  - component: {fileID: 2729147306207522278}
+  - component: {fileID: 5300407712142835936}
+  - component: {fileID: 6195303221297698410}
   m_Layer: 11
   m_Name: PlayerBroadSprite
   m_TagString: Player
@@ -111,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3388893247907844828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -0.044, z: 5.3}
+  m_LocalPosition: {x: 0, y: 0, z: 5.3}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 3470019291148997096}
@@ -251,6 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ec05f437336c040bfbf65ae884282d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: Broadsword
   melee: 1
   mage: 0
@@ -261,6 +267,7 @@ MonoBehaviour:
   damagePopUp: {fileID: 3158943827055275246, guid: 7d342830e5aad94479680ea949434326,
     type: 3}
   positionOffset: 0
+  pushback: -40
 --- !u!114 &3388893247907844645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fe8bda38aa18341bc292886bd4b6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   caster: 0
   supercaster: 0
   inRange: 0
@@ -313,6 +322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10b80eaa8b65ce44895346bd5d4ce84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   moveSpeed: 0
   walkSpeed: 0.9
   runSpeed: 0
@@ -332,6 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109ed339c3b54b24f9038b8f75fbe916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   dropShadow: {fileID: 8183517043941462805}
   deathCount: 3
   idleCount: 4
@@ -385,6 +398,78 @@ MonoBehaviour:
   mediumGoldDrop: {fileID: 0}
   largeGoldDrop: {fileID: 0}
   largerGoldDrop: {fileID: 0}
+--- !u!114 &5305847318136552228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388893247907844828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &2729147306207522278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388893247907844828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 3388893247907844826}
+--- !u!114 &5300407712142835936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388893247907844828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 3388893247907844807}
+  clientAuthority: 1
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
+--- !u!114 &6195303221297698410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388893247907844828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!1 &3388893248132516553
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3388893248464503398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.41, y: -1.545, z: 10.449997}
+  m_LocalPosition: {x: 0, y: 0, z: 10.449997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3388893247809137049}
@@ -915,6 +1000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83060f4b4e469b5419b1decf4cd97728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 8183517044749826271}
   fill: {fileID: 8183517043598470492}

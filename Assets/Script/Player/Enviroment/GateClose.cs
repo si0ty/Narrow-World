@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class GateClose : MonoBehaviour
+public class GateClose : NetworkBehaviour
 {
     private Animator anim;
   

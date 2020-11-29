@@ -417,6 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83060f4b4e469b5419b1decf4cd97728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 1608948254904180330}
   fill: {fileID: 1608948255583581076}
@@ -561,6 +563,10 @@ GameObject:
   - component: {fileID: 1608948255418337964}
   - component: {fileID: 1608948255418337963}
   - component: {fileID: 1608948255418337960}
+  - component: {fileID: 8071047731880454541}
+  - component: {fileID: 7518418993116277638}
+  - component: {fileID: 7592864433739048708}
+  - component: {fileID: 5092510804591199100}
   m_Layer: 11
   m_Name: HeroNatureMage
   m_TagString: Player
@@ -576,7 +582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608948255418337974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.038, y: -1.605228, z: 15.75}
+  m_LocalPosition: {x: 0, y: 0, z: 15.75}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1608948255056429276}
@@ -762,6 +768,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ec05f437336c040bfbf65ae884282d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: HeroNatureMage
   melee: 0
   mage: 1
@@ -772,6 +780,7 @@ MonoBehaviour:
   damagePopUp: {fileID: 3158943827055275246, guid: 7d342830e5aad94479680ea949434326,
     type: 3}
   positionOffset: 0
+  pushback: -40
 --- !u!114 &1608948255418337965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,6 +793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5dae90db3dd7ed48bc30c40c40e12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   anim: {fileID: 0}
   capsuleCollider: {fileID: 1608948255056429277}
   boxCollider: {fileID: 0}
@@ -806,6 +817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92250f722ae86942b95dd9b2cb1ed68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   shooter: 1
   caster: 1
   supercaster: 1
@@ -830,6 +843,7 @@ MonoBehaviour:
   critMax: 0
   critMin: 0
   critRate: 0
+  pushback: 0
   maxBtwShoot: 0
   maxBtwCast: 0
   maxBtwSuperCast: 0
@@ -845,6 +859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8064e530c24c237469360d2a6e4c5a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   walkSpeed: 1.1
   runSpeed: 0
   moveSpeed: 0
@@ -870,6 +886,78 @@ MonoBehaviour:
   enemySpotted: 0
   allySpotted: 0
   onceEnemyPosition: {x: 0, y: 0}
+--- !u!114 &8071047731880454541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608948255418337974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &7518418993116277638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608948255418337974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  animator: {fileID: 1608948255418337966}
+--- !u!114 &7592864433739048708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608948255418337974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  target: {fileID: 1608948255418337952}
+  clientAuthority: 1
+  syncVelocity: 1
+  clearVelocity: 0
+  velocitySensitivity: 0.1
+  syncAngularVelocity: 1
+  clearAngularVelocity: 0
+  angularVelocitySensitivity: 0.1
+--- !u!114 &5092510804591199100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608948255418337974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!1 &1608948255583581076
 GameObject:
   m_ObjectHideFlags: 0

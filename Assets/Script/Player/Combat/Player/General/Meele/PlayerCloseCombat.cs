@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 
-public class PlayerCloseCombat : MonoBehaviour
+public class PlayerCloseCombat : NetworkBehaviour
 {
     public bool caster, supercaster;
 
