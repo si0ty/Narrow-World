@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/KingdomMenu.unity
     guid: 6ef06d8e9cc17e54e8bee35be987f955
@@ -18,9 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/War of Ages.unity
     guid: 70e71353bc0340c4d9f523d75c094411
   - enabled: 1
-    path: Assets/Scenes/LoadingScreen.unity
-    guid: f82ce2628a0bea34b957bacaedd8ac83
-  - enabled: 1
     path: Assets/Scenes/SetupScreen.unity
     guid: 5dd39a382d827964b86865c8047a8561
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: de6bfd4686e06ed4e838355790e81cea
   m_configObjects: {}

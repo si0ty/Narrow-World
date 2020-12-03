@@ -8,6 +8,8 @@ public class LoadingText : MonoBehaviour
     private TMP_Text text;
     private bool animated = false;
 
+    public string displayedText;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,13 +22,13 @@ public class LoadingText : MonoBehaviour
         animated = true;
         if(animated) {
             yield return new WaitForSeconds(0.8f);
-            text.SetText("Loading");
+            text.SetText(displayedText);
             yield return new WaitForSeconds(0.8f);
-            text.SetText("Loading.");
+            text.SetText(displayedText + ".");
             yield return new WaitForSeconds(0.8f);
-            text.SetText("Loading..");
+            text.SetText(displayedText + "..");
             yield return new WaitForSeconds(0.8f);
-            text.SetText("Loading...");
+            text.SetText(displayedText + "...");
           
             animated = false;
         }

@@ -5,13 +5,28 @@ using Mirror;
 
 public class LobbyMenu : MonoBehaviour
 {
-    [SerializeField] private NetworkRoomPlayerLobby networkManager = null;
+    [SerializeField] private NarrowNetwork networkManager = null;
 
-    [Header("UI")]
-    [SerializeField] private GameObject landingPagePanel = null;
+    private void Start() {
+        networkManager = GameObject.Find("NetworkManager").GetComponent<NarrowNetwork>();
+    }
+
+
    
     public void HostLobby() {
         networkManager.StartHost();
-        landingPagePanel.SetActive(false);
+     
+    }
+
+    public void ClientReady() {
+        if (NetworkClient.isConnected && !ClientScene.ready) {
+           
+                ClientScene.Ready(NetworkClient.connection);
+
+                if (ClientScene.localPlayer == null) {
+                    ClientScene.AddPlayer(NetworkClient.connection);
+                }
+            
+        }
     }
 }

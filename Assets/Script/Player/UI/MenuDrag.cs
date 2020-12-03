@@ -66,7 +66,7 @@ public class MenuDrag : MonoBehaviour
         } else {
             player.demon = false;
         }
-        popUpSystem.ScenePopUp("You really want to start a battle?", 2, 90);
+        popUpSystem.ScenePopUp("You really want to start a battle?", 4, 90);
         
         
 

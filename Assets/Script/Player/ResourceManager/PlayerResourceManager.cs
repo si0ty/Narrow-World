@@ -40,7 +40,7 @@ namespace RTS {
           
         }
            
-        public string playerName = "Mylo";
+        public string playerName = null;
         public int playerLevel = 1;
         public int logins = 0;
         //Camer

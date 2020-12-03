@@ -9,6 +9,7 @@ public class FollowCursor : MonoBehaviour
 {
 
     private bool control;
+    private bool delay = true;
 
     private void Start() {
         control = false;
@@ -16,7 +17,6 @@ public class FollowCursor : MonoBehaviour
 
         
     }
-
 
 
     void Follow() {
@@ -43,10 +43,11 @@ public class FollowCursor : MonoBehaviour
     private IEnumerator Delay() {
         yield return new WaitForSeconds(3f);
         control = true;
+        delay = false;
     }
 
     void FixedUpdate() {
-      if(control)
+      if(control && !delay)
         Follow();
 
     }

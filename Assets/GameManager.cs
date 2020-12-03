@@ -85,6 +85,20 @@ public class GameManager : MonoBehaviour
 
         }
 
+        if (sceneIndex == (int)SceneIndexes.MAP) {
+
+            resources.SaveResources();
+
+
+        }
+
+
+
+        if (sceneIndex == (int)SceneIndexes.LOBBY) {
+
+
+
+        }
 
     }
         

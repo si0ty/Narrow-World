@@ -9,6 +9,8 @@ using UnityEngine;
         MAIN_MENU = 0,
         MAP = 2, 
         SHOP = 1,
+        LOBBY = 4
+
 
     }
 

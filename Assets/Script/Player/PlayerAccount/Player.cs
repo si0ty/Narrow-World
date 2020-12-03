@@ -7,8 +7,9 @@ using System;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Mirror;
 
-public class Player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
     public string username;
     public bool demon;
@@ -46,10 +47,19 @@ public class Player : MonoBehaviour
     private float enemyBasePos = 27.15f;
 
 
+    /// <summary>
+    /// NETWORK
+    /// </summary>
+
+
+    [SyncVar]
+    private string playerName;
+    [SyncVar]
+    private int playerLevel;
 
     void Awake() {
         CheckSingleton();
-      
+
 
         playerSkills = new PlayerSkills();
         playerItems = new PlayerItems();
@@ -58,15 +68,17 @@ public class Player : MonoBehaviour
         bankResources = InitBankResources();
 
         resourceManager = GetComponent<PlayerResourceManager>();
-      
+
         // playerSkills.OnSkillUnlocked += PlayerSkills_OnSkillUnlocked;
 
 
     }
 
+
+
+
     private void Start() {
 
-      
         if (SaveSystem.LoadResources() == null) {
             resourceManager.SaveResources();
         }
@@ -77,12 +89,57 @@ public class Player : MonoBehaviour
         level = resourceManager.playerLevel;
         logins = resourceManager.logins;
 
-         logins++;
+        logins++;
 
         Debug.Log(logins.ToString());
         StartCoroutine(SetScripts());
-       
+
+        playerName = GameObject.Find("Player").GetComponent<Player>().name;
+        playerLevel = GameObject.Find("Player").GetComponent<Player>().level;
     }
+
+
+    [SyncVar]
+   private string displayName = "Loading...";
+  
+
+    private NarrowNetwork room;
+
+    private NarrowNetwork Room {
+        get {
+            if (room != null) { return room; }
+            return room = NetworkManager.singleton as NarrowNetwork;
+        }
+    }
+
+    public override void OnStartClient() {
+        DontDestroyOnLoad(gameObject);
+        Room.GamePlayers.Add(this);
+    
+    }
+
+    public override void OnStopClient() {
+        Room.GamePlayers.Remove(this);
+     
+    }
+
+
+
+    public void OnNetworkDestroy() {
+        Room.GamePlayers.Remove(this);
+    }
+
+    [Server]
+    public void SetDisplayName(string displayName) {
+        this.displayName = displayName;   
+    }
+
+    /// <summary>
+    /// NETWORK
+    /// </summary>
+
+
+
 
 
 
@@ -111,14 +168,14 @@ public class Player : MonoBehaviour
             playerUI = GameObject.Find("PlayerUI").gameObject.transform;
 
             if (demon) {
-                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(enemyBasePos, 0f);
+                GameObject.Find("CameraHolder").gameObject.transform.DOMoveX(enemyBasePos, 0f);
                 enemyUI.transform.Find("HUD").gameObject.SetActive(true);
                
 
 
             }
             else {
-                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(playerBasePos, 0f);
+                GameObject.Find("CameraHolder").gameObject.transform.DOMoveX(playerBasePos, 0f);
 
                 playerUI.transform.Find("HUD").gameObject.SetActive(true);
 
