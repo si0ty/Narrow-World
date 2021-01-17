@@ -6,18 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IntroScreen.unity
+    guid: 8c551fcb542b22343820319ba8924453
+  - enabled: 1
+    path: Assets/Scenes/SetupScreen.unity
+    guid: 5dd39a382d827964b86865c8047a8561
+  - enabled: 1
     path: Assets/Scenes/KingdomMenu.unity
     guid: 6ef06d8e9cc17e54e8bee35be987f955
   - enabled: 1
     path: Assets/Scenes/PlayerShop.unity
     guid: 081a2ba4aa41d1a429b216606a929266
   - enabled: 1
-    path: Assets/Scenes/War of Ages.unity
-    guid: 70e71353bc0340c4d9f523d75c094411
-  - enabled: 1
-    path: Assets/Scenes/SetupScreen.unity
-    guid: 5dd39a382d827964b86865c8047a8561
-  - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: de6bfd4686e06ed4e838355790e81cea
+  - enabled: 1
+    path: Assets/Scenes/War of Ages.unity
+    guid: 70e71353bc0340c4d9f523d75c094411
   m_configObjects: {}

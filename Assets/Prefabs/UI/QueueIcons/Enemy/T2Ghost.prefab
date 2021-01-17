@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Ghost Demon
   buildTime: 1
-  unitPrefab: {fileID: 1647299583156969285, guid: ed340e4ee5c6315469f168be92c040cf,
+  unitPrefab: {fileID: 3746981626050835236, guid: ed340e4ee5c6315469f168be92c040cf,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

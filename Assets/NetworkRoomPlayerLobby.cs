@@ -14,6 +14,8 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
     [SerializeField] private Button startGameButton = null;
     [SerializeField] private Button exitButton = null;
 
+    private Player player;
+
     [SyncVar(hook = nameof(HandleDisplayNameChanged))]
     public string DisplayName = "Loading...";
     [SyncVar(hook = nameof(HandleReadyStatusChanged))]
@@ -24,6 +26,8 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
     private string playerName;
     [SyncVar]
     private int playerLevel;
+    [SyncVar]
+    public bool demon;
 
     public bool IsLeader {
         set {
@@ -50,8 +54,15 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
     public override void OnStartClient() {
       
         Room.RoomPlayers.Add(this);
-        playerName = GameObject.Find("Player").GetComponent<Player>().username;
-        playerLevel = GameObject.Find("Player").GetComponent<Player>().level;
+        player = GameObject.Find("Player").GetComponent<Player>();
+        playerName = player.username;
+        playerLevel = player.level;
+        if (player.demon) {
+            demon = true;
+        } else {
+            demon = false;
+        }
+       
 
         exitButton.onClick.AddListener(() => {
             room.StopServer();

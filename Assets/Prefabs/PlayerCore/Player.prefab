@@ -1,225 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &755958609956447367
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7864127520574879435}
-  - component: {fileID: 253777632038091650}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7864127520574879435
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755958609956447367}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.895357, y: 8.199514, z: -72.067215}
-  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1693307018797052745}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &253777632038091650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755958609956447367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68c6c420b7525942b406fae522d9e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Coin1
-    clip: {fileID: 8300000, guid: 060eab8bff82af84e9b27666efb314f3, type: 3}
-    volume: 0.545
-    volumeVariance: 0
-    pitch: 0.1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Page1
-    clip: {fileID: 8300000, guid: 25444c3cfbec95041aef5cc676aae1f1, type: 3}
-    volume: 0.732
-    volumeVariance: 0
-    pitch: 0
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Page2
-    clip: {fileID: 8300000, guid: a436efe806934b4418cdb07fbc8c4980, type: 3}
-    volume: 0.762
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Page3
-    clip: {fileID: 8300000, guid: ac739ad00fe529d4db47df9c2071dba0, type: 3}
-    volume: 0.737
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: IntroClick
-    clip: {fileID: 8300000, guid: 546e3f22179845e4e9f037f97baeb12c, type: 3}
-    volume: 0.777
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: ArrowClick
-    clip: {fileID: 8300000, guid: 1d9a2852c0d1a17448b5ca4885ab28ab, type: 3}
-    volume: 0.777
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: FastTheme1
-    clip: {fileID: 8300000, guid: 77dbddac2b7ef1740852f09738ed0d09, type: 3}
-    volume: 0.706
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 1
-    source: {fileID: 0}
-  - name: FastTheme2
-    clip: {fileID: 8300000, guid: bf1204237452cef4588734611f9c3adf, type: 3}
-    volume: 0.711
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: SlowTheme1
-    clip: {fileID: 8300000, guid: 48b78434dae70a6478b00d779c84e52b, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: SlowTheme2
-    clip: {fileID: 8300000, guid: 31ec600aa1a1ad54685aaae89435fff7, type: 3}
-    volume: 0.711
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: EpicTheme2
-    clip: {fileID: 8300000, guid: 33d940fc699bcf84cae277637e28f7ad, type: 3}
-    volume: 0.799
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HardClick
-    clip: {fileID: 8300000, guid: 12b4135031237fb4784211594a8c8eff, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Coin1
-    clip: {fileID: 8300000, guid: 060eab8bff82af84e9b27666efb314f3, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Coin2
-    clip: {fileID: 8300000, guid: d19799da9040edf4cad143cedf9ee462, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Coin3
-    clip: {fileID: 8300000, guid: 429de13498fbb314e9a36818dd20a7f9, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Coing4
-    clip: {fileID: 8300000, guid: a7870e1cd655b1a46aacb7d6d00ba451, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: Coin5
-    clip: {fileID: 8300000, guid: 19c7fc236e61c0d428b46e697a1fbde0, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HardClick
-    clip: {fileID: 8300000, guid: 12b4135031237fb4784211594a8c8eff, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HardClick
-    clip: {fileID: 8300000, guid: 12b4135031237fb4784211594a8c8eff, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HardClick
-    clip: {fileID: 8300000, guid: 12b4135031237fb4784211594a8c8eff, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HardClick
-    clip: {fileID: 8300000, guid: 12b4135031237fb4784211594a8c8eff, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HardClick
-    clip: {fileID: 8300000, guid: 12b4135031237fb4784211594a8c8eff, type: 3}
-    volume: 0.701
-    volumeVariance: 0
-    pitch: 1
-    pitchVariance: 0
-    loop: 0
-    source: {fileID: 0}
 --- !u!1 &1693307018797052744
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,11 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1693307018797052745}
-  - component: {fileID: 5818444188168684389}
-  - component: {fileID: 1693307018797052749}
-  - component: {fileID: 1693307018797052748}
-  - component: {fileID: 1260745562417623283}
-  - component: {fileID: 5194395384515221073}
+  - component: {fileID: 5868143326294217260}
+  - component: {fileID: 1465975692830770644}
+  - component: {fileID: 969913047467204726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -248,15 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693307018797052744}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.79698, y: -5.2974854, z: 25.753113}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
-  m_Children:
-  - {fileID: 7864127520574879435}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5818444188168684389
+--- !u!114 &5868143326294217260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,14 +52,15 @@ MonoBehaviour:
   startMoney: 300
   startRedStone: 300
   startSkillPoints: 300
-  startLevel: 1
+  startLevel: 0
   sceneLoader: {fileID: 0}
+  audioManager: {fileID: 0}
   ingameDisplay: {fileID: 0}
   menuDisplay: {fileID: 0}
   enemyUI: {fileID: 0}
   playerUI: {fileID: 0}
   hud: {fileID: 0}
---- !u!114 &1693307018797052749
+--- !u!114 &1465975692830770644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,15 +72,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3357cd2186ec4b04292dc8490a8fd00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerItems: {fileID: 1693307018797052748}
+  playerItems: {fileID: 0}
   requiredTier1: 0
-  requiredTier2: 35
-  requiredTier3: 75
+  requiredTier2: 250
+  requiredTier3: 750
   goldReady: 0
-  playerName: Mylo
+  playerName: 
   playerLevel: 1
   logins: 0
-  scrollWidth: 100
+  scrollWidth: 300
   scrollHeight: 100
   scrollSpeed: 2
   rotateAmount: 10
@@ -321,7 +99,7 @@ MonoBehaviour:
   shieldTrainCost: 10
   shieldPushback: -40
   broadswordHealth: 110
-  broadswordDamage: 30
+  broadswordDamage: 10
   broadswordCritRate: 1
   broadswordCritMin: 5
   broadswordCritMax: 15
@@ -329,71 +107,71 @@ MonoBehaviour:
   broadswordAttackSpeed: 3
   broadswordWalkSpeed: 1
   broadswordTrainSpeed: 10
-  broadswordTrainCost: 1
+  broadswordTrainCost: 10
   runnerHealth: 90
   runnerDamage: 50
-  runnerCritRate: 6
+  runnerCritRate: 1
   runnerCritMin: 5
   runnerCritMax: 15
   runnerRange: 20
   runnerWalkSpeed: 1.1
   runnerAttackSpeed: 3
   runnerRunningSpeed: 1.3
-  runnerTrainSpeed: 1
+  runnerTrainSpeed: 10
   runnerTrainCost: 10
   archerHealth: 60
   archerShootDamage: 50
-  archerFireRate: 6
-  archerFireRange: 10
+  archerFireRate: 1
+  archerFireRange: 1
   archerWalkSpeed: 1
-  archerTravelSpeed: 1
+  archerTravelSpeed: 10
   archerTrainSpeed: 10
   archerTrainCost: 10
   archerPushback: 20
   shieldCaptainHealth: 250
   shieldCaptainDamage: 40
-  shieldCaptainCritRate: 6
+  shieldCaptainCritRate: 1
   shieldCaptainCritMin: 5
   shieldCaptainCritMax: 15
   shieldCaptainRange: 0.5
   shieldCaptainAttackSpeed: 2.5
   shieldCaptainWalkSpeed: 1
-  shieldCaptainTrainSpeed: 1
+  shieldCaptainTrainSpeed: 10
   shieldCaptainTrainCost: 10
   broadswordCaptainHealth: 180
   broadswordCaptainDamage: 65
-  broadswordCaptainCritRate: 6
+  broadswordCaptainCritRate: 1
   broadswordCaptainCritMin: 5
   broadswordCaptainCritMax: 15
   broadswordCaptainRange: 0.6
   broadswordCaptainAttackSpeed: 2.5
   broadswordCaptainWalkSpeed: 1
-  broadswordCaptainTrainSpeed: 1
+  broadswordCaptainTrainSpeed: 10
   broadswordCaptainTrainCost: 10
   runnerCaptainHealth: 120
   runnerCaptainDamage: 100
-  runnerCaptainCritRate: 6
+  runnerCaptainCritRate: 1
   runnerCaptainCritMin: 5
   runnerCaptainCritMax: 15
   runnerCaptainRange: 0.6
   runnerCaptainWalkSpeed: 1.1
   runnerCaptainAttackSpeed: 2.5
   runnerCaptainRunningSpeed: 1.4
-  runnerCaptainTrainSpeed: 1
+  runnerCaptainTrainSpeed: 10
   runnerCaptainTrainCost: 10
   archerCaptainHealth: 100
   archerCaptainShootDamage: 80
   archerCaptainFireRate: 5
-  archerCaptainFireRange: 10
+  archerCaptainFireRange: 2
   archerCaptainWalkSpeed: 1.05
-  archerCaptainTravelSpeed: 1.05
-  archerCaptainTrainSpeed: 1
+  archerCaptainTravelSpeed: 10
+  archerCaptainTrainSpeed: 10
   archerCaptainTrainCost: 10
   fireMageHealth: 150
   fireMageShootDamage: 120
   fireMageNormalCastDamage: 150
   fireMageSuperCastDamage: 200
-  fireMageRange: 0.6
+  fireMageRange: 1
   fireMageWalkSpeed: 1.1
   fireMageTrainSpeed: 10
   fireMageTrainCost: 10
@@ -401,39 +179,39 @@ MonoBehaviour:
   fireMageCritMin: 5
   fireMageCritMax: 15
   fireMageFireRate: 5
-  fireMageCastRate: 15
-  fireMageSuperCastRate: 30
+  fireMageCastRate: 10
+  fireMageSuperCastRate: 15
   boltMageHealth: 150
   boltMageShootDamage: 120
   boltMageNormalCastDamage: 150
   boltMageSuperCastDamage: 200
-  boltMageRange: 0.6
+  boltMageRange: 1
   boltMageWalkSpeed: 1.1
-  boltMageTrainSpeed: 1
+  boltMageTrainSpeed: 10
   boltMageTrainCost: 10
   boltMageCritRate: 6
   boltMageCritMin: 5
   boltMageCritMax: 15
   boltMageFireRate: 5
-  boltMageCastRate: 15
-  boltMageSuperCastRate: 30
+  boltMageCastRate: 10
+  boltMageSuperCastRate: 15
   natureMageHealth: 150
   natureMageShootDamage: 120
   natureMageNormalCastDamage: 150
   natureMageSuperCastDamage: 200
-  natureMageRange: 0.6
+  natureMageRange: 1
   natureMageWalkSpeed: 1.1
-  natureMageTrainSpeed: 1
+  natureMageTrainSpeed: 10
   natureMageTrainCost: 10
   natureMageCritRate: 6
   natureMageCritMin: 5
   natureMageCritMax: 15
   natureMageFireRate: 5
-  natureMageCastRate: 15
-  natureMageSuperCastRate: 30
+  natureMageCastRate: 10
+  natureMageSuperCastRate: 15
   shieldHeroHealth: 600
   shieldHeroDamage: 80
-  shieldHeroCritRate: 6
+  shieldHeroCritRate: 1
   shieldHeroCritMin: 5
   shieldHeroCritMax: 15
   shieldHeroRange: 0.5
@@ -443,18 +221,18 @@ MonoBehaviour:
   shieldHeroTrainCost: 10
   broadswordHeroHealth: 300
   broadswordHeroDamage: 100
-  broadswordHeroCritRate: 6
+  broadswordHeroCritRate: 1
   broadswordHeroCritMin: 5
   broadswordHeroCritMax: 15
   broadswordHeroRange: 0.6
   broadswordHeroAttackSpeed: 2.5
   broadswordHeroWalkSpeed: 1.1
   broadswordHeroRunningSpeed: 1.3
-  broadswordHeroTrainSpeed: 1
+  broadswordHeroTrainSpeed: 10
   broadswordHeroTrainCost: 10
   runnerHeroHealth: 180
   runnerHeroDamage: 150
-  runnerHeroCritRate: 6
+  runnerHeroCritRate: 1
   runnerHeroCritMin: 5
   runnerHeroCritMax: 15
   runnerHeroRange: 0.6
@@ -466,53 +244,53 @@ MonoBehaviour:
   archerHeroHealth: 150
   archerHeroShootDamage: 100
   archerHeroFireRate: 3
-  archerHeroFireRange: 10
+  archerHeroFireRange: 3
   archerHeroWalkSpeed: 1.1
-  archerHeroTravelSpeed: 1.05
-  archerHeroTrainSpeed: 1
+  archerHeroTravelSpeed: 10
+  archerHeroTrainSpeed: 10
   archerHeroTrainCost: 10
   fireMageHeroHealth: 210
   fireMageHeroShootDamage: 150
   fireMageHeroNormalCastDamage: 200
   fireMageHeroSuperCastDamage: 300
-  fireMageHeroRange: 0.6
+  fireMageHeroRange: 1.2
   fireMageHeroWalkSpeed: 1.1
-  fireMageHeroTrainSpeed: 1
+  fireMageHeroTrainSpeed: 10
   fireMageHeroCritRate: 6
   fireMageHeroCritMin: 5
   fireMageHeroCritMax: 15
   fireMageHeroTrainCost: 10
   fireMageHeroFireRate: 5
   fireMageHeroCastRate: 10
-  fireMageHeroSuperCastRate: 20
+  fireMageHeroSuperCastRate: 15
   boltMageHeroHealth: 150
   boltMageHeroShootDamage: 120
   boltMageHeroNormalCastDamage: 150
   boltMageHeroSuperCastDamage: 200
-  boltMageHeroRange: 0.6
+  boltMageHeroRange: 1.2
   boltMageHeroWalkSpeed: 1.1
-  boltMageHeroTrainSpeed: 1
+  boltMageHeroTrainSpeed: 10
   boltMageHeroTrainCost: 10
   boltMageHeroCritRate: 6
   boltMageHeroCritMin: 5
   boltMageHeroCritMax: 15
   boltMageHeroFireRate: 5
   boltMageHeroCastRate: 10
-  boltMageHeroSuperCastRate: 20
-  natureMageHeroHealth: 150
+  boltMageHeroSuperCastRate: 15
+  natureMageHeroHealth: 500
   natureMageHeroShootDamage: 120
   natureMageHeroNormalCastDamage: 150
   natureMageHeroSuperCastDamage: 200
-  natureMageHeroRange: 0.6
+  natureMageHeroRange: 1.2
   natureMageHeroWalkSpeed: 1.1
-  natureMageHeroTrainSpeed: 1
+  natureMageHeroTrainSpeed: 10
   natureMageHeroTrainCost: 10
   natureMageHeroCritRate: 6
   natureMageHeroCritMin: 5
   natureMageHeroCritMax: 15
   natureMageHeroFireRate: 5
   natureMageHeroCastRate: 10
-  natureMageHeroSuperCastRate: 20
+  natureMageHeroSuperCastRate: 15
   skeletonBroadswordHealth: 150
   skeletonBroadswordDamage: 20
   skeletonBroadswordCritRate: 6
@@ -639,23 +417,7 @@ MonoBehaviour:
   heroMageDemonSuperCastRate: 15
   unlockedSkillList: 
   unlockedItemsList: 
---- !u!114 &1693307018797052748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693307018797052744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adfef2f73e3b6249862d00eeca6452f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  requiredTier1: 0
-  requiredTier2: 25
-  requiredTier3: 75
---- !u!114 &1260745562417623283
+--- !u!114 &969913047467204726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,23 +432,7 @@ MonoBehaviour:
   levelDisplay: {fileID: 0}
   loadingBar: {fileID: 0}
   percentageDisplay: {fileID: 0}
-  firstLayerMulti: 0.43
-  secondLayerMulti: 1.25
-  thirdLayerMulti: 2.97
-  fourthLayerMulti: 5.29
---- !u!114 &5194395384515221073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693307018797052744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
+  firstLayerMulti: 0
+  secondLayerMulti: 0
+  thirdLayerMulti: 0
+  fourthLayerMulti: 0

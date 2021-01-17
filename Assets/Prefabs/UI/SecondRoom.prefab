@@ -59,8 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ba33442b41aa2418355743376040e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panRangeX: -16.7
+  panRange: 0
   displayPanRangeX: -2
+  horizontal: 0
   knightImage: {fileID: 21300000, guid: 056130ce3d78a924d866d10c05aff076, type: 3}
 --- !u!114 &6031727021554107875
 MonoBehaviour:
@@ -146,7 +147,6 @@ GameObject:
   - component: {fileID: 6031727021646452147}
   - component: {fileID: 6031727021646452145}
   - component: {fileID: 6031727021646452146}
-  - component: {fileID: 6031727021646452144}
   m_Layer: 5
   m_Name: SecondRoom
   m_TagString: Untagged
@@ -212,16 +212,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6031727021646452144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031727021646452108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119b95d07e6dd0a4a9f60aac745c7f1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 0}

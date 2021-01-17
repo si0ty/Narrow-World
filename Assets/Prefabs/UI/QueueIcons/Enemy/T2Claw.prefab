@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Claw Demon
   buildTime: 1
-  unitPrefab: {fileID: 412998569255081876, guid: 386718e74fddf0548944dc4d21e23c73,
+  unitPrefab: {fileID: 2402983109728932745, guid: 386718e74fddf0548944dc4d21e23c73,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

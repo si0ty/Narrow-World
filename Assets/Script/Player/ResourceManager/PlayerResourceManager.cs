@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using Mirror;
 
 using UnityEngine;
 
@@ -21,6 +22,7 @@ namespace RTS {
          
        //skillUnlockList muss noch  rein
         private Player player;
+        private IngamePlayer ingamePlayer;
         public PlayerSkills playerSkills;
         public PlayerItems playerItems;
 
@@ -33,10 +35,14 @@ namespace RTS {
 
         private void Start() {
           
-            DontDestroyOnLoad(gameObject);
-            player = GetComponent<Player>();
-          
-            
+           // DontDestroyOnLoad(gameObject);
+            if(GetComponent<Player>() != null) {
+                player = GetComponent<Player>();
+            } else {
+                ingamePlayer = GetComponent<IngamePlayer>();
+            }
+           
+
           
         }
            
@@ -475,12 +481,18 @@ namespace RTS {
         public void SaveResources() {
 
             playerSkills = player.GetPlayerSkills();
-            playerItems = player.GetPlayerItems();
+
+            if (playerItems) {
+                playerItems = ingamePlayer.GetPlayerItems();
+                unlockedItemsList = playerItems.returnUnlockedItems();
+            }
+
             bankResources = Player.LoadBankResources();
            
             unlockedSkillList = playerSkills.returnUnlockedSkills();
-            unlockedItemsList = playerItems.returnUnlockedItems();
+          
             logins = player.logins;
+           
 
 
             SaveSystem.SaveResources(this);
@@ -496,11 +508,17 @@ namespace RTS {
             unlockedSkillList = data.unlockedSkillList;
             unlockedItemsList = data.unlockedItemsList;
             PlayerSkills.SetUnlockedSkills(unlockedSkillList);
-            playerItems.SetUnlockedList(unlockedItemsList);
+            if(playerItems) {
+                playerItems.SetUnlockedList(unlockedItemsList);
+
+            }
 
             logins = data.logins;
+
             timeStore = data.timeStore;
             goldReady = data.goldReady;
+
+            playerName = data.playerName;
 
 
         bankResources = data.bankResources;

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Axe Demon
   buildTime: 1
-  unitPrefab: {fileID: 7383599748693661978, guid: 79a885c44150fbf4e9ae789679343d16,
+  unitPrefab: {fileID: 6276125112343244431, guid: 79a885c44150fbf4e9ae789679343d16,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

@@ -36,10 +36,6 @@ public class ChestOpen : MonoBehaviour
 
 
         StartCoroutine(LateSerialize());
-    
-      
-
-        timer.DOFade(0, 0);
 
         
     }
@@ -49,6 +45,7 @@ public class ChestOpen : MonoBehaviour
         CheckTimer();
 
         if (resourceManager.goldReady) {
+            timer.DOFade(0, 0);
             timerImage.GetComponent<Animator>().SetBool("Wub", true);
         }
 
@@ -56,7 +53,7 @@ public class ChestOpen : MonoBehaviour
     }
 
     private void CheckTimer() {
-        if(resourceManager.timeStore.Hour + 1 <= System.DateTime.Now.Hour && !resourceManager.goldReady) {
+        if(resourceManager.timeStore.Hour + 1 <= System.DateTime.Now.Hour) {
             resourceManager.goldReady = true;
            
         } else {
@@ -66,28 +63,24 @@ public class ChestOpen : MonoBehaviour
     }
    
     private void LoadTimer() {
-      if(!resourceManager.goldReady) {
-            int minutesPassed = 60 - resourceManager.timeStore.Minute + System.DateTime.Now.Minute;
-            int secondsPassed = 60 - resourceManager.timeStore.Second + System.DateTime.Now.Minute;
+      
+            int minutesPassed = 60  - System.DateTime.Now.Minute + resourceManager.timeStore.Minute;
+            int secondsPassed = 60 - System.DateTime.Now.Second + resourceManager.timeStore.Second;
 
             mm = 60 - minutesPassed;
             ss = 60 - secondsPassed;
 
             counting = true;
-        }
-       
 
-      
     }
 
     private void SetTimer() {
 
-        resourceManager.timeStore = System.DateTime.Now;
+       
         mm = 59;
         ss = 60;
 
         counting = true;
-
 
     }
 
@@ -113,9 +106,13 @@ public class ChestOpen : MonoBehaviour
             Player.AddResource(ResourceType.BankMoney, goldSpawn.transform.GetComponent<GoldPickUp>().goldAmount, display );
             display.UpdateDisplay(goldSpawn.transform.GetComponent<GoldPickUp>().goldAmount, ResourceType.BankMoney, false);
             timerImage.GetComponent<Animator>().SetBool("Wub", false);
-              DestroyGold();
+            DestroyGold();
             SetTimer();
+            resourceManager.timeStore = System.DateTime.Now;
             resourceManager.goldReady = false;
+
+            resourceManager.SaveResources();
+         
             spawned = false;
             timer.DOFade(1, 2);
         }

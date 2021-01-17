@@ -98,7 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: HeroDemon
   buildTime: 1
-  unitPrefab: {fileID: 7388202477560555380}
+  unitPrefab: {fileID: 4368026197007139746, guid: 4afc62bc651d57c48a8076631748c979,
+    type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10
   _tweenFlag: 1

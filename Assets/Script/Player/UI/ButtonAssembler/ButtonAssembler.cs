@@ -31,7 +31,7 @@ public class ButtonAssembler : MonoBehaviour
     public GameObject t2Assembly;
     public GameObject t3Assembly;
 
-    private Player player;
+    private IngamePlayer player;
     private PlayerResourceManager resources;
 
     /*
@@ -61,7 +61,7 @@ public class ButtonAssembler : MonoBehaviour
 
     public void UpdateVisuals() {
 
-        if (Player.ingameResources[ResourceType.Knowledge] < secondRequierment) {
+        if (IngamePlayer.ingameResources[ResourceType.Knowledge] < secondRequierment) {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetLocked();
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetLocked();
             t2AssemblyButton.interactable = false;
@@ -69,7 +69,7 @@ public class ButtonAssembler : MonoBehaviour
             return;
         }
 
-        if (Player.ingameResources[ResourceType.Knowledge] < thirdRequierment) {
+        if (IngamePlayer.ingameResources[ResourceType.Knowledge] < thirdRequierment) {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
             t2AssemblyButton.interactable = true;
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetLocked();
@@ -78,7 +78,7 @@ public class ButtonAssembler : MonoBehaviour
         }
 
 
-        if (Player.ingameResources[ResourceType.Knowledge] >= thirdRequierment) {
+        if (IngamePlayer.ingameResources[ResourceType.Knowledge] >= thirdRequierment) {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
             t2AssemblyButton.interactable = true;
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
@@ -90,7 +90,7 @@ public class ButtonAssembler : MonoBehaviour
 
 
     void Start() {
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<IngamePlayer>();
         resources = player.GetComponent<PlayerResourceManager>();
 
         t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();

@@ -8,7 +8,7 @@ public class LobbyMenu : MonoBehaviour
     [SerializeField] private NarrowNetwork networkManager = null;
 
     private void Start() {
-        networkManager = GameObject.Find("NetworkManager").GetComponent<NarrowNetwork>();
+        networkManager = GameObject.Find("NarrowNetwork").GetComponent<NarrowNetwork>();
     }
 
 

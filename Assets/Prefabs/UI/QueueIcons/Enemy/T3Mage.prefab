@@ -97,7 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: HeroMage
   buildTime: 1
-  unitPrefab: {fileID: 7388202477560555380}
+  unitPrefab: {fileID: 1447797347339295249, guid: af20d34296be33744aa894afa2722d7c,
+    type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10
   _tweenFlag: 1

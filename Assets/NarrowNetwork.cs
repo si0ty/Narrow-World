@@ -21,39 +21,47 @@ public class NarrowNetwork : NetworkManager
     [SerializeField] private NetworkRoomPlayerLobby roomPlayerPrefab = null;
 
     [Header("Game")]
-    [SerializeField] private Player gamePlayerPrefab = null;
+    [SerializeField] private IngamePlayer gamePlayerPrefab;
 
     public static event Action OnClientConnected;
     public static event Action OnClientDisconnected;
 
+    private Player player;
+
 
     public List<NetworkRoomPlayerLobby> RoomPlayers { get; } = new List<NetworkRoomPlayerLobby>();
-    public List<Player> GamePlayers { get; } = new List<Player>();
+    public List<IngamePlayer> GamePlayers { get; } = new List<IngamePlayer>();
+
+ 
 
     public override void OnStartServer() {
-        spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
+      spawnPrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
         Debug.Log("Server started!");
 
     }
 
     public override void OnStartClient() {
-        var spawnablePrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs");
+     var spawnablePrefabs = Resources.LoadAll<GameObject>("SpawnablePrefabs").ToList();
 
         foreach (var prefab in spawnablePrefabs) {
             ClientScene.RegisterPrefab(prefab);
-        }
-    }
+        } 
+     
+              }
 
     public override void OnStopServer() {
         Debug.Log("Server stopped!");
         RoomPlayers.Clear();
+        GamePlayers.Clear();
     }
 
     public override void OnClientConnect(NetworkConnection conn) {
-        base.OnClientConnect(conn);
+       base.OnClientConnect(conn);
         OnClientConnected?.Invoke();
         Debug.Log("Conntected to server!");
     }
+
+ 
 
     public override void OnClientDisconnect(NetworkConnection conn) {
         base.OnClientDisconnect(conn);
@@ -62,25 +70,40 @@ public class NarrowNetwork : NetworkManager
     }
 
     public override void OnServerConnect(NetworkConnection conn) {
-        if(numPlayers >= maxConnections) {
+        player = GameObject.Find("Player").GetComponent<Player>();
+        if(RoomPlayers[0].demon && player.demon) {
+            GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>().SimplePopUp("There already is a demon in this lobby", 90f);
             conn.Disconnect();
             return;
         }
 
-        /*
-        if(SceneManager.GetActiveScene().name == Path.GetFileNameWithoutExtension(menuScene)) {
+        if (!RoomPlayers[0].demon && !player.demon) {
+            conn.Disconnect();
+            GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>().SimplePopUp("There already is a knight in this lobby", 90f);
+
+            return;
+        }
+
+        if (numPlayers >= maxConnections) {
             conn.Disconnect();
             return;
-        } */
+        }
+
+        
+        if(SceneManager.GetActiveScene().path == Path.GetFileNameWithoutExtension(menuScene)) {
+            conn.Disconnect();
+            return;
+        } 
     }
 
     public override void OnServerAddPlayer(NetworkConnection conn) {
-        if(SceneManager.GetActiveScene().name == Path.GetFileNameWithoutExtension(menuScene)) {
+        
             bool isLeader = RoomPlayers.Count == 0;
             NetworkRoomPlayerLobby roomPlayerInstance = Instantiate(roomPlayerPrefab);
             roomPlayerInstance.IsLeader = isLeader;
             NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);
-        }
+            Debug.Log("Player really added");
+        
     }
 
     public override void OnServerDisconnect(NetworkConnection conn) {
@@ -90,6 +113,9 @@ public class NarrowNetwork : NetworkManager
 
             NotifyPlayersOfReadyState();
         }
+
+        gamePlayerPrefab.InitializePlayer();
+
         base.OnServerDisconnect(conn);
     }
 
@@ -110,11 +136,12 @@ public class NarrowNetwork : NetworkManager
     }
 
     private IEnumerator Delay() {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.4f);
 
-        gamePlayerPrefab.InitializePlayer();
+        gamePlayerPrefab.GetComponent<IngamePlayer>().InitializePlayer();
     }
 
+   
     public void StartGame() {
        
             if(!IsReadyToStart()) {
@@ -134,12 +161,14 @@ public class NarrowNetwork : NetworkManager
         if (SceneManager.GetActiveScene().name == menuScene && newSceneName.StartsWith("War of Ages")) {
             for (int i = RoomPlayers.Count - 1; i >= 0; i--) {
                 var conn = RoomPlayers[i].connectionToClient;
-                var gameplayerInstance = Instantiate(gamePlayerPrefab);
-                gameplayerInstance.SetDisplayName(RoomPlayers[i].DisplayName);
+                var gameplayerPrefab = Instantiate(gamePlayerPrefab);
+                gameplayerPrefab.SetDisplayName(RoomPlayers[i].DisplayName);
+
+                Debug.Log("Ingame Player Instantiated");
 
                 NetworkServer.Destroy(conn.identity.gameObject);
 
-                NetworkServer.ReplacePlayerForConnection(conn, gameplayerInstance.gameObject);
+                NetworkServer.ReplacePlayerForConnection(conn, gameplayerPrefab.gameObject);
 
             }
         }

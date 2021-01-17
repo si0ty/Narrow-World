@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 
-public class PlayerUnitHealthBar : NetworkBehaviour
+public class PlayerUnitHealthBar : MonoBehaviour
 {
 
     private PlayerHealthSystem playerHealthSystem;

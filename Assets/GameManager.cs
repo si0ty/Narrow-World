@@ -27,7 +27,10 @@ public class GameManager : MonoBehaviour
     public Image transitionDarken;
 
     public Player player;
+    private IngamePlayer ingamePlayer;
     private PlayerResourceManager resources;
+
+    public AudioManager audioManager;
 
 
    
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+       instance = this;
      //   SceneManager.LoadSceneAsync((int)SceneIndexes.TITLE_SCREEN, LoadSceneMode.Additive);
         DontDestroyOnLoad(this);
     }
@@ -45,7 +48,7 @@ public class GameManager : MonoBehaviour
         crossfade.color = new Color(0, 0, 0, 0);
         loadingBar = loadingScreen.transform.GetChild(1).GetComponent<Slider>();
        
-        resources = player.GetComponent<PlayerResourceManager>();
+        resources = player.gameObject.GetComponent<PlayerResourceManager>();
 
         canvasGroup = loadingScreen.transform.GetChild(1).GetComponent<CanvasGroup>();
 
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour
     }
 
     public IEnumerator LoadActualScene(int sceneIndex) {
-        FindObjectOfType<AudioManager>().Play("ArrowClick");
+        audioManager.Play("ArrowClick");
         // canvasGroup.DOFade(1, transitionTime);
         transitionDarken.DOFade(1, transitionTime).SetEase(Ease.InSine);
         yield return new WaitForSeconds(transitionTime);
@@ -73,9 +76,9 @@ public class GameManager : MonoBehaviour
 
         if (sceneIndex == (int)SceneIndexes.MAIN_MENU) {
             player.demon = false;
-            player.GetComponent<LevelSystem>().FarSerialize();
+            player.gameObject.GetComponent<LevelSystem>().FarSerialize();
 
-            FindObjectOfType<AudioManager>().PlayRandomSong();
+            audioManager.PlayRandomSong();
         }
 
         if (sceneIndex == (int)SceneIndexes.MAP) {
@@ -145,13 +148,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void LoadMenu() {
-      
+        ingamePlayer = GameObject.Find("IngamePlayer").GetComponent<IngamePlayer>();
+        ingamePlayer.SendToBank();
+
         resources.LoadResources();
-        player.SendToBank();
-        
 
         backgroundImage.sprite = backgrounds[Random.Range(0, backgrounds.Length)];
-
 
         StartCoroutine(GenerateTips());
 

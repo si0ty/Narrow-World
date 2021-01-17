@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Imp
   buildTime: 1
-  unitPrefab: {fileID: 7207716647252211441, guid: ffb57b3fc51d02541921405cbe35d895,
+  unitPrefab: {fileID: 295399459372679997, guid: 1cc3d578d2e6823428b8f4e58df62a48,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

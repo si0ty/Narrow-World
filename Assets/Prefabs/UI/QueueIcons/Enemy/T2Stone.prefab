@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Stone Demon
   buildTime: 1
-  unitPrefab: {fileID: 4617742862199530024, guid: ac28137e73e76f740bfd9043d32c84ef,
+  unitPrefab: {fileID: 2712623736412622551, guid: ac28137e73e76f740bfd9043d32c84ef,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

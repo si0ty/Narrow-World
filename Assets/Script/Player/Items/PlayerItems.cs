@@ -6,11 +6,17 @@ using UnityEngine;
 public class PlayerItems : MonoBehaviour
 {
 
-    public Player player;
+    [HideInInspector]
+    public IngamePlayer player;
 
     public int requiredTier1;
     public int requiredTier2;
     public int requiredTier3;
+
+
+    private void Start() {
+        player = gameObject.GetComponent<IngamePlayer>();
+    }
 
     public enum ItemType
 	{

@@ -40,13 +40,7 @@ public class LevelSystem : MonoBehaviour
         resourceManager = transform.GetComponent<PlayerResourceManager>();
         player = transform.GetComponent<Player>();
 
-
-       
-
-
-
-
-        DontDestroyOnLoad(this);
+       // DontDestroyOnLoad(this);
     }
 
     public IEnumerator Serialize() {
@@ -66,9 +60,6 @@ public class LevelSystem : MonoBehaviour
             levelDisplay.SetText(playerLevel.ToString());
 
             currentProgress = Player.bankResources[ResourceType.EPPoints];
-
-
-
 
 
             CheckProgress();

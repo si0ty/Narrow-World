@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System;
 
 public class Intro : MonoBehaviour
 {
     public GameObject volume;
     public CanvasGroup button;
+    public AudioManager audioManager;
 
     private Vector2 startPoint;
     public float endHeight;
@@ -26,18 +28,28 @@ public class Intro : MonoBehaviour
 
     public float panelFadeOutLength;
 
-    void Start() {
+    void Awake() {
+       
+
         volume = GameObject.Find("Global Volume").transform.gameObject;
+
         volume.SetActive(false);
         startPoint = new Vector2(transform.position.x, transform.position.y);
         logo.DOFade(0, 0);
         StartCoroutine(Delay2());
 
+        button.gameObject.GetComponent<Button>().interactable = false;
+
+       
+     
       
+    
+       
         
     }
 
     IEnumerator Delay2() {
+      
         yield return new WaitForSeconds(1);
         logo.DOFade(1, logoFadeInLength).SetEase(Ease.InOutSine);
         yield return new WaitForSeconds(logoFadeInLength);
@@ -51,11 +63,6 @@ public class Intro : MonoBehaviour
         panel.DOFade(0, panelFadeOutLength);
 
         yield return new WaitForSeconds(beginPanLength);
-
-
-    
-        
-            
         
 
     }
@@ -82,19 +89,29 @@ public class Intro : MonoBehaviour
             panelFadeOutLength = 1;
         }
 
-        if (transform.position.y < 2 && !button.gameObject.activeSelf) {
-            button.gameObject.SetActive(true);
+        if (transform.position.y < 2) {
+            button.gameObject.GetComponent<Button>().interactable = true;
+
             button.DOFade(1, 2);
 
-           
-           int random = Random.Range(1, 3);
+            int random = new int();
+            random = UnityEngine.Random.Range(1, 3);
 
             if (random == 1) {
-                FindObjectOfType<AudioManager>().Play("SlowTheme2");
+
+            
+               audioManager.Play("SlowTheme2");
+
+              
+            
+
             }
             if (random == 2) {
 
-                FindObjectOfType<AudioManager>().Play("FastTheme2");
+              
+              audioManager.Play("FastTheme2");
+
+             
             }
 
         }

@@ -21,7 +21,7 @@ public class MenuDrag : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        player = FindObjectOfType<Player>().GetComponent<Player>();
+        player = GameObject.Find("Player").GetComponent<Player>();
 
         popUpSystem = GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>();
         sceneLoader = player.GetComponent<GameManager>();

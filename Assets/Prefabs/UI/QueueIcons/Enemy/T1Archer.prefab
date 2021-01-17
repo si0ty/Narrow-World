@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: SkeletonArcher
   buildTime: 1
-  unitPrefab: {fileID: 8359248814619979728, guid: afa08cb4d77cd4c45a4ea820094021f5,
+  unitPrefab: {fileID: 3922619580636268677, guid: afa08cb4d77cd4c45a4ea820094021f5,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

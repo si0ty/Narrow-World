@@ -5,11 +5,13 @@ using UnityEngine;
 
 
    public enum SceneIndexes {
-        TITLE_SCREEN = 3,
-        MAIN_MENU = 0,
-        MAP = 2, 
-        SHOP = 1,
-        LOBBY = 4
+        
+        MAIN_MENU = 2,
+        MAP = 5, 
+        SHOP = 3,
+        LOBBY = 4,
+        INTRO = 0,
+        SETUP = 1
 
 
     }

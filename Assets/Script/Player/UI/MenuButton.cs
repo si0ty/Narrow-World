@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 using RTS;
+using System;
 
 public class MenuButton : MonoBehaviour
 {
@@ -31,14 +32,21 @@ public class MenuButton : MonoBehaviour
     public List<GameObject> pagesToClose;
 
     public GameManager loader;
-    private Player player;
+    public Player player;
 
-    public void Start() {
-        player = FindObjectOfType<Player>().GetComponent<Player>();
-        resources = FindObjectOfType<Player>().GetComponent<PlayerResourceManager>();
+    public void Awake() {
+
+
+        StartCoroutine(Delay());
+
+      
 
         if (sceneLoader) {
-            loader = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+           
+                loader = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+           
+         
+         
             GetComponent<Button>().onClick.AddListener(() =>
                 
             SceneSwitch(sceneIndex));
@@ -47,7 +55,10 @@ public class MenuButton : MonoBehaviour
        } 
 
       if(firstLogin) {
-            loader = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+         
+                loader = FindObjectOfType<GameManager>().GetComponent<GameManager>();
+          
+          
             GetComponent<Button>().onClick.AddListener(() =>
           SetupPlayerName());
             
@@ -65,11 +76,27 @@ public class MenuButton : MonoBehaviour
         }
     }
 
+    private IEnumerator Delay() {
+        yield return new WaitForSeconds(0.1f);
+        player = GameObject.Find("Player").GetComponent<Player>();
+        resources = player.GetComponent<PlayerResourceManager>();
+        Debug.Log("Player is Working");
+
+
+    }
+
     private void SetupPlayerName() {
-        FindObjectOfType<AudioManager>().Play("IntroClick");
-        resources.playerName = playerNameInput.text;
-        resources.SaveResources();
-        loader.LoadScene(0);
+        if(playerNameInput.text.Length <= 10) {
+            FindObjectOfType<AudioManager>().Play("IntroClick");
+            resources.playerName = playerNameInput.text;
+            resources.SaveResources();
+            loader.LoadScene(2);
+        } else {
+            GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>().SimplePopUp("Maximum 10 characters allowed", 90f);
+
+        }
+
+
     }
 
 
@@ -78,9 +105,9 @@ public class MenuButton : MonoBehaviour
             GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>().ScenePopUp(popUpText, sceneIndex, 90f);
         } else {
             if(player.logins == 1) {
-                loader.LoadScene(4);
+                loader.LoadScene(1);
             } else {
-                loader.LoadScene(0);
+                loader.LoadScene(2);
             }
           
 

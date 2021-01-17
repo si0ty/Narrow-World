@@ -55,11 +55,11 @@ public class ResourceDisplay : MonoBehaviour
 
 
         if (ingameMenu) {
-            goldText.SetText(Player.ingameResources[ResourceType.Money].ToString());
-            redStoneText.SetText(Player.ingameResources[ResourceType.RedStone].ToString());
+            goldText.SetText(IngamePlayer.ingameResources[ResourceType.Money].ToString());
+            redStoneText.SetText(IngamePlayer.ingameResources[ResourceType.RedStone].ToString());
 
             if (knowledgeText != null) {
-                knowledgeText.SetText(Player.ingameResources[ResourceType.Knowledge].ToString());
+                knowledgeText.SetText(IngamePlayer.ingameResources[ResourceType.Knowledge].ToString());
             }
 
             buttonAssembler = FindObjectOfType<ButtonAssembler>();

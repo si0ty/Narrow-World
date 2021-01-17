@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Shaman
   buildTime: 1
-  unitPrefab: {fileID: 8453898353434654600, guid: 8f2069935b9357345b81a2ba1e7c06d4,
+  unitPrefab: {fileID: 8588359429941848895, guid: 8f2069935b9357345b81a2ba1e7c06d4,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

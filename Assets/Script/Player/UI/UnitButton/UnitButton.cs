@@ -44,9 +44,11 @@ public class UnitButton : NetworkBehaviour
 
             }
 
-        } else {
+        } else if (iconPrefab.GetComponent<Icon>().unitPrefab.transform.GetChild(0).GetComponentInChildren<EnemyValueSetter>()) {
             unitPrice = iconPrefab.GetComponent<Icon>().unitPrefab.transform.GetChild(0).GetComponentInChildren<EnemyValueSetter>().unitPrice;
 
+        } else {
+            unitPrice = iconPrefab.GetComponent<Icon>().unitPrefab.GetComponent<EnemyValueSetter>().unitPrice;
         }
         priceTag = transform.GetChild(0).GetComponentInChildren<TMP_Text>();
         priceTag.SetText(unitPrice.ToString());

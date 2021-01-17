@@ -29,7 +29,7 @@ public class PopUpSystem : MonoBehaviour
     private void Start() {
 
         sceneLoader = GameObject.Find("GameManager").GetComponent<GameManager>();
-        network = GameObject.Find("NetworkManager").GetComponent<NarrowNetwork>();
+        network = GameObject.Find("NarrowNetwork").GetComponent<NarrowNetwork>();
     }
 
 
@@ -84,7 +84,7 @@ public class PopUpSystem : MonoBehaviour
 
 
     public void SceneSwitch(int sceneIndex) {
-        Debug.Log("Test");
+     
 
         if (sceneIndex == (int)SceneIndexes.MAIN_MENU) {
             Debug.Log("GameFullyLoaded");

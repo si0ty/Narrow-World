@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Skeleton Longsword
   buildTime: 1
-  unitPrefab: {fileID: 5908474037679626084, guid: 2965d6a192a2bb343bf4ec4111cd4764,
+  unitPrefab: {fileID: 7574456004048960357, guid: ce897d90e08246e45b4da95668e263ce,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

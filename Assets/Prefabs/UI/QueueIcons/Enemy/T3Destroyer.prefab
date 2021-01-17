@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconName: Destroyer
   buildTime: 1
-  unitPrefab: {fileID: 2062384206722517489, guid: 421bf9e1d67dc1f4cba2577319009a13,
+  unitPrefab: {fileID: 4573409570545928557, guid: 421bf9e1d67dc1f4cba2577319009a13,
     type: 3}
   rectTransform: {fileID: 0}
   _tweenRatio: 10

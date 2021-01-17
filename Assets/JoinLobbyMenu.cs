@@ -12,13 +12,13 @@ public class JoinLobbyMenu : MonoBehaviour
     [SerializeField] private GameObject landingPagePanel = null;
    
     [SerializeField] private Button joinButton = null;
-    [SerializeField] private Button exitButton = null;
+   
     [SerializeField] private TMP_InputField ipAdressInputField;
 
     private PopUpSystem popUpSystem;
 
     private void Start() {
-        networkManager = GameObject.Find("NetworkManager").GetComponent<NarrowNetwork>();
+        networkManager = GameObject.Find("NarrowNetwork").GetComponent<NarrowNetwork>();
         popUpSystem = GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>();
     }
 
@@ -53,7 +53,7 @@ public class JoinLobbyMenu : MonoBehaviour
     }
 
     private void HandleClientDisconnected() {
-        landingPagePanel.SetActive(true);
+       
         popUpSystem.SimplePopUp("Couldn't connect to server.", 90);
         joinButton.interactable = true;
     }

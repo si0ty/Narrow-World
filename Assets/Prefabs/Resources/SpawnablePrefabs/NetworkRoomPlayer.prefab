@@ -325,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1405661327204028565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1294,6 +1294,7 @@ MonoBehaviour:
   - {fileID: 8637683861082037242}
   - {fileID: 451344493050397671}
   startGameButton: {fileID: 1405661327452906000}
+  exitButton: {fileID: 1710716400117435319}
   DisplayName: Loading...
   IsReady: 0
 --- !u!114 &4845709489656119558
@@ -2384,6 +2385,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6906617381982779528, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9073215282788256737}
+    - target: {fileID: 6906617381982779528, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ServerLeaveButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906617381982779528, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FromServerDisconnect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906617381982779528, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6906617381982779532, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
         type: 3}
       propertyPath: m_Name
@@ -2512,3 +2533,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5216457451539297087}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1710716400117435319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6906617381982779528, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5216457451539297087}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9073215282788256737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3859054161308760286, guid: a3a6989acf6f5bd4092b2ebd19d3d38f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5216457451539297087}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5773bfc93ae21a945851ad6146ef8e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

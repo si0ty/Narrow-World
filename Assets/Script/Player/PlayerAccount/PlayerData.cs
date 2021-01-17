@@ -291,8 +291,8 @@ public class PlayerData
 
             bankResources = resourceManager.bankResources;
 
-        playerName = resourceManager.playerName;
-         playerLevel = resourceManager.playerLevel;
+           playerName = resourceManager.playerName;
+           playerLevel = resourceManager.playerLevel;
             logins = resourceManager.logins;
             timeStore = resourceManager.timeStore;
             goldReady = resourceManager.goldReady;
