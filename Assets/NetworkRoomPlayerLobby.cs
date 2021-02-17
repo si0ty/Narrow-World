@@ -11,10 +11,11 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
     [SerializeField] private GameObject lobbyUI;
     [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[4];
     [SerializeField] private TMP_Text[] playerReadyTexts = new TMP_Text[4];
+    [SerializeField] private TMP_Text hostText = null;
     [SerializeField] private Button startGameButton = null;
     [SerializeField] private Button exitButton = null;
 
-    private Player player;
+    public Player player;
 
     [SyncVar(hook = nameof(HandleDisplayNameChanged))]
     public string DisplayName = "Loading...";
@@ -22,12 +23,16 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
     public bool IsReady = false;
     private bool isLeader;
 
+    public ChatBehaviour chatUI;
+
     [SyncVar]
-    private string playerName;
+    public string playerName;
     [SyncVar]
-    private int playerLevel;
-    [SyncVar]
+    public int playerLevel;
+
     public bool demon;
+ 
+    public int index;
 
     public bool IsLeader {
         set {
@@ -45,24 +50,43 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
         }
     }
 
+    [Command]
+    public void GiveAuthority(NetworkIdentity identity) {
+
+        identity.AssignClientAuthority(connectionToClient);
+
+        Debug.LogError("Authority given");
+    }
+
+
     public override void OnStartAuthority() {
        
         CmdSetDisplayName(playerName);
         lobbyUI.SetActive(true);
+        GiveAuthority(chatUI.GetComponent<NetworkIdentity>());
     }
 
+
+
     public override void OnStartClient() {
-      
-        Room.RoomPlayers.Add(this);
+
         player = GameObject.Find("Player").GetComponent<Player>();
-        playerName = player.username;
+        playerName = player.playerName;
         playerLevel = player.level;
-        if (player.demon) {
-            demon = true;
-        } else {
-            demon = false;
-        }
+
+
+        if (Room.RoomPlayers.Count == 0) {
+            index = 1;
        
+            Room.RoomPlayers.Add(this);
+        }
+        else {
+            index = 2;
+          
+                Room.RoomPlayers.Add(this);
+         
+        }
+
 
         exitButton.onClick.AddListener(() => {
             room.StopServer();
@@ -124,7 +148,7 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
     [Command] 
     public void CmdStartGame() {
         if(Room.RoomPlayers[0].connectionToClient != connectionToClient) { return; }
-        Debug.LogError("Game should start");
+        
         Room.StartGame();
     }
 }

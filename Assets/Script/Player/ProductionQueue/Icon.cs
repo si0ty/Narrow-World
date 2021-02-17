@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class Icon : MonoBehaviour
+public class Icon : NetworkBehaviour
 {
 
     
@@ -13,6 +14,8 @@ public class Icon : MonoBehaviour
    
 
     public GameObject unitPrefab;
+    private NetworkIdentity identity;
+
 
     [HideInInspector]
     public Transform rectTransform;
@@ -22,15 +25,18 @@ public class Icon : MonoBehaviour
                                              // because of this it could actually be much larger than 1.0f
     public bool _tweenFlag = true; // set this to true when the positions need to update
     public Vector3 _targetPos; // the final resting place of the object; it's what we calculated earlier
+    IngamePlayer player;
 
 
-    private void Awake() {
-       
+    private void Start() {
+ 
+
         rectTransform = GetComponent<Transform>();
 
       
     }
 
+  
 
     public void Update() {
         if (_tweenFlag) {

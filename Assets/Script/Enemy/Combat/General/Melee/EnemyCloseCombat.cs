@@ -207,7 +207,7 @@ public class EnemyCloseCombat : NetworkBehaviour
                 Debug.Log("we hit" + enemy.name);
 
                 if (enemy.GetComponent<PlayerHealthSystem>() != null) {
-                    enemy.GetComponent<PlayerHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -266,7 +266,7 @@ public class EnemyCloseCombat : NetworkBehaviour
                 Debug.Log("we hit" + enemy.name);
 
                 if (enemy.GetComponent<PlayerHealthSystem>() != null) {
-                    enemy.GetComponent<PlayerHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -324,7 +324,7 @@ public class EnemyCloseCombat : NetworkBehaviour
                 Debug.Log("we hit" + enemy.name);
 
                 if (enemy.GetComponent<PlayerHealthSystem>() != null) {
-                    enemy.GetComponent<PlayerHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -379,7 +379,7 @@ public class EnemyCloseCombat : NetworkBehaviour
             foreach (Collider2D enemy in hitEnemies) {
                 Debug.Log("we hit" + enemy.name);
                 if (enemy.GetComponent<PlayerHealthSystem>() != null) {
-                    enemy.GetComponent<PlayerHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -417,7 +417,7 @@ public class EnemyCloseCombat : NetworkBehaviour
 
      
             if (enemy.GetComponent<PlayerHealthSystem>() != null) {
-                enemy.GetComponent<PlayerHealthSystem>().TakeDamage((int)normalCastDmg);
+                enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage((int)normalCastDmg);
                 enemy.GetComponent<PlayerHealthSystem>().MagicDmgEffect(normalCastDmg);
             }
             else {
@@ -436,7 +436,7 @@ public class EnemyCloseCombat : NetworkBehaviour
             Debug.Log("we hit" + enemy.name);
            
             if (enemy.GetComponent<PlayerHealthSystem>() != null) {
-                enemy.GetComponent<PlayerHealthSystem>().TakeDamage((int)superCastDmg);
+                enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage((int)superCastDmg);
                 enemy.GetComponent<PlayerHealthSystem>().MagicDmgEffect(superCastDmg);
             }
             else {

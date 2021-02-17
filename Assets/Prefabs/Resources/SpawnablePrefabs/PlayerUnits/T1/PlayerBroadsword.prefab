@@ -82,7 +82,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &95629145696041155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 95629146703942097}
   - component: {fileID: 95629146703942096}
   - component: {fileID: 95629146703942103}
-  - component: {fileID: 5202438817725818311}
+  - component: {fileID: 1672289994201758708}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -472,10 +472,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83060f4b4e469b5419b1decf4cd97728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerHealthSystem: {fileID: 6901145355364011293}
   castle: 0
   image: {fileID: 95629146698393371}
   fill: {fileID: 95629146503377560}
---- !u!114 &5202438817725818311
+--- !u!114 &1672289994201758708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6901145355364011288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.854366, y: -1.5648597, z: 15.749997}
+  m_LocalPosition: {x: 0, y: 0, z: 15.749997}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4676411511294070316}
@@ -850,7 +853,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6901145355364011288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
   m_Name: 

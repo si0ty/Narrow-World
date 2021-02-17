@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Mirror;
 
-public class JoinLobbyMenu : MonoBehaviour
+public class JoinLobbyMenu : NetworkBehaviour
 {
     [SerializeField] private NarrowNetwork networkManager = null;
 
@@ -36,12 +37,20 @@ public class JoinLobbyMenu : MonoBehaviour
     }
 
     public void JoinLobby() {
-        string ipAdress = ipAdressInputField.text;
+        
+            string ipAdress = ipAdressInputField.text;
 
-        networkManager.networkAddress = ipAdress;
-        networkManager.StartClient();
+            networkManager.networkAddress = ipAdress;
 
-        joinButton.interactable = false;
+            networkManager.StartClient();
+
+            joinButton.interactable = false;
+      
+         //   Debug.Log("No Server active");
+           // popUpSystem.SimplePopUp("No server active to join", 90);
+               
+      
+      
     }
 
  private void HandleClientConnected() {

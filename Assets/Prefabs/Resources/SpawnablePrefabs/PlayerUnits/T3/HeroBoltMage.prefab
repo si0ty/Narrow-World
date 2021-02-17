@@ -458,7 +458,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2439766219001715547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
   m_Name: 
@@ -714,6 +714,7 @@ GameObject:
   - component: {fileID: 2439766219771227720}
   - component: {fileID: 2439766219771227718}
   - component: {fileID: 2439766219771227721}
+  - component: {fileID: 2562455329240175540}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -804,9 +805,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83060f4b4e469b5419b1decf4cd97728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerHealthSystem: {fileID: 2439766219001715543}
   castle: 0
   image: {fileID: 2439766220059126680}
   fill: {fileID: 2439766219243157909}
+--- !u!114 &2562455329240175540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439766219771227723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &2439766220059126682
 GameObject:
   m_ObjectHideFlags: 0

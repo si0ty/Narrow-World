@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1693307018797052745}
   - component: {fileID: 5868143326294217260}
   - component: {fileID: 1465975692830770644}
-  - component: {fileID: 969913047467204726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -49,16 +48,11 @@ MonoBehaviour:
   demon: 0
   level: 1
   logins: 0
-  startMoney: 300
-  startRedStone: 300
-  startSkillPoints: 300
   startLevel: 0
   sceneLoader: {fileID: 0}
   audioManager: {fileID: 0}
   ingameDisplay: {fileID: 0}
   menuDisplay: {fileID: 0}
-  enemyUI: {fileID: 0}
-  playerUI: {fileID: 0}
   hud: {fileID: 0}
 --- !u!114 &1465975692830770644
 MonoBehaviour:
@@ -417,22 +411,3 @@ MonoBehaviour:
   heroMageDemonSuperCastRate: 15
   unlockedSkillList: 
   unlockedItemsList: 
---- !u!114 &969913047467204726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693307018797052744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4272a3e9ff92f44c8acc52b46cface5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelDisplay: {fileID: 0}
-  loadingBar: {fileID: 0}
-  percentageDisplay: {fileID: 0}
-  firstLayerMulti: 0
-  secondLayerMulti: 0
-  thirdLayerMulti: 0
-  fourthLayerMulti: 0

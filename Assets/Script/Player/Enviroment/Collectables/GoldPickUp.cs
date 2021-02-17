@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RTS;
+using Mirror;
 
-public class GoldPickUp : MonoBehaviour
+public class GoldPickUp : NetworkBehaviour
 {
 
     public int lowestGoldAmount;

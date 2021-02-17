@@ -11,28 +11,59 @@ public class BuildQueue : NetworkBehaviour
     private float currentBuildTime;
     public int queueMax;
 
-    public GameObject progressBar;
+    private ProgressBar progressBar;
 
     public PositionHandler positionHandler;
 
-    public GameObject spawnPoint;
+    
     private Vector3 entrancePosition;
     private Vector3 targetPosition;
 
-    public GameObject gate;
+    public GateClose gate;
 
     private List<Vector3> positionList;
     public List<GameObject> buildQueue;
     public List<GameObject> queueSlot;
+   
 
-    public Canvas mainUI;
+    private NarrowNetwork network;
+
+    private Vector3 playerBasePos = new Vector3(-18.347f, -4.303227f, 0);
+    private Vector3 enemyBasePos = new Vector3(57.46f, -4.303227f, 0);
+
+    private Player player;
+    private IngamePlayer ingamePlayer;
+   
 
     private void Start() {
         buildQueue = new List<GameObject>();
+        player = GameObject.Find("Player").GetComponent<Player>();
+
+        if (player.demon) {
+            ingamePlayer = GameObject.FindGameObjectWithTag("DemonPlayer").GetComponent<IngamePlayer>();
+            progressBar = GameObject.Find("EnemyUI").transform.GetChild(5).GetComponentInChildren<ProgressBar>();
+        } else {
+            ingamePlayer = GameObject.FindGameObjectWithTag("KnightPlayer").GetComponent<IngamePlayer>();
+            progressBar = GameObject.Find("PlayerUI").transform.GetChild(5).GetComponentInChildren<ProgressBar>();
+
+        }
+
+
+        //     ingamePlayer = GameObject.Find("IngamePlayer").GetComponent<IngamePlayer>();
+       
+
+
+        if (!player.demon) {
+            gate = progressBar.gate;
+        }
+      
 
         currentBuildTime = 0;
-}
+        network = GameObject.Find("NarrowNetwork").GetComponent<NarrowNetwork>();
+       
+    }
 
+    
     void Update() {
         UpdateBuildTime();
 
@@ -54,30 +85,60 @@ public class BuildQueue : NetworkBehaviour
        // World_Sprite.Create(entrancePosition, new Vector3(.1f, .1f), Color.magenta);      
     }
 
+  
+
+
     private void UpdateBuildTime() {
        
         if (buildQueue.Count > 0 ) {
             
-            progressBar.GetComponent<Slider>().value += Time.deltaTime * 1;
+            progressBar.gameObject.GetComponent<Slider>().value += Time.deltaTime * 1;
             currentBuildTime += Time.deltaTime * 1;
             // Debug.Log("currentBuildTime: " + currentBuildTime);
-            if (currentBuildTime >= buildQueue[0].gameObject.GetComponent<Icon>().buildTime) {
-                Debug.Log("Unit Spawned + " + buildQueue[0].gameObject.name);
-                
-                SpawnUnit(buildQueue[0]);
+           if (currentBuildTime >= buildQueue[0].gameObject.GetComponent<Icon>().buildTime) {
 
-                progressBar.GetComponent<Slider>().value = 0;
-                currentBuildTime = 0;              
+
+
+                ingamePlayer.SpawnUnit(buildQueue[0].GetComponent<Icon>().unitPrefab.name, transform);
+
+
+
+                if (gate) {
+                    gate.OpenGate();
+                }
+
+                Debug.Log("Object Removed + " + buildQueue[0].gameObject.name);
+
+                Destroy(buildQueue[0].gameObject);
+                buildQueue.RemoveAt(0);
+
+                Debug.Log("buildList Count:" + buildQueue.Count.ToString());
+                if (buildQueue.Count == 0) {
+                    progressBar.gameObject.GetComponent<Slider>().value = 0;
+                    currentBuildTime = 0;
+                    return;
+                }
+                else {
+                    RelocateAllIcons();
+                }
+
+                Debug.Log("Unit Spawned + " + buildQueue[0].gameObject.name);
+
+                progressBar.gameObject.GetComponent<Slider>().value = 0;
+                currentBuildTime = 0;
+
             }
         } 
     }
 
+  
 
     public void AddUnitToBuildQueue(GameObject icon) {
  
         if (buildQueue.Count <= queueMax) {
             GameObject newIcon = Instantiate(icon, new Vector2(positionHandler.buildQueue.entrancePosition.x, positionHandler.buildQueue.entrancePosition.y), Quaternion.identity);
            
+
             newIcon.transform.SetParent(Camera.main.transform);
 
             if (buildQueue.Count == 0) {
@@ -88,7 +149,7 @@ public class BuildQueue : NetworkBehaviour
                 targetPosition = positionHandler.buildQueue.positionList[buildQueue.Count - 1] + new Vector3(0.65f, 0);
             }
 
-            Debug.Log("PositionList Count: " + positionHandler.buildQueue.positionList.Count.ToString());
+           // Debug.Log("PositionList Count: " + positionHandler.buildQueue.positionList.Count.ToString());
                 
             buildQueue.Add(newIcon);
             progressBar.GetComponent<Slider>().maxValue = buildQueue[0].gameObject.GetComponent<Icon>().buildTime;
@@ -103,32 +164,12 @@ public class BuildQueue : NetworkBehaviour
             
         } else {
             Debug.Log("Queue is full");
-        }
+        } 
     }
 
-    [Command]
-    private void SpawnUnit(GameObject unit) {
 
-        Vector3 pos = new Vector3(spawnPoint.transform.position.x, spawnPoint.transform.position.y, spawnPoint.transform.position.z);
-        Instantiate(unit.GetComponent<Icon>().unitPrefab, pos, Quaternion.identity);
-        NetworkServer.Spawn(unit.GetComponent<Icon>().unitPrefab);
-
-        if(gate) {
-            gate.GetComponent<GateClose>().OpenGate();
-        }
-       
-        Debug.Log("Object Removed + " + buildQueue[0].gameObject.name);
-      
-        Destroy(buildQueue[0].gameObject);
-        buildQueue.RemoveAt(0);
-
-        Debug.Log("buildList Count:" + buildQueue.Count.ToString());
-        if (buildQueue.Count == 0) {
-             return;
-        } else {
-            RelocateAllIcons();
-        }     
-    }
+    
+  
 
     public void RelocateAllIcons() {
         for (int i = 0; i < buildQueue.Count; i++) {

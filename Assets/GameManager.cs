@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
 
         if (sceneIndex == (int)SceneIndexes.MAIN_MENU) {
             player.demon = false;
-            player.gameObject.GetComponent<LevelSystem>().FarSerialize();
+           
 
             audioManager.PlayRandomSong();
         }

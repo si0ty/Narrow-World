@@ -47,6 +47,16 @@ public class EnemyValueSetter : MonoBehaviour
     public GameObject largerGoldDrop;
 
     private PlayerResourceManager resourceManager;
+    private Transform spawnStore;
+
+    private void Start() {
+
+        spawnStore = GameObject.Find("Demons").transform;
+        transform.SetParent(spawnStore);
+        Vector3 spawnPoint = new Vector3();
+        spawnPoint = new Vector3(-0.73f, 0.18f, 0);
+        transform.localPosition = spawnPoint;
+    }
 
     void Awake() {
 

@@ -4,13 +4,11 @@ using UnityEngine;
 using RTS;
 using DG.Tweening;
 using Mirror;
+using TMPro;
 
 public class IngamePlayer : NetworkBehaviour
 {
-    public string username;
-    public bool demon;
-    public int level;
-     
+
 
     public static IngamePlayer instance;
 
@@ -20,9 +18,9 @@ public class IngamePlayer : NetworkBehaviour
 
     //Ressource Storage
     public static int roundMoney, roundStones, roundSkillPoints, roundEp;
-    public static Dictionary<ResourceType, int> ingameResources, bankResources, resourceLimits;
+    public  Dictionary<ResourceType, int> ingameResources, bankResources, resourceLimits;
 
-    public static Dictionary<ResourceType, int> transferBook;
+    public  Dictionary<ResourceType, int> transferBook;
 
     private PlayerSkills playerSkills;
     private PlayerItems playerItems;
@@ -30,59 +28,50 @@ public class IngamePlayer : NetworkBehaviour
     public GameManager sceneLoader;
     public AudioManager audioManager;
 
-
     public ResourceDisplay ingameDisplay;
     public ResourceDisplay menuDisplay;
 
     public Transform enemyUI;
     public Transform playerUI;
+    public NarrowNetwork network;
 
-    public HUD hud;
+    [Header("StartScreenUI")]
+    private StartScreen startUI;
 
-    private float playerBasePos = -6.37f;
-    private float enemyBasePos = 27.15f;
+    [SerializeField] public TMP_Text[] playerReadyTexts = new TMP_Text[4];
+    [SyncVar(hook = nameof(HandleReadyStatusChanged))]
+    public bool IsReady = false;
+
+    public Vector3 pos;
 
     private Player player;
+    private BuildQueue buildQueue;
+    
+    public Transform spawnPoint;
 
-
+    private GameObject icon;
     /// <summary>
     /// NETWORK
     /// </summary>
 
 
     [SyncVar]
-    private string playerName;
+    public string playerName;
     [SyncVar]
-    private int playerLevel;
+    public int playerLevel;
+  
+    public bool demon;
+  
+    public int index;
 
-    void Awake() {
+    private NetworkIdentity thisid;
 
-        CheckSingleton();
-        // DontDestroyOnLoad(gameObject);
+    private void Start() {
 
         playerSkills = new PlayerSkills();
         playerItems = new PlayerItems();
 
-        // playerSkills.OnSkillUnlocked += PlayerSkills_OnSkillUnlocked;
     }
-
-    private void Start() {
-
-        resourceManager = GetComponent<PlayerResourceManager>();
-
-        ingameResources = InitIngameResources();
-
-        StartCoroutine(SetScripts());
-
-        playerName = resourceManager.name;
-        playerLevel = resourceManager.playerLevel;
-
-        player = FindObjectOfType<Player>().GetComponent<Player>();
-    }
-
-    [SyncVar]
-    private string displayName = "Loading...";
-
 
     private NarrowNetwork room;
 
@@ -93,11 +82,121 @@ public class IngamePlayer : NetworkBehaviour
         }
     }
 
+    public void HandleReadyStatusChanged(bool oldValue, bool newValue) => UpdateDisplay();
+
+    public void UpdateDisplay() {
+        if (!hasAuthority) {
+            foreach (IngamePlayer player in Room.GamePlayers) {
+                if (player.hasAuthority) {
+                    player.UpdateDisplay();
+                    break;
+                }
+            }
+            return;
+        }
+
+        for (int i = 0; i < Room.GamePlayers.Count; i++) {
+            
+            playerReadyTexts[i].text = Room.GamePlayers[i].IsReady ? "<color=green>Ready</color>" : "<color=red>Not Ready</color>";
+
+        }
+    }
+
+    [Command]
+    public void CmdReadyUp() {
+        IsReady = !IsReady;
+        Room.NotifyPlayersOfReadyState();
+      
+            if (Room.GamePlayers[0].IsReady && Room.GamePlayers[1].IsReady) {
+            startUI = GameObject.Find("Startscreen").GetComponent<StartScreen>();
+            startUI.GetComponent<StartScreen>().Intro();
+            ClientStartGame();
+           
+        }
+    }
+
+   [ClientRpc]
+    public void ClientStartGame() {
+
+        startUI = GameObject.Find("Startscreen").GetComponent<StartScreen>();
+        startUI.GetComponent<StartScreen>().Intro();
+    }
+
     public override void OnStartClient() {
+
         DontDestroyOnLoad(gameObject);
-        Room.GamePlayers.Add(this);
+        thisid = GetComponent<NetworkIdentity>();
+
+        player = GameObject.Find("Player").GetComponent<Player>();
+        resourceManager = player.GetComponent<PlayerResourceManager>();
+        playerName = player.playerName;
+        playerLevel = player.level;
+
+        resourceManager.LoadResources();
+
+        network = GameObject.Find("NarrowNetwork").GetComponent<NarrowNetwork>();
+
+        ingameResources = InitIngameResources();
+
+        if (isLocalPlayer) {
+            index = 1;
+
+            demon = player.demon;
+
+          
+            if (demon == true) {
+                gameObject.tag = "DemonPlayer";
+                Room.GamePlayers.Add(this);
+
+            }
+            else {
+                gameObject.tag = "KnightPlayer";
+                Room.GamePlayers.Add(this);
+
+            }
+
+            if (isLocalPlayer) {
+                Debug.Log("index: " + index.ToString() + "Is local Player");
+            }
+            else {
+                Debug.Log("index: " + index.ToString() + "Is not local Player");
+
+            }
+
+            StartCoroutine(SetScripts());
+            return;
+        }
+        else {
+            index = 2;
+
+            demon = player.demon;
+
+            if (demon) {
+                demon = false;
+
+                gameObject.tag = "KnightPlayer";
+                Room.GamePlayers.Add(this);
+               
+
+            }
+            else  {
+                demon = true;
+
+                gameObject.tag = "DemonPlayer";
+
+                Room.GamePlayers.Add(this);
+
+            }
+
+          
+        }
+
+
+    
 
     }
+
+    /*
 
     public override void OnStopClient() {
         Room.GamePlayers.Remove(this);
@@ -110,15 +209,19 @@ public class IngamePlayer : NetworkBehaviour
         Room.GamePlayers.Remove(this);
     }
 
+
+
     [Server]
     public void SetDisplayName(string displayName) {
-        this.displayName = displayName;
+        playerName = displayName;
     }
+    */
 
     /// <summary>
     /// NETWORK
     /// </summary>
 
+    /*
     private void CheckSingleton() {
         if (instance != null) {
             Destroy(gameObject);
@@ -128,72 +231,62 @@ public class IngamePlayer : NetworkBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-    }
+    } */
 
     public void InitializePlayer() {
-        StartCoroutine(SetScripts());
-    }
 
-    IEnumerator SetScripts() {
-        yield return new WaitForSeconds(0.2f);
+        sceneLoader = GameObject.Find("GameManager").GetComponent<GameManager>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        buildQueue = FindObjectOfType<BuildQueue>().GetComponent<BuildQueue>();
 
-
-
-        if (GameObject.Find("IngameResourceDisplay") != null) {
-
-            enemyUI = GameObject.Find("EnemyUI").gameObject.transform;
+     
+        enemyUI = GameObject.Find("EnemyUI").gameObject.transform;
             playerUI = GameObject.Find("PlayerUI").gameObject.transform;
 
             if (player.demon) {
-                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(enemyBasePos, 0f);
-                enemyUI.transform.Find("HUD").gameObject.SetActive(true);
+                // GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(enemyBasePos, 0f);
+                // enemyUI.transform.Find("HUD").gameObject.SetActive(true);
 
-
-
-            }
-            else {
-                GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(playerBasePos, 0f);
-
-                playerUI.transform.Find("HUD").gameObject.SetActive(true);
-
-            }
-
-
-
-            if (player.demon) {
                 playerUI.gameObject.SetActive(false);
-                ingameDisplay = GameObject.Find("IngameResourceDisplay").GetComponent<ResourceDisplay>();
+                ingameDisplay = enemyUI.transform.Find("HUD").GetComponentInChildren<ResourceDisplay>();
+            spawnPoint = enemyUI.transform.GetChild(7);
+            
+            Debug.Log("IngameDisplayFound");
 
+            // StopCoroutine(SetScripts());
+            return;
             }
-            else {
+
+
+            else if (!player.demon) {
+                //  GameObject.Find("CameraFollow").gameObject.transform.DOMoveX(playerBasePos, 0f);
+
+                // playerUI.transform.Find("HUD").gameObject.SetActive(true);
                 enemyUI.gameObject.SetActive(false);
-                ingameDisplay = GameObject.Find("IngameResourceDisplay").GetComponent<ResourceDisplay>();
+                ingameDisplay = playerUI.transform.Find("HUD").GetComponentInChildren<ResourceDisplay>();
+            spawnPoint = playerUI.transform.GetChild(7);
+            Debug.Log("IngameDisplayFound");
+
+                // StopCoroutine(SetScripts());
             }
 
+      
+        //StartCoroutine(SetScripts());
+    }
 
-        }
+    IEnumerator SetScripts() {
+        yield return new WaitForSeconds(0.8f);
+       
+        InitializePlayer();
+      
       /*  else if (GameObject.Find("MenuResourceDisplay") != null) {
             menuDisplay = GameObject.Find("MenuResourceDisplay").GetComponent<ResourceDisplay>();
         }
       */
 
-        sceneLoader = GameObject.Find("GameManager").GetComponent<GameManager>();
 
-
-        if (ingameDisplay) {
-
-            StartCoroutine(AddingStartResources());
-        }
              
     }
-
-    public IEnumerator AddingStartResources() {
-        yield return new WaitForSeconds(0.2f);
-
-        AddStartResources();
-
-    }
-
 
 
     //Neue Methode bei der aktuelle Werte zurückgegeben werden.
@@ -212,13 +305,13 @@ public class IngamePlayer : NetworkBehaviour
 
     public void AddStartResources() {
         AddResource(ResourceType.Money, startMoney, ingameDisplay);
-        AddResource(ResourceType.Knowledge, 0, ingameDisplay);
-        AddResource(ResourceType.RedStone, startRedStone, ingameDisplay);
+      //  AddResource(ResourceType.Knowledge, 0, ingameDisplay);
+      //  AddResource(ResourceType.RedStone, startRedStone, ingameDisplay);
 
 
     }
 
-    public static void AddResource(ResourceType type, int amount, ResourceDisplay display) {
+    public void AddResource(ResourceType type, int amount, ResourceDisplay display) {
         if (type == ResourceType.BankMoney || type == ResourceType.BankStone || type == ResourceType.EPPoints || type == ResourceType.SkillPoints) {
             bankResources[type] += amount;
         }
@@ -233,7 +326,7 @@ public class IngamePlayer : NetworkBehaviour
         // ressourceUI.GetComponent<IngameResourceDisplay>().UpdateDisplay();
     }
 
-    public static void SpendResource(ResourceType type, int amount, ResourceDisplay display) {
+    public  void SpendResource(ResourceType type, int amount, ResourceDisplay display) {
         if (type == ResourceType.BankMoney || type == ResourceType.BankStone || type == ResourceType.EPPoints || type == ResourceType.SkillPoints) {
             bankResources[type] -= amount;
         }
@@ -246,13 +339,11 @@ public class IngamePlayer : NetworkBehaviour
 
     }
 
-    public static int ReturnResource(ResourceType resourceType) {
+    public int ReturnResource(ResourceType resourceType) {
 
         ingameResources.TryGetValue(resourceType, out int transfer);
 
         return transfer;
-
-
     }
 
     public void SendToBank() {
@@ -290,4 +381,42 @@ public class IngamePlayer : NetworkBehaviour
     public PlayerItems GetPlayerItems() {
         return playerItems;
     }
+
+    [Command]
+    public void GiveAuthority(NetworkIdentity identity) {
+
+
+        identity.AssignClientAuthority(connectionToClient);
+
+        Debug.LogError("Authority given");
+    }
+
+    [Command]
+    public void SpawnUnit(string name, Transform parent) {
+      
+
+      Debug.Log(  network.spawnablePrefabs.Count.ToString());
+
+        foreach (GameObject prefab in network.spawnablePrefabs) {
+           
+            if (prefab.name == name) {
+                GameObject unit = Instantiate(prefab, prefab.transform.position, Quaternion.identity);
+
+              
+
+                NetworkServer.Spawn(unit, connectionToClient);
+
+                
+                Debug.Log("Unit spawned");
+
+            }
+
+        }
+
+
+
+
+    }
+
+
 }

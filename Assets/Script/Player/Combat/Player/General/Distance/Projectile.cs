@@ -72,7 +72,7 @@ public class Projectile : MonoBehaviour
                
                 if(arrowcollider.GetComponent<PlayerHealthSystem>() != null) {
                     arrowcollider.GetComponent<PlayerHealthSystem>().NormalDmgEffect(damage);
-                    arrowcollider.GetComponent<PlayerHealthSystem>().TakeDamage(damage);
+                    arrowcollider.GetComponent<PlayerHealthSystem>().CmdDealDamage(damage);
                 } else {
                     arrowcollider.GetComponent<PlayerCastleHealthSystem>().TakeDamage(damage);
                 }

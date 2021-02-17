@@ -1,5 +1,6 @@
 ﻿using RTS;
 using UnityEngine;
+using Mirror;
 
 
 public class PlayerValueSetter : MonoBehaviour
@@ -48,12 +49,27 @@ public class PlayerValueSetter : MonoBehaviour
 
     private PlayerResourceManager resourceManager;
     private ResourceDisplay display;
+    private IngamePlayer ingamePlayer;
+    private NetworkIdentity identity;
+
+    private Transform spawnStore;
+
+    private void Start() {
+
+        spawnStore = GameObject.Find("Knights").transform;
+        transform.SetParent(spawnStore);
+        transform.localPosition = spawnStore.localPosition;
+    }
 
     void Awake() {
 
         playerHealthSystem = GetComponent<PlayerHealthSystem>();
         resourceManager = GameObject.Find("Player").GetComponent<PlayerResourceManager>();
+        ingamePlayer = GameObject.FindGameObjectWithTag("KnightPlayer").GetComponent<IngamePlayer>();
         display = GameObject.Find("IngameResourceDisplay").GetComponent<ResourceDisplay>();
+        identity = GetComponent<NetworkIdentity>();
+
+       // ingamePlayer.GiveAuthority(identity);
 
         if (playerHealthSystem.melee == true) {
             playerMovement = GetComponent<PlayerMeleeMovement>();
@@ -128,12 +144,12 @@ public class PlayerValueSetter : MonoBehaviour
     }
 
     public void GoldPickup(int amount) {
-        Player.AddResource(ResourceType.Money, amount, display);
+        ingamePlayer.AddResource(ResourceType.Money, amount, display);
         display.UpdateDisplay(amount, ResourceType.Money, false);
     }
 
     public void ExpPickUp(int amount) {
-        Player.AddResource(ResourceType.Knowledge, amount, display);
+        ingamePlayer.AddResource(ResourceType.Knowledge, amount, display);
     }
 
 

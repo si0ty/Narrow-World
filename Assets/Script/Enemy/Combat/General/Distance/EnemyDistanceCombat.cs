@@ -144,7 +144,7 @@ public class EnemyDistanceCombat : NetworkBehaviour
 
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("we hit" + enemy.name);
-            enemy.GetComponent<PlayerHealthSystem>().TakeDamage(normalCastDmg);
+            enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage(normalCastDmg);
             enemy.GetComponent<PlayerHealthSystem>().MagicDmgEffect(normalCastDmg);
         }
     }
@@ -157,7 +157,7 @@ public class EnemyDistanceCombat : NetworkBehaviour
 
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("we hit" + enemy.name);
-            enemy.GetComponent<PlayerHealthSystem>().TakeDamage(superCastDmg);
+            enemy.GetComponent<PlayerHealthSystem>().CmdDealDamage(superCastDmg);
             enemy.GetComponent<PlayerHealthSystem>().MagicDmgEffect(superCastDmg);
         }
     }

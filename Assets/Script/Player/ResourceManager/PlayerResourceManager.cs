@@ -45,8 +45,8 @@ namespace RTS {
 
           
         }
-           
-        public string playerName = null;
+
+        public string playerName;
         public int playerLevel = 1;
         public int logins = 0;
         //Camer
@@ -492,6 +492,7 @@ namespace RTS {
             unlockedSkillList = playerSkills.returnUnlockedSkills();
           
             logins = player.logins;
+            playerLevel = player.level;
            
 
 
@@ -519,7 +520,7 @@ namespace RTS {
             goldReady = data.goldReady;
 
             playerName = data.playerName;
-
+            playerLevel = data.playerLevel;
 
         bankResources = data.bankResources;
 

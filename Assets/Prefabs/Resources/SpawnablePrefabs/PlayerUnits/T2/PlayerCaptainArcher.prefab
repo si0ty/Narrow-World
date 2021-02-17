@@ -194,6 +194,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2058377525076959351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058377525706659147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7940006, y: -1.634228, z: -24.025803}
+  m_LocalPosition: {x: 0, y: 0, z: -24.025803}
   m_LocalScale: {x: 3, y: 2.9000003, z: 1}
   m_Children:
   - {fileID: 2058377526009047123}
@@ -534,6 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ec05f437336c040bfbf65ae884282d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: CaptainArcher
   melee: 0
   mage: 0
@@ -557,6 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5dae90db3dd7ed48bc30c40c40e12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   anim: {fileID: 2058377525706659145}
   capsuleCollider: {fileID: 2058377526009047120}
   boxCollider: {fileID: 2058377525706659138}
@@ -579,6 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92250f722ae86942b95dd9b2cb1ed68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   shooter: 1
   caster: 0
   supercaster: 0
@@ -619,6 +626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8064e530c24c237469360d2a6e4c5a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   walkSpeed: 1
   runSpeed: 0
   moveSpeed: 0
@@ -730,7 +739,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058377525706659147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab2cbc52526ea384ba280d13cd1a57b9, type: 3}
   m_Name: 
@@ -924,6 +933,7 @@ GameObject:
   - component: {fileID: 2058377526393507971}
   - component: {fileID: 2058377526393507969}
   - component: {fileID: 2058377526393507968}
+  - component: {fileID: 7388901084765194782}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -965,6 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1013,6 +1024,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83060f4b4e469b5419b1decf4cd97728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerHealthSystem: {fileID: 2058377525706659149}
   castle: 0
   image: {fileID: 2058377525439980188}
   fill: {fileID: 2058377525628367739}
+--- !u!114 &7388901084765194782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058377526393507970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0

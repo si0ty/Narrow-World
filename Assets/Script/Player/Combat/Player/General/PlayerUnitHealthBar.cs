@@ -1,19 +1,20 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 
-public class PlayerUnitHealthBar : MonoBehaviour
+public class PlayerUnitHealthBar : NetworkBehaviour
 {
-
-    private PlayerHealthSystem playerHealthSystem;
+   //ALREADY TRÀNSLATED TO NETWORK // WORKING NOT CONFIRMED
+    
+    [Header("Refrences")]
+    [SerializeField] private PlayerHealthSystem playerHealthSystem;
     private PlayerCloseCombat playerCombat;
     private PlayerDistanceCombat playerDistanceCombat;
     private PlayerRayCast playerRayCast;
 
     public bool castle;
-
 
     private Slider slider;
 
@@ -21,11 +22,18 @@ public class PlayerUnitHealthBar : MonoBehaviour
     public GameObject fill;
 
 
+    [ClientRpc]
+    private void HandleHealthChanged(int currentHealth, int maxHealth) {
+        slider.value = (float)currentHealth / maxHealth;
+        HealthUpdate();
+    }
+
     void Start() {
-    
-       
+      
+
         fill.SetActive(false);
         playerHealthSystem = transform.parent.GetComponentInParent<PlayerHealthSystem>();
+        playerHealthSystem.EventHealthChanged += HandleHealthChanged;
 
         if (!castle) {
 
@@ -41,9 +49,6 @@ public class PlayerUnitHealthBar : MonoBehaviour
 
 
         slider.maxValue = playerHealthSystem.maxHealth;
-
-
-
 
 
     }
@@ -94,10 +99,13 @@ public class PlayerUnitHealthBar : MonoBehaviour
                 StartCoroutine(TurnOff());
             }
 
-    }
-
-    void LateUpdate() {
         slider.value = playerHealthSystem.currentHealth;
 
+        if(playerHealthSystem.currentHealth <= 0) {
+            playerHealthSystem.EventHealthChanged -= HandleHealthChanged;
+        }
+
     }
+
+  
 }

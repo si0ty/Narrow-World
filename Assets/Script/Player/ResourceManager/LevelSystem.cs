@@ -37,10 +37,12 @@ public class LevelSystem : MonoBehaviour
     private void Start() 
     
     {
-        resourceManager = transform.GetComponent<PlayerResourceManager>();
-        player = transform.GetComponent<Player>();
+       
+        player = GameObject.Find("Player").GetComponent<Player>();
+        resourceManager = player.GetComponent<PlayerResourceManager>();
 
-       // DontDestroyOnLoad(this);
+        StartCoroutine(Serialize());
+        // DontDestroyOnLoad(this);
     }
 
     public IEnumerator Serialize() {

@@ -37,17 +37,25 @@ public class ResourceDisplay : MonoBehaviour
 
     private PlayerResourceManager resourceManager;
     private Player player;
+    private IngamePlayer ingamePlayer;
 
+    public GameObject goldEffect;
+    public GameObject skillEffect;
+    public GameObject redStoneEffect;
+    public GameObject knowledgeEffect;
 
     private void Start() {
         StartCoroutine(SetupDelay());
+
+       
+     
     }
 
     IEnumerator SetupDelay() {
         yield return new WaitForSeconds(0.02f);
 
         player = GameObject.Find("Player").GetComponent<Player>();
-        resourceManager = GameObject.Find("Player").GetComponent<PlayerResourceManager>();
+        resourceManager = player.GetComponent<PlayerResourceManager>();
 
         if (playerName != null) {
             playerName.SetText(resourceManager.playerName);
@@ -55,11 +63,17 @@ public class ResourceDisplay : MonoBehaviour
 
 
         if (ingameMenu) {
-            goldText.SetText(IngamePlayer.ingameResources[ResourceType.Money].ToString());
-            redStoneText.SetText(IngamePlayer.ingameResources[ResourceType.RedStone].ToString());
+            if(player.demon) {
+                ingamePlayer = GameObject.FindGameObjectWithTag("DemonPlayer").GetComponent<IngamePlayer>();
+            } else {
+                ingamePlayer = GameObject.FindGameObjectWithTag("KnightPlayer").GetComponent<IngamePlayer>();
+            }
+
+            goldText.SetText(ingamePlayer.ingameResources[ResourceType.Money].ToString());
+            redStoneText.SetText(ingamePlayer.ingameResources[ResourceType.RedStone].ToString());
 
             if (knowledgeText != null) {
-                knowledgeText.SetText(IngamePlayer.ingameResources[ResourceType.Knowledge].ToString());
+                knowledgeText.SetText(ingamePlayer.ingameResources[ResourceType.Knowledge].ToString());
             }
 
             buttonAssembler = FindObjectOfType<ButtonAssembler>();
@@ -88,7 +102,7 @@ public class ResourceDisplay : MonoBehaviour
     IEnumerator CountUpEffect(int value, ResourceType resource) {
         
         if(!counting && ingameMenu) {
-            displayScore = Player.ingameResources[resource] - value;
+            displayScore = ingamePlayer.ingameResources[resource] - value;
             counting = true;
         }
 
@@ -97,13 +111,15 @@ public class ResourceDisplay : MonoBehaviour
             while (true) {
                 if (counting) {
 
-                    if (Player.ingameResources[resource] == displayScore) {
+                    displayScore++;
+
+                    if (ingamePlayer.ingameResources[resource] == displayScore) {
                         counting = false;
                         Debug.Log("Stopped");
-                        yield return null;
+                        StopAllCoroutines();
                     }
 
-                    displayScore++; //Increment the display score by 1
+                    //Increment the display score by 1
 
                    
 
@@ -127,14 +143,18 @@ public class ResourceDisplay : MonoBehaviour
 
                 }
                 if (value < 500) {
-                    yield return new WaitForSeconds(0.05f);
+                    yield return new WaitForSeconds(0.01f);
                 }
                 else if (value >= 500 && value < 1500) {
-                    yield return new WaitForSeconds(0.03f);
+                    yield return new WaitForSeconds(0.001f);
                 }
                 else if (value >= 1500) {
-                    yield return new WaitForSeconds(0.01f);
+                    yield return new WaitForSeconds(0.0001f);
                 } // I used .2 secs but you can update it as fast as you want
+
+                else if(displayScore > value - 20) {
+                    yield return new WaitForSeconds(0.15f);
+                }
             }
         } else {
 
@@ -147,7 +167,11 @@ public class ResourceDisplay : MonoBehaviour
                 if (counting) {
                     displayScore++;
 
-                 
+                    if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore) {
+                        counting = false;
+                        StopAllCoroutines();
+
+                    }
 
 
                     if (resource == ResourceType.BankMoney && Player.bankResources[ResourceType.BankMoney] > displayScore) {
@@ -177,24 +201,23 @@ public class ResourceDisplay : MonoBehaviour
                        
                     }
 
-                    if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore) {
-                        counting = false;
-                      
-                    }
+                
 
                 }
 
                 if (value < 500) {
-                    yield return new WaitForSeconds(0.05f);
-                }
-                else if (value >= 500 && value < 1500) {
-                    yield return new WaitForSeconds(0.03f);
-                }
-                else if (value >= 1500) {
                     yield return new WaitForSeconds(0.01f);
                 }
+                else if (value >= 500 && value < 1500) {
+                    yield return new WaitForSeconds(0.001f);
+                }
+                else if (value >= 1500) {
+                    yield return new WaitForSeconds(0.0001f);
+                }
 
-
+                else if (displayScore > value - 20) {
+                    yield return new WaitForSeconds(0.15f);
+                }
             }
 
 
@@ -207,7 +230,8 @@ public class ResourceDisplay : MonoBehaviour
     IEnumerator CountDownEffect(int value, ResourceType resource) {
 
         if (!counting && ingameMenu) {
-            displayScore = Player.ingameResources[resource] + value;
+            displayScore = new int();
+            displayScore = ingamePlayer.ingameResources[resource] + value;
             counting = true;
         }
 
@@ -219,14 +243,15 @@ public class ResourceDisplay : MonoBehaviour
                 if (counting) {
                     //Increment the display score by 
 
-                    if (Player.ingameResources[resource] == displayScore) {
+                    displayScore--;
+                    if (ingamePlayer.ingameResources[resource] == displayScore) {
                         counting = false;
                         Debug.Log("Stopped");
-                        yield return null;
+                        StopAllCoroutines();
                     }
 
 
-                    displayScore--;
+                  
 
 
                     if (resource == ResourceType.Money) {
@@ -247,9 +272,6 @@ public class ResourceDisplay : MonoBehaviour
 
 
 
-                 
-
-
                 }
 
                 if (value < 500) {
@@ -263,6 +285,7 @@ public class ResourceDisplay : MonoBehaviour
             }
         } else {
             if(!counting) {
+                displayScore = new int();
                 displayScore = Player.bankResources[resource] + value;
                 counting = true;
             }
@@ -280,7 +303,7 @@ public class ResourceDisplay : MonoBehaviour
 
                             goldText.SetText(displayScore.ToString());
 
-                       
+                      
                     }
 
                     if (resource == ResourceType.BankStone && Player.bankResources[ResourceType.BankStone] < displayScore) {
@@ -288,8 +311,8 @@ public class ResourceDisplay : MonoBehaviour
                             
 
                             redStoneText.SetText(displayScore.ToString());
-
                        
+
                     }
 
                     if (resource == ResourceType.SkillPoints && Player.bankResources[ResourceType.SkillPoints] < displayScore) {
@@ -297,8 +320,8 @@ public class ResourceDisplay : MonoBehaviour
                             
 
                             skillPointsText.SetText(displayScore.ToString());
+                      
 
-                        
                     }
 
 
@@ -306,7 +329,8 @@ public class ResourceDisplay : MonoBehaviour
                     if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore) {
                         counting = false;
                         Debug.Log("Stopped");
-                       
+                        StopAllCoroutines();
+
                     }
 
                 }
@@ -347,35 +371,41 @@ public class ResourceDisplay : MonoBehaviour
            
 
             if (resource == ResourceType.Money || resource == ResourceType.BankMoney) {
-                GameObject text = new GameObject(); 
-                text =
-                Instantiate(plusEffect, new Vector3(goldText.transform.position.x + 0.08f, goldText.transform.position.y - 0.08f, goldText.transform.position.z), Quaternion.identity);
+                GameObject 
+                text = 
+                Instantiate(plusEffect, transform.position, Quaternion.identity);
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
-                text.transform.SetParent(this.transform);
+                text.transform.SetParent(this.transform, false);
+                text.GetComponent<RectTransform>().localPosition = goldEffect.GetComponent<RectTransform>().transform.localPosition;
             }
 
             if (resource == ResourceType.RedStone || resource == ResourceType.BankStone) {
                 GameObject text = new GameObject();
                 text =
-                Instantiate(plusEffect, new Vector3(redStoneText.transform.position.x + 0.08f, redStoneText.transform.position.y - 0.08f, redStoneText.transform.position.z), Quaternion.identity);
+                Instantiate(plusEffect, transform.position, Quaternion.identity);
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
-                text.transform.SetParent(this.transform);
+                text.transform.SetParent(this.transform, false);
+                text.GetComponent<RectTransform>().localPosition = redStoneEffect.GetComponent<RectTransform>().transform.localPosition;
             }
 
             if (resource == ResourceType.Knowledge) {
                 GameObject text = new GameObject();
                 text =
-                  Instantiate(plusEffect, new Vector3(knowledgeText.transform.position.x + 0.08f, knowledgeText.transform.position.y - 0.08f, knowledgeText.transform.position.z), Quaternion.identity);
+                Instantiate(plusEffect, transform.position, Quaternion.identity); 
                 text.GetComponent<TMP_Text>().SetText("+"+ value.ToString());
                 text.transform.SetParent(this.transform);
+                text.GetComponent<RectTransform>().localPosition = knowledgeEffect.GetComponent<RectTransform>().transform.localPosition;
+
             }
 
             if  (resource == ResourceType.SkillPoints) {
                 GameObject text = new GameObject(); 
                 text =
-                  Instantiate(plusEffect, new Vector3(skillPointsText.transform.position.x + 0.08f, skillPointsText.transform.position.y - 0.08f, skillPointsText.transform.position.z), Quaternion.identity);
+                Instantiate(plusEffect, transform.position, Quaternion.identity); 
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
                 text.transform.SetParent(this.transform);
+                text.GetComponent<RectTransform>().localPosition = skillEffect.GetComponent<RectTransform>().transform.localPosition;
+
             }
             StartCoroutine(CountUpEffect(value, resource));
 
@@ -387,37 +417,42 @@ public class ResourceDisplay : MonoBehaviour
 
                 GameObject text = new GameObject();
                  text = 
-                Instantiate(minusEffect, new Vector3(goldText.transform.position.x + 0.08f, goldText.transform.position.y - 0.08f, goldText.transform.position.z), Quaternion.identity);
+                Instantiate(minusEffect, transform.position, Quaternion.identity);
 
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
                 text.transform.SetParent(this.transform);
+                text.GetComponent<RectTransform>().localPosition = goldEffect.GetComponent<RectTransform>().transform.localPosition;
+
             }
 
             if (resource == ResourceType.RedStone || resource == ResourceType.BankStone) {
                 GameObject text = new GameObject();
                 text =
-              Instantiate(minusEffect, new Vector3(redStoneText.transform.position.x + 0.08f, redStoneText.transform.position.y - 0.08f, redStoneText.transform.position.z), Quaternion.identity);
-
+                Instantiate(minusEffect, transform.position, Quaternion.identity);
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
                 text.transform.SetParent(this.transform);
+                text.GetComponent<RectTransform>().localPosition = redStoneEffect.GetComponent<RectTransform>().transform.localPosition;
+
             }
 
             if (resource == ResourceType.Knowledge) {
                 GameObject text = new GameObject();
                 text =
-                                  Instantiate(minusEffect, new Vector3(knowledgeText.transform.position.x + 0.08f, knowledgeText.transform.position.y - 0.08f, knowledgeText.transform.position.z), Quaternion.identity);
-
+                Instantiate(minusEffect, transform.position, Quaternion.identity);
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
                 text.transform.SetParent(this.transform);
+                text.GetComponent<RectTransform>().localPosition = knowledgeEffect.GetComponent<RectTransform>().transform.localPosition;
             }
 
             if (resource == ResourceType.SkillPoints) {
                 GameObject text = new GameObject();
                 text =
-                                  Instantiate(minusEffect, new Vector3(skillPointsText.transform.position.x + 0.08f, skillPointsText.transform.position.y - 0.08f, skillPointsText.transform.position.z), Quaternion.identity);
+                Instantiate(minusEffect, transform.position, Quaternion.identity);
 
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
                 text.transform.SetParent(this.transform);
+                text.GetComponent<RectTransform>().localPosition = skillEffect.GetComponent<RectTransform>().transform.localPosition;
+
             }
 
             StartCoroutine(CountDownEffect(value, resource));

@@ -13,6 +13,8 @@ public class ProgressBar : MonoBehaviour
 
     public ParticleSystem particleSystem;
     public BuildQueue buildQueue;
+    private NarrowNetwork network;
+    public GateClose gate;
 
     private bool firstBurst;
     private bool secondBurst;
@@ -21,8 +23,14 @@ public class ProgressBar : MonoBehaviour
 
     private void Start() {
         slider = GetComponent<Slider>();
-       
+        network = GameObject.Find("NarrowNetwork").GetComponent<NarrowNetwork>();
 
+
+        if (!FindObjectOfType<BuildQueue>()) {
+            network.BuildQueue();
+        }
+        
+        buildQueue = network.buildQueue;
       
     }
 
@@ -33,20 +41,16 @@ public class ProgressBar : MonoBehaviour
             particleSystem.Stop();
         }
 
+        if(buildQueue) {
+            if (buildQueue.buildQueue.Count >= 1) {
 
-
-        if (buildQueue.buildQueue.Count >= 1)
-            {
-
-
-         
 
 
                 if (slider.value != 0) {
 
-                if (!particleSystem.isPlaying) {
-                    particleSystem.Play();
-                }
+                    if (!particleSystem.isPlaying) {
+                        particleSystem.Play();
+                    }
                     /*
 
                 if (slider.value >= GetFloatPercentage(slider.maxValue, 33.33333333f)) {
@@ -81,12 +85,15 @@ public class ProgressBar : MonoBehaviour
 
                 }
                     */
-               
-               
+
+
+                }
             }
-        } 
-          
-     
+
+        }
+
+
+
     }
 
     private float GetFloatPercentage(float maxAmount, float desiredChange) {

@@ -38,6 +38,9 @@ TextureImporter:
   - first:
       213: -6703167245893330692
     second: SimpleOrnament_8
+  - first:
+      213: 4060857843687531815
+    second: SimpleOrnament_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,6 +94,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -175,7 +180,7 @@ TextureImporter:
         serializedVersion: 2
         x: 248
         y: 102
-        width: 108
+        width: 150
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -325,7 +330,7 @@ TextureImporter:
         width: 118
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,6 +338,27 @@ TextureImporter:
       bones: []
       spriteID: cf89e7e97e099f2a0800000000000000
       internalID: -6703167245893330692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SimpleOrnament_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 81
+        width: 108
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725aa5881b01b5830800000000000000
+      internalID: 4060857843687531815
       vertices: []
       indices: 
       edges: []

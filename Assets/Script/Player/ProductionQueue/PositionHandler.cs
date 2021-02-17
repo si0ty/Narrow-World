@@ -16,6 +16,7 @@ public class PositionHandler : MonoBehaviour
    
     void Start()
     {
+        buildQueue = GetComponentInParent<BuildQueue>();
         List<Vector3> waitingQueuePositionList = new List<Vector3>();
 
 

@@ -8,6 +8,10 @@ TagManager:
   - EnemyCollider
   - PlayerCollider
   - Death
+  - DemonPlayer
+  - KnightPlayer
+  - DemonPanel
+  - KnightPanel
   layers:
   - Default
   - TransparentFX
@@ -74,4 +78,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1268730935
+    locked: 0
+  - name: StartScreen
+    uniqueID: 1068847881
     locked: 0

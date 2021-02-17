@@ -24,6 +24,7 @@ public class ChestOpen : MonoBehaviour
 
     public TMP_Text timer;
     private bool counting = false;
+    private int minutesPassed;
 
     int mm;
     float ss;
@@ -35,27 +36,19 @@ public class ChestOpen : MonoBehaviour
         resourceManager = GameObject.Find("Player").GetComponent<PlayerResourceManager>();
 
 
-        StartCoroutine(LateSerialize());
-
-        
-    }
-
-    IEnumerator LateSerialize() {
-        yield return new WaitForSeconds(0.1f);
         CheckTimer();
 
-        if (resourceManager.goldReady) {
-            timer.DOFade(0, 0);
-            timerImage.GetComponent<Animator>().SetBool("Wub", true);
-        }
-
 
     }
 
+
     private void CheckTimer() {
-        if(resourceManager.timeStore.Hour + 1 <= System.DateTime.Now.Hour) {
+        if(resourceManager.timeStore.Hour != System.DateTime.Now.Hour || resourceManager.timeStore.Day != System.DateTime.Now.Day) {
             resourceManager.goldReady = true;
-           
+            spawned = false;
+            timer.DOFade(0, 0);
+            timerImage.GetComponent<Animator>().SetBool("Wub", true);
+            return;
         } else {
 
             LoadTimer();
@@ -63,20 +56,32 @@ public class ChestOpen : MonoBehaviour
     }
    
     private void LoadTimer() {
-      
-            int minutesPassed = 60  - System.DateTime.Now.Minute + resourceManager.timeStore.Minute;
-            int secondsPassed = 60 - System.DateTime.Now.Second + resourceManager.timeStore.Second;
+
+       System.DateTime nowMinutes = System.DateTime.Now; 
+            
+
+        if (nowMinutes.Minute > resourceManager.timeStore.Minute) {
+
+            minutesPassed = nowMinutes.Minute - resourceManager.timeStore.Minute;
 
             mm = 60 - minutesPassed;
-            ss = 60 - secondsPassed;
+            ss = System.DateTime.Now.Second;
 
-            counting = true;
+        }
+        else if (nowMinutes.Minute < resourceManager.timeStore.Minute) {
+
+            minutesPassed = (60 - resourceManager.timeStore.Minute) + nowMinutes.Minute;
+
+            mm = 60 - minutesPassed;
+            ss = 60 - Random.Range(0, 60);
+        }
+
+        counting = true;
 
     }
 
     private void SetTimer() {
 
-       
         mm = 59;
         ss = 60;
 
@@ -148,7 +153,14 @@ public class ChestOpen : MonoBehaviour
             }
            
             timer.SetText(mm.ToString() + ":" + seconds.ToString());
-            if(mm == 0) {
+            if(seconds <= 9) {
+                timer.SetText(mm.ToString() + ":0" + seconds.ToString());
+            }
+            if (mm <= 9) {
+                timer.SetText("0" + mm.ToString() + ":" + seconds.ToString());
+            }
+            if (mm == 0 && ss == 0) {
+                timerImage.GetComponent<Animator>().SetBool("Wub", true);
                 resourceManager.goldReady = true;
                 counting = false;
                 timer.DOFade(0, 2);

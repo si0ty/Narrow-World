@@ -33,10 +33,12 @@ public class MenuButton : MonoBehaviour
 
     public GameManager loader;
     public Player player;
+    private Button button;
 
     public void Awake() {
 
-
+       button = GetComponent<Button>();
+        button.interactable = true;
         StartCoroutine(Delay());
 
       
@@ -44,12 +46,12 @@ public class MenuButton : MonoBehaviour
         if (sceneLoader) {
            
                 loader = FindObjectOfType<GameManager>().GetComponent<GameManager>();
-           
-         
-         
+
+
+
             GetComponent<Button>().onClick.AddListener(() =>
-                
-            SceneSwitch(sceneIndex));
+             
+            SceneSwitch(sceneIndex)); 
 
            
        } 
@@ -86,7 +88,8 @@ public class MenuButton : MonoBehaviour
     }
 
     private void SetupPlayerName() {
-        if(playerNameInput.text.Length <= 10) {
+        button.interactable = false;
+        if (playerNameInput.text.Length <= 10) {
             FindObjectOfType<AudioManager>().Play("IntroClick");
             resources.playerName = playerNameInput.text;
             resources.SaveResources();
@@ -101,7 +104,8 @@ public class MenuButton : MonoBehaviour
 
 
     private void SceneSwitch(int sceneIndex) {
-        if(!intro) {
+        button.interactable = false;
+        if (!intro) {
             GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>().ScenePopUp(popUpText, sceneIndex, 90f);
         } else {
             if(player.logins == 1) {

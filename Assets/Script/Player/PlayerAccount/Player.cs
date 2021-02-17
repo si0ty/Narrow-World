@@ -9,7 +9,7 @@ using Mirror;
 
 public class Player : MonoBehaviour
 {
-    public string username;
+    public string playerName;
     public bool demon;
     public int level;
 
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public static Player instance;
 
     //ingame 
-    public int startMoney, startRedStone, startSkillPoints, startLevel ;
+    public int startLevel;
 
 
      //Ressource Storage
@@ -37,8 +37,7 @@ public class Player : MonoBehaviour
     public ResourceDisplay ingameDisplay;
     public ResourceDisplay menuDisplay;
 
-    public Transform enemyUI;
-    public Transform playerUI;
+   
 
     public HUD hud;
 
@@ -88,7 +87,7 @@ public class Player : MonoBehaviour
 
         level = resourceManager.playerLevel;
         logins = resourceManager.logins;
-        username = resourceManager.playerName;
+        playerName = resourceManager.playerName;
 
         logins++;
 

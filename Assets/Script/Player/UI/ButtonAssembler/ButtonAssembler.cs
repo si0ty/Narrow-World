@@ -18,9 +18,9 @@ public class ButtonAssembler : MonoBehaviour
     private List<Vector3> positionList;
 
 
-    private int firstRequierment = 0;
-    private int secondRequierment = 250;
-    private int thirdRequierment = 750;
+    private int firstRequierment;
+    private int secondRequierment;
+    private int thirdRequierment;
 
 
     public Button t1AssemblyButton;
@@ -31,8 +31,9 @@ public class ButtonAssembler : MonoBehaviour
     public GameObject t2Assembly;
     public GameObject t3Assembly;
 
-    private IngamePlayer player;
+   
     private PlayerResourceManager resources;
+    private IngamePlayer ingamePlayer;
 
     /*
     public void SetupAssembler() {
@@ -61,7 +62,7 @@ public class ButtonAssembler : MonoBehaviour
 
     public void UpdateVisuals() {
 
-        if (IngamePlayer.ingameResources[ResourceType.Knowledge] < secondRequierment) {
+        if (ingamePlayer.ingameResources[ResourceType.Knowledge] < secondRequierment) {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetLocked();
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetLocked();
             t2AssemblyButton.interactable = false;
@@ -69,7 +70,7 @@ public class ButtonAssembler : MonoBehaviour
             return;
         }
 
-        if (IngamePlayer.ingameResources[ResourceType.Knowledge] < thirdRequierment) {
+        if (ingamePlayer.ingameResources[ResourceType.Knowledge] < thirdRequierment) {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
             t2AssemblyButton.interactable = true;
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetLocked();
@@ -78,7 +79,7 @@ public class ButtonAssembler : MonoBehaviour
         }
 
 
-        if (IngamePlayer.ingameResources[ResourceType.Knowledge] >= thirdRequierment) {
+        if (ingamePlayer.ingameResources[ResourceType.Knowledge] >= thirdRequierment) {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
             t2AssemblyButton.interactable = true;
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
@@ -90,16 +91,27 @@ public class ButtonAssembler : MonoBehaviour
 
 
     void Start() {
-        player = FindObjectOfType<IngamePlayer>();
-        resources = player.GetComponent<PlayerResourceManager>();
+     
+        resources = GameObject.Find("Player").GetComponent<PlayerResourceManager>();
 
-        t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+        if (resources.gameObject.GetComponent<Player>().demon) {
+            ingamePlayer = GameObject.FindGameObjectWithTag("DemonPlayer").GetComponent<IngamePlayer>();
+
+        } else {
+            ingamePlayer = GameObject.FindGameObjectWithTag("KnightPlayer").GetComponent<IngamePlayer>();
+        }
+
+        firstRequierment = resources.requiredTier1;
+        secondRequierment = resources.requiredTier2;
+        thirdRequierment = resources.requiredTier3;
+
+        t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetGlow();
 
 
         t1AssemblyButton.GetComponent<Button>().onClick.AddListener(() => {
             t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetGlow();
-            t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
-            t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+           // t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+//            t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
 
             t1Assembly.SetActive(true);
             
@@ -114,8 +126,8 @@ public class ButtonAssembler : MonoBehaviour
 
         t2AssemblyButton.GetComponent<Button>().onClick.AddListener(() => {
             t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetGlow();
-            t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
-            t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+          //  t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+          //  t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
 
             t1Assembly.SetActive(false);
             t2Assembly.SetActive(true);
@@ -127,8 +139,8 @@ public class ButtonAssembler : MonoBehaviour
 
         t3AssemblyButton.GetComponent<Button>().onClick.AddListener(() => {
             t3AssemblyButton.gameObject.GetComponent<ButtonSelector>().SetGlow();
-            t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
-            t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+          //  t2AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
+         //   t1AssemblyButton.gameObject.GetComponent<ButtonSelector>().DefaultMaterial();
 
             t1Assembly.SetActive(false);
             t2Assembly.SetActive(false);
