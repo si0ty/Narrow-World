@@ -1,9 +1,10 @@
 ﻿using RTS;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat;
 
 
-public class PlayerValueSetter : MonoBehaviour
+public class PlayerValueSetter : NetworkBehaviour
 {
 
     public bool t1, t2, t3, legend;
@@ -121,28 +122,34 @@ public class PlayerValueSetter : MonoBehaviour
 
     }
 
+    [Command]
     public void DropGold(string amount) {
         if (amount == "small") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(smallGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(smallGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
 
         if (amount == "medium") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(mediumGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(mediumGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
 
         if (amount == "large") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(largeGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(largeGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
 
         if (amount == "larger") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(largerGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(largerGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
     }
 
+    [ClientRpc]
     public void GoldPickup(int amount) {
         ingamePlayer.AddResource(ResourceType.Money, amount, display);
         display.UpdateDisplay(amount, ResourceType.Money, false);
@@ -174,7 +181,10 @@ public class PlayerValueSetter : MonoBehaviour
             buildTime = (int)resourceManager.broadswordTrainSpeed;
             unitPrice = resourceManager.broadswordTrainCost;
 
-
+            playerCombat.attackRangeAddition1 = resourceManager.broadswordRange;
+                  playerCombat.attackRangeAddition2 = resourceManager.broadswordRange;
+            playerCombat.attackRangeAddition3 = resourceManager.broadswordRange;
+            playerCombat.attackRangeAddition4 = resourceManager.broadswordRange;
 
             return;
         }
@@ -197,6 +207,11 @@ public class PlayerValueSetter : MonoBehaviour
             buildTime = (int)resourceManager.runnerTrainSpeed;
             unitPrice = resourceManager.runnerTrainCost;
 
+            playerCombat.attackRangeAddition1 = resourceManager.runnerRange;
+            playerCombat.attackRangeAddition2 = resourceManager.runnerRange;
+            playerCombat.attackRangeAddition3 = resourceManager.runnerRange;
+            playerCombat.attackRangeAddition4 = resourceManager.runnerRange;
+
             return;
         }
 
@@ -217,6 +232,11 @@ public class PlayerValueSetter : MonoBehaviour
             unitPrice = resourceManager.shieldTrainCost;
             playerHealthSystem.pushback = (int)resourceManager.shieldPushback;
 
+
+            playerCombat.attackRangeAddition1 = resourceManager.shieldRange;
+            playerCombat.attackRangeAddition2 = resourceManager.shieldRange;
+            playerCombat.attackRangeAddition3 = resourceManager.shieldRange;
+            playerCombat.attackRangeAddition4 = resourceManager.shieldRange;
             return;
         }
 
@@ -241,6 +261,11 @@ public class PlayerValueSetter : MonoBehaviour
             buildTime = (int)resourceManager.broadswordCaptainTrainSpeed;
             unitPrice = resourceManager.broadswordCaptainTrainCost;
 
+            playerCombat.attackRangeAddition1 = resourceManager.broadswordCaptainRange;
+            playerCombat.attackRangeAddition2 = resourceManager.broadswordCaptainRange;
+            playerCombat.attackRangeAddition3 = resourceManager.broadswordCaptainRange;
+            playerCombat.attackRangeAddition4 = resourceManager.broadswordCaptainRange;
+
             return;
         }
 
@@ -261,6 +286,11 @@ public class PlayerValueSetter : MonoBehaviour
             buildTime = (int)resourceManager.runnerCaptainTrainSpeed;
             unitPrice = resourceManager.runnerCaptainTrainCost;
 
+            playerCombat.attackRangeAddition1 = resourceManager.runnerCaptainRange;
+            playerCombat.attackRangeAddition2 = resourceManager.runnerCaptainRange;
+            playerCombat.attackRangeAddition3 = resourceManager.runnerCaptainRange;
+            playerCombat.attackRangeAddition4 = resourceManager.runnerCaptainRange;
+
             return;
         }
 
@@ -280,6 +310,11 @@ public class PlayerValueSetter : MonoBehaviour
 
             buildTime = (int)resourceManager.shieldCaptainTrainSpeed;
             unitPrice = resourceManager.shieldCaptainTrainCost;
+
+            playerCombat.attackRangeAddition1 = resourceManager.shieldCaptainRange;
+            playerCombat.attackRangeAddition2 = resourceManager.shieldCaptainRange;
+            playerCombat.attackRangeAddition3 = resourceManager.shieldCaptainRange;
+            playerCombat.attackRangeAddition4 = resourceManager.shieldCaptainRange;
 
             return;
         }
@@ -306,6 +341,10 @@ public class PlayerValueSetter : MonoBehaviour
             buildTime = (int)resourceManager.broadswordHeroTrainSpeed;
             unitPrice = resourceManager.broadswordHeroTrainCost;
 
+            playerCombat.attackRangeAddition1 = resourceManager.broadswordHeroRange;
+            playerCombat.attackRangeAddition2 = resourceManager.broadswordHeroRange;
+            playerCombat.attackRangeAddition3 = resourceManager.broadswordHeroRange;
+            playerCombat.attackRangeAddition4 = resourceManager.broadswordHeroRange;
 
             return;
         }
@@ -327,6 +366,10 @@ public class PlayerValueSetter : MonoBehaviour
             buildTime = (int)resourceManager.runnerHeroTrainSpeed;
             unitPrice = resourceManager.runnerHeroTrainCost;
 
+            playerCombat.attackRangeAddition1 = resourceManager.runnerHeroRange;
+            playerCombat.attackRangeAddition2 = resourceManager.runnerHeroRange;
+            playerCombat.attackRangeAddition3 = resourceManager.runnerHeroRange;
+            playerCombat.attackRangeAddition4 = resourceManager.runnerHeroRange;
             return;
         }
 
@@ -345,6 +388,11 @@ public class PlayerValueSetter : MonoBehaviour
             playerCombat.startTimeBtwAttack = resourceManager.shieldHeroAttackSpeed;
             buildTime = (int)resourceManager.shieldHeroTrainSpeed;
             unitPrice = resourceManager.shieldHeroTrainCost;
+
+            playerCombat.attackRangeAddition1 = resourceManager.shieldHeroRange;
+            playerCombat.attackRangeAddition2 = resourceManager.shieldHeroRange;
+            playerCombat.attackRangeAddition3 = resourceManager.shieldHeroRange;
+            playerCombat.attackRangeAddition4 = resourceManager.shieldHeroRange;
 
             return;
         }

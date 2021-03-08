@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class EnemyMeleeMovement : MonoBehaviour
+public class EnemyMeleeMovement : NetworkBehaviour
 {
 
     [HideInInspector]
@@ -97,15 +98,16 @@ public class EnemyMeleeMovement : MonoBehaviour
                   
         if (collidertwo.gameObject.tag == "Player") {
             GetComponentInChildren<EnemyUnitHealthBar>().fill.SetActive(false);
-           
 
-          
+        
+
 
             anim.ResetTrigger("Attack1");
             anim.ResetTrigger("Attack2");
             anim.ResetTrigger("Attack3");
             anim.ResetTrigger("Attack4");
 
+            baseAnimation.WalkingAnim();
         }
     }
 
@@ -114,7 +116,7 @@ public class EnemyMeleeMovement : MonoBehaviour
         if(!enemyCombat.inRange && moveSpeed > 0f) {
                      
             transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
-                    baseAnimation.WalkingAnim();
+                  
                     
           
         }

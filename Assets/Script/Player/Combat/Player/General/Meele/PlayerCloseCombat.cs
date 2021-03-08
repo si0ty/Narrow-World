@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat;
 
 
 public class PlayerCloseCombat : NetworkBehaviour
 {
     public bool caster, supercaster;
 
-    
+
     public bool inRange;
     public Transform attackPoint;
     public LayerMask enemyLayers;
@@ -17,7 +18,7 @@ public class PlayerCloseCombat : NetworkBehaviour
     [HideInInspector]
     public float startTimeBtwAttack;
 
-    [HideInInspector]
+
     public int attackDamage;
 
     private int actualDamage;
@@ -31,7 +32,7 @@ public class PlayerCloseCombat : NetworkBehaviour
     public int critRate;
     [HideInInspector]
     public int critMin;
-    [HideInInspector]
+
     public int critMax;
 
     public GameObject critEffect;
@@ -41,8 +42,8 @@ public class PlayerCloseCombat : NetworkBehaviour
 
     public float normalCastRange;
     public float superCastRange;
-        
-  
+
+
     [HideInInspector]
     public int combo;
 
@@ -53,11 +54,11 @@ public class PlayerCloseCombat : NetworkBehaviour
     [HideInInspector]
     public float maxBtwCast;
     private float castBtw = 0;
-   
+
     [HideInInspector]
     public float maxBtwSuperCast;
     private float superCastBtw = 0;
-        
+
     private PlayerRayCast playerRayCast;
     private PlayerMeleeAnimations baseAnimation;
     private PlayerMeleeMovement playerMeleeMovement;
@@ -66,11 +67,11 @@ public class PlayerCloseCombat : NetworkBehaviour
     private int critDamage;
 
     private void Start() {
-        if(caster || supercaster) {
+        if (caster || supercaster) {
             playerRayCast = GetComponent<PlayerRayCast>();
             superCastBtw = maxBtwSuperCast;
         }
-      
+
         baseAnimation = GetComponent<PlayerMeleeAnimations>();
         playerMeleeMovement = GetComponent<PlayerMeleeMovement>();
     }
@@ -95,7 +96,7 @@ public class PlayerCloseCombat : NetworkBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == "Enemy") {
             inRange = false;
-           
+
         }
 
         if (other.gameObject.tag == "EnemyCastle") {
@@ -122,7 +123,7 @@ public class PlayerCloseCombat : NetworkBehaviour
             baseAnimation.IdleAnim();
         }
 
-        else {        
+        else {
             timeBtwAttack -= Time.deltaTime;
         }
 
@@ -131,10 +132,10 @@ public class PlayerCloseCombat : NetworkBehaviour
 
             if (playerRayCast.enemySpotted == true && inRange == false) {
 
-               
-                    castPoint.transform.position = new Vector3(playerRayCast.onceEnemyPosition.x, castPoint.transform.position.y, castPoint.transform.position.z);
-                    Debug.Log(castPoint.transform.position.ToString());
-               
+
+                castPoint.transform.position = new Vector3(playerRayCast.onceEnemyPosition.x, castPoint.transform.position.y, castPoint.transform.position.z);
+                Debug.Log(castPoint.transform.position.ToString());
+
                 if (caster == true) {
                     if (castBtw <= 0 && superCastBtw > 0) {
 
@@ -172,43 +173,47 @@ public class PlayerCloseCombat : NetworkBehaviour
         return setPercentage;
     }
 
+    [Command]
+    public void Attack() {
+        AttackEffect();
+    }
 
-    private void Attack() {
 
+    [ClientRpc]
+    private void AttackEffect() {
+        Debug.Log("PlayerAttack Triggered");
 
-       
-       
 
         if (combo == 1) {
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRangeAddition1, enemyLayers);
-            
+
             int mayCrit = new int();
             mayCrit = Random.Range(1, critRate + 1);
             Debug.Log(mayCrit.ToString());
-           
+
             if (mayCrit == 1) {
                 int critDamage = new int();
                 critDamage = Random.Range(critMin, critMax);
 
 
-               
-                actualDamage = critDamage + attackDamage;
-            
 
+                actualDamage = critDamage + attackDamage;
+
+/*
                 foreach (Collider2D enemy in hitEnemies) {
                     Instantiate(critEffect, enemy.transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
-                
 
-                }
+
+                } */
 
                 CinemachineShake.Instance.ShakeCamera(0.1f, 0.1f, false);
 
             }
             else {
-              
+
                 actualDamage = attackDamage;
-               
+
 
             }
 
@@ -216,10 +221,10 @@ public class PlayerCloseCombat : NetworkBehaviour
 
             foreach (Collider2D enemy in hitEnemies) {
                 Debug.Log("we hit" + enemy.name + "with " + actualDamage.ToString() + " damage");
-                Debug.Log("actual Damage was: " +  actualDamage);
+                Debug.Log("actual Damage was: " + actualDamage);
 
                 if (enemy.GetComponent<EnemyHealthSystem>() != null) {
-                    enemy.GetComponent<EnemyHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -260,16 +265,16 @@ public class PlayerCloseCombat : NetworkBehaviour
 
                 foreach (Collider2D enemy in hitEnemies) {
                     Instantiate(critEffect, enemy.transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
-               
+
 
                 }
 
                 CinemachineShake.Instance.ShakeCamera(0.1f, 0.1f, false);
             }
             else {
-               
+
                 actualDamage = attackDamage;
-               
+
 
             }
 
@@ -279,7 +284,7 @@ public class PlayerCloseCombat : NetworkBehaviour
                 Debug.Log("we hit" + enemy.name + "with " + actualDamage.ToString() + " damage");
 
                 if (enemy.GetComponent<EnemyHealthSystem>() != null) {
-                    enemy.GetComponent<EnemyHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -320,7 +325,7 @@ public class PlayerCloseCombat : NetworkBehaviour
 
                 foreach (Collider2D enemy in hitEnemies) {
                     Instantiate(critEffect, enemy.transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
-                 
+
 
                 }
 
@@ -328,18 +333,18 @@ public class PlayerCloseCombat : NetworkBehaviour
 
             }
             else {
-              
+
                 actualDamage = attackDamage;
-              
+
 
             }
 
             foreach (Collider2D enemy in hitEnemies) {
                 Debug.Log("we hit" + enemy.name + "with " + actualDamage.ToString() + " damage");
-              
+
 
                 if (enemy.GetComponent<EnemyHealthSystem>() != null) {
-                    enemy.GetComponent<EnemyHealthSystem>().TakeDamage(actualDamage);
+                    enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage(actualDamage);
 
 
                     if (critDamage < SetPercentage(critMax, 60)) {
@@ -367,7 +372,7 @@ public class PlayerCloseCombat : NetworkBehaviour
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRangeAddition4, enemyLayers);
 
 
-          
+
             int mayCrit = Random.Range(1, critRate + 1);
             Debug.Log(mayCrit.ToString());
 
@@ -380,7 +385,7 @@ public class PlayerCloseCombat : NetworkBehaviour
 
                 foreach (Collider2D enemy in hitEnemies) {
                     Instantiate(critEffect, enemy.transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
-               
+
 
                 }
 
@@ -388,15 +393,15 @@ public class PlayerCloseCombat : NetworkBehaviour
 
             }
             else {
-               
+
                 actualDamage = attackDamage;
-               
+
 
             }
 
             foreach (Collider2D enemy in hitEnemies) {
                 Debug.Log("we hit" + enemy.name + "with " + actualDamage.ToString() + " damage");
-                enemy.GetComponent<EnemyHealthSystem>().TakeDamage(actualDamage);
+                enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage(actualDamage);
 
                 if (critDamage < SetPercentage(critMax, 60)) {
                     enemy.GetComponent<EnemyHealthSystem>().NormalDmgEffect(actualDamage);
@@ -416,7 +421,13 @@ public class PlayerCloseCombat : NetworkBehaviour
 
     }
 
+    [Command]
     public void NormalCast() {
+        NormalCastEffect();
+    }
+
+    [ClientRpc]
+    public void NormalCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("NormalCast");
 
@@ -427,7 +438,7 @@ public class PlayerCloseCombat : NetworkBehaviour
             Debug.Log("we hit" + enemy.name);
 
             if (enemy.GetComponent<EnemyHealthSystem>() != null) {
-                enemy.GetComponent<EnemyHealthSystem>().TakeDamage((int)normalCastDmg);
+                enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage((int)normalCastDmg);
                 enemy.GetComponent<EnemyHealthSystem>().MagicDmgEffect(normalCastDmg);
             }
             else {
@@ -441,7 +452,13 @@ public class PlayerCloseCombat : NetworkBehaviour
         }
     }
 
+    [Command]
     public void SuperCast() {
+        SuperCastEffect();
+    }
+
+    [ClientRpc]
+    public void SuperCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("SuperCast");
 
@@ -451,7 +468,7 @@ public class PlayerCloseCombat : NetworkBehaviour
             Debug.Log("we hit" + enemy.name);
 
             if (enemy.GetComponent<EnemyHealthSystem>() != null) {
-                enemy.GetComponent<EnemyHealthSystem>().TakeDamage((int)superCastDmg);
+                enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage((int)superCastDmg);
                 enemy.GetComponent<EnemyHealthSystem>().MagicDmgEffect(superCastDmg);
             }
             else {

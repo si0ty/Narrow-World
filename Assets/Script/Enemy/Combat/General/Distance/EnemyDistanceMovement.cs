@@ -84,7 +84,7 @@ public class EnemyDistanceMovement : NetworkBehaviour
 
         if (!rayCast.enemySpotted && moveSpeed > 0f) {
             transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
-            baseAnimation.WalkingAnim();
+           
         }
 
 

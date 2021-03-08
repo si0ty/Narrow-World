@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat;
 
 public class PlayerDistanceAnimations : NetworkBehaviour
 {
@@ -85,7 +86,13 @@ public class PlayerDistanceAnimations : NetworkBehaviour
         this.tintFadeSpeed = tintFadeSpeed;
     }
 
+    [Command]
     public void WalkingAnim() {
+        WalkingAnimEffect();
+    }
+
+    [ClientRpc]
+    public void WalkingAnimEffect() {
         playerMovement.moveSpeed = playerMovement.walkSpeed ;
         
         anim.SetBool("Idle1", false);
@@ -103,7 +110,13 @@ public class PlayerDistanceAnimations : NetworkBehaviour
         
     }
 
+    [Command]
     public void RunningAnim() {
+        RunningAnimEffect();
+    }
+
+    [ClientRpc]
+    public void RunningAnimEffect() {
         playerMovement.moveSpeed = playerMovement.runSpeed;
 
         anim.SetBool("Idle1", false);
@@ -115,8 +128,13 @@ public class PlayerDistanceAnimations : NetworkBehaviour
         anim.SetBool("Walking", false);
     }
 
-
+    [Command]
     public void IdleAnim() {
+        IdleAnimEffect();
+    }
+
+    [ClientRpc]
+    public void IdleAnimEffect() {
         playerMovement.moveSpeed = 0f;
         anim.SetBool("Walking", false);
         anim.SetBool("Running", false);
@@ -180,7 +198,14 @@ public class PlayerDistanceAnimations : NetworkBehaviour
 
     }
 
+    [Command]
     public void ShootingAnim() {
+        ShootingAnimEffect();
+    }
+
+    [ClientRpc]
+    public void ShootingAnimEffect() {
+        AudioManager.instance.Play("BowDraw1");
         playerMovement.moveSpeed = 0f;
         anim.SetBool("Walking", false);
         anim.SetBool("Running", false);
@@ -193,8 +218,13 @@ public class PlayerDistanceAnimations : NetworkBehaviour
 
     }
 
-
+    [Command]
     public void NormalCastAnim() {
+        NormalCastAnimEffect();
+    }
+
+    [ClientRpc]
+    public void NormalCastAnimEffect() {
         playerMovement.moveSpeed = 0f;
         anim.SetBool("Walking", false);
         anim.SetBool("Running", false);
@@ -207,7 +237,13 @@ public class PlayerDistanceAnimations : NetworkBehaviour
 
     }
 
+    [Command]
     public void SuperCastAnim() {
+        SuperCastAnimEffect();
+    }
+
+    [ClientRpc]
+    public void SuperCastAnimEffect() {
         playerMovement.moveSpeed = 0f;
         anim.SetBool("Walking", false);
         anim.SetBool("Running", false);
@@ -220,12 +256,17 @@ public class PlayerDistanceAnimations : NetworkBehaviour
 
     }
 
+    [Command]
     public void HurtAnim() {
+
+        HurtAnimEffect();
        
-      
-        SetTintColor(new Color(1, 0, 0, 1f));
         }
 
+    [ClientRpc]
+    public void HurtAnimEffect() {
+        SetTintColor(new Color(1, 0, 0, 1f));
+    }
 
     IEnumerator DeathWait() {
         yield return new WaitForSeconds(3);
@@ -262,9 +303,13 @@ public class PlayerDistanceAnimations : NetworkBehaviour
         }
     }
 
-
-
+    [Command]
     public void Die() {
+        DieEffect();
+    }
+
+    [ClientRpc]
+    public void DieEffect() {
 
         anim.SetBool("Walking", false);
         anim.SetBool("Idle5", false);

@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 7574456003854969949}
   - component: {fileID: 7574456003854969947}
   - component: {fileID: 7574456003854969946}
+  - component: {fileID: 6008744903445773852}
   m_Layer: 0
   m_Name: Life
   m_TagString: Untagged
@@ -148,9 +149,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927866a59369a4583523927d311b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 7574456003931176786}
   fill: {fileID: 7574456004879246309}
+--- !u!114 &6008744903445773852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574456003854969948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &7574456003931176788
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +196,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7574456003931176788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7574456004879246306}
@@ -264,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7574456004048960357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 38.52}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 7574456004840662960}
@@ -447,6 +466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fb960720d91a04997661bed4b4ee5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   dropShadow: {fileID: 7574456004214388935}
   deathCount: 2
   idleCount: 1
@@ -467,6 +488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadd4ca6f4ba5ed48a4ba3de0cc140cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   moveSpeed: 0
   walkSpeed: 0.9
   runSpeed: 0
@@ -486,6 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee09f1db9e5554da86b63d1725be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: 
   melee: 1
   mage: 0
@@ -508,6 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825008aefb41e1d428c737ec62b196c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   t1: 1
   t2: 0
   t3: 0
@@ -771,7 +798,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &7574456004269377617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,7 +842,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7574456004656236386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 36.478912}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1.0000198, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7574456004879246306}

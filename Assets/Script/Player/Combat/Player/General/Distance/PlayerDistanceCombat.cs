@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat;
 
 public class PlayerDistanceCombat : NetworkBehaviour
 {
@@ -151,23 +152,34 @@ public class PlayerDistanceCombat : NetworkBehaviour
 
     }
 
-
+    [Command]
     public void Shoot() {
+        ShootEffect();
+    }
+
+    [ClientRpc]
+    public void ShootEffect() {
 
         if(valueSetter.archer == true) {
             projectilePrefab.GetComponent<Projectile>().playerPushback = (int)pushback;
         }
        
-        newArrow = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        GameObject newArrow = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
 
+        NetworkServer.Spawn(newArrow, connectionToClient);
 
        // newArrow.GetComponent<Projectile>().speed = projectileSpeed;
 
 
     }
 
-
+    [Command]
     public void NormalCast() {
+        NormalCastEffect();
+    }
+
+    [ClientRpc]
+    public void NormalCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("NormalCast");
 
@@ -177,12 +189,18 @@ public class PlayerDistanceCombat : NetworkBehaviour
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("we hit" + enemy.name);
            
-            enemy.GetComponent<EnemyHealthSystem>().TakeDamage((int)normalCastDmg);
+            enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage((int)normalCastDmg);
             enemy.GetComponent<EnemyHealthSystem>().MagicDmgEffect((int)normalCastDmg);
         }
     }
 
+    [Command]
     public void SuperCast() {
+        SuperCastEffect();
+    }
+
+    [ClientRpc]
+    public void SuperCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("SuperCast");
 
@@ -190,7 +208,7 @@ public class PlayerDistanceCombat : NetworkBehaviour
 
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("we hit" + enemy.name);
-            enemy.GetComponent<EnemyHealthSystem>().TakeDamage((int)superCastDmg);
+            enemy.GetComponent<EnemyHealthSystem>().CmdTakeDamage((int)superCastDmg);
             enemy.GetComponent<EnemyHealthSystem>().MagicDmgEffect((int)superCastDmg);
         }
     }

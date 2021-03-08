@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 
+using System;
+using NarrowWorld.Combat;
+
 public class PlayerUnitHealthBar : NetworkBehaviour
 {
-   //ALREADY TRÀNSLATED TO NETWORK // WORKING NOT CONFIRMED
+
     
     [Header("Refrences")]
     [SerializeField] private PlayerHealthSystem playerHealthSystem;
@@ -22,18 +25,19 @@ public class PlayerUnitHealthBar : NetworkBehaviour
     public GameObject fill;
 
 
-    [ClientRpc]
-    private void HandleHealthChanged(int currentHealth, int maxHealth) {
-        slider.value = (float)currentHealth / maxHealth;
-        HealthUpdate();
-    }
+
 
     void Start() {
-      
 
-        fill.SetActive(false);
-        playerHealthSystem = transform.parent.GetComponentInParent<PlayerHealthSystem>();
-        playerHealthSystem.EventHealthChanged += HandleHealthChanged;
+     if(transform.parent.GetComponentInParent<PlayerHealthSystem>() != null) {
+            playerHealthSystem = transform.parent.GetComponentInParent<PlayerHealthSystem>();
+        }
+    
+
+        
+
+
+        // playerHealthSystem.EventHealthChanged += HandleHealthChanged;
 
         if (!castle) {
 
@@ -47,17 +51,22 @@ public class PlayerUnitHealthBar : NetworkBehaviour
 
         slider = GetComponent<Slider>();
 
-
+        slider.value = playerHealthSystem.currentHealth;
         slider.maxValue = playerHealthSystem.maxHealth;
 
+        Debug.Log(playerHealthSystem.currentHealth.ToString());
 
+        fill.SetActive(false);
     }
 
-    private void Awake() {
-   
+/*
+    private void HandleHealthChanged(int currentHealth, int maxHealth) {
+        HealthUpdate();
+        slider.value = currentHealth / maxHealth;
+
+
     }
-
-
+*/
     IEnumerator TurnOff2() {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
@@ -69,12 +78,19 @@ public class PlayerUnitHealthBar : NetworkBehaviour
         fill.SetActive(false);
     }
 
+
    
-
     public void HealthUpdate() {
-      
+        HealthUpdateEffect();
+    }
 
+
+    public void HealthUpdateEffect() {
+
+        slider.value = playerHealthSystem.currentHealth;
         fill.SetActive(true);
+
+        
 
         if (playerHealthSystem.melee == true) {
 
@@ -99,11 +115,7 @@ public class PlayerUnitHealthBar : NetworkBehaviour
                 StartCoroutine(TurnOff());
             }
 
-        slider.value = playerHealthSystem.currentHealth;
-
-        if(playerHealthSystem.currentHealth <= 0) {
-            playerHealthSystem.EventHealthChanged -= HandleHealthChanged;
-        }
+       
 
     }
 

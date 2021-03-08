@@ -109,7 +109,7 @@ public class IngamePlayer : NetworkBehaviour
       
             if (Room.GamePlayers[0].IsReady && Room.GamePlayers[1].IsReady) {
             startUI = GameObject.Find("Startscreen").GetComponent<StartScreen>();
-            startUI.GetComponent<StartScreen>().Intro();
+          //  startUI.GetComponent<StartScreen>().Intro();
             ClientStartGame();
            
         }

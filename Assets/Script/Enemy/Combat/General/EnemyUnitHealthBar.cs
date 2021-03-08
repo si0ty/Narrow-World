@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
+using NarrowWorld.Combat;
 
-public class EnemyUnitHealthBar : MonoBehaviour
+
+public class EnemyUnitHealthBar : NetworkBehaviour
 {
 
 
@@ -13,9 +16,6 @@ public class EnemyUnitHealthBar : MonoBehaviour
     private EnemyRayCast enemyRayCast;
 
     public bool castle;
-   
-
-
 
     private Slider slider;
     
@@ -23,10 +23,24 @@ public class EnemyUnitHealthBar : MonoBehaviour
     public GameObject fill;
 
 
+    /*
+    private void HandleHealthChanged(object sender, EnemyHealthSystem.HealthChangedEventArgs e) {
+        HealthUpdate();
+        slider.value = e.Health / e.MaxHealth;
+    
+    } */
+
     void Start() {
     
         fill.SetActive(false);
-        enemyHealthSystem = transform.parent.GetComponentInParent<EnemyHealthSystem>();
+
+        if(transform.parent.GetComponentInParent<EnemyHealthSystem>() != null) {
+            enemyHealthSystem = transform.parent.GetComponentInParent<EnemyHealthSystem>();
+        }
+
+
+
+       // enemyHealthSystem.EventHealthChanged += HandleHealthChanged;
 
         if (!castle) {
             if (enemyHealthSystem.melee == true) { enemyCombat = transform.parent.GetComponentInParent<EnemyCloseCombat>(); }
@@ -40,29 +54,29 @@ public class EnemyUnitHealthBar : MonoBehaviour
 
         slider = GetComponent<Slider>();
 
-
+       
         slider.maxValue = enemyHealthSystem.maxHealth;
 
-
+        HealthUpdate();
 
     }
+
 
     IEnumerator TurnOff() {
         yield return new WaitForSeconds(5);
         fill.SetActive(false);
     }
 
-    private void Awake() {
-    
+ 
 
-        // slider.maxValue = enemyHealthSystem.maxHealth;
-
-
-
+   
+    public void HealthUpdate() {
+        HealthUpdateEffect();
     }
 
-    public void HealthUpdate() {
-    
+
+    public void HealthUpdateEffect() {
+        slider.value = enemyHealthSystem.currentHealth;
 
         fill.SetActive(true);
 
@@ -88,11 +102,9 @@ public class EnemyUnitHealthBar : MonoBehaviour
         else {
             StartCoroutine(TurnOff());
         }
-        
+
+      
     }
 
-    void LateUpdate() {
-        slider.value = enemyHealthSystem.currentHealth;
 
-    }
 }

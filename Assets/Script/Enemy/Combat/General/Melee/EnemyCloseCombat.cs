@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat;
 
 
 public class EnemyCloseCombat : NetworkBehaviour
@@ -15,7 +16,7 @@ public class EnemyCloseCombat : NetworkBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
-    [HideInInspector]
+  
     public int attackDamage;
 
     private int actualDamage;
@@ -174,8 +175,14 @@ public class EnemyCloseCombat : NetworkBehaviour
         return setPercentage;
     }
 
+    [Command]
+    public void Attack() {
+        AttackEffect();
+    }
 
-    private void Attack() {
+
+    [ClientRpc]
+    private void AttackEffect() {
         
 
        
@@ -198,7 +205,7 @@ public class EnemyCloseCombat : NetworkBehaviour
             }
             else {
                
-                actualDamage= attackDamage;
+                actualDamage = attackDamage;
              
 
             }
@@ -405,7 +412,13 @@ public class EnemyCloseCombat : NetworkBehaviour
 
     }
 
+    [Command]
     public void NormalCast() {
+        NormalCastEffect();
+    }
+
+    [ClientRpc]
+    public void NormalCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("NormalCast");
 
@@ -426,7 +439,13 @@ public class EnemyCloseCombat : NetworkBehaviour
         }
     }
 
+    [Command]
     public void SuperCast() {
+        SuperCastEffect();
+    }
+
+    [ClientRpc]
+    public void SuperCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("SuperCast");
 

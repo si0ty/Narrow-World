@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NarrowWorld.Combat;
+using Mirror;
 
 
-public class Projectile : MonoBehaviour
+public class Projectile : NetworkBehaviour
 {
 
     public string projectileName;
@@ -25,7 +27,7 @@ public class Projectile : MonoBehaviour
 
     void Awake() {
         rBody.velocity = transform.right * speed;
-
+      
         timer = timerLength;
     }
 
@@ -35,9 +37,9 @@ public class Projectile : MonoBehaviour
 
                 hitSomething = true;
                 arrowcollider.GetComponent<EnemyHealthSystem>().NormalDmgEffect(damage);
-                arrowcollider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
+                arrowcollider.GetComponent<EnemyHealthSystem>().CmdTakeDamage(damage);
 
-
+                AudioManager.instance.Play("ArrowhitArmor");
 
                 if (arrowcollider.GetComponent<EnemyMeleeMovement>() != null) {
                 arrowcollider.GetComponent<EnemyMeleeMovement>().PushBack(playerPushback);
@@ -76,8 +78,8 @@ public class Projectile : MonoBehaviour
                 } else {
                     arrowcollider.GetComponent<PlayerCastleHealthSystem>().TakeDamage(damage);
                 }
-             
-             
+
+                AudioManager.instance.Play("ArrowhitArmor");
 
 
 

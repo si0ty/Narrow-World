@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat;
 
 public class EnemyDistanceCombat : NetworkBehaviour
 {
@@ -69,7 +70,7 @@ public class EnemyDistanceCombat : NetworkBehaviour
     void Update() {
 
         if (castPoint != null) {
-            castPoint.transform.position = new Vector3(enemyRayCast.onceEnemyPosition.x, castPoint.transform.position.y, castPoint.transform.position.z);
+            castPoint.transform.localPosition = new Vector3(enemyRayCast.onceEnemyPosition.x, castPoint.transform.localPosition.y, castPoint.transform.localPosition.z);
 
         }
 
@@ -126,21 +127,31 @@ public class EnemyDistanceCombat : NetworkBehaviour
        
     }
 
-
+    [Command]
     public void Shoot() {
+        ShootEffect();
+    }
+
+    [ClientRpc]
+    public void ShootEffect() {
 
         GameObject newArrow = new GameObject();
         newArrow = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         newArrow.GetComponent<Projectile>().speed = projectileSpeed;
     }
 
-
+    [Command]
     public void NormalCast() {
+        NormalCastEffect();
+    }
+
+    [ClientRpc]
+    public void NormalCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("NormalCast");
 
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(castPoint.transform.position, normalCastRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(castPoint.transform.localPosition, normalCastRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("we hit" + enemy.name);
@@ -149,11 +160,17 @@ public class EnemyDistanceCombat : NetworkBehaviour
         }
     }
 
+    [Command]
     public void SuperCast() {
+        SuperCastEffect();
+    }
+
+    [ClientRpc]
+    public void SuperCastEffect() {
 
         castPoint.GetComponent<Animator>().SetTrigger("SuperCast");
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(castPoint.transform.position, superCastRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(castPoint.transform.localPosition, superCastRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("we hit" + enemy.name);
@@ -167,7 +184,7 @@ public class EnemyDistanceCombat : NetworkBehaviour
         if (castPoint == null) {
             return;
         } else {
-            Gizmos.DrawWireSphere(castPoint.transform.position, normalCastRange);
+            Gizmos.DrawWireSphere(castPoint.transform.localPosition, normalCastRange);
         }
            
        

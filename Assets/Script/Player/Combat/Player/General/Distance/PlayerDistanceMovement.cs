@@ -61,9 +61,9 @@ public class PlayerDistanceMovement : NetworkBehaviour
 
     }
 
-    /*
+  
     private void OnTriggerStay2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Player" && collision.gameObject.name != "PlayerCastle") {
 
 
             distanceXBetween = transform.position.x - collision.gameObject.transform.position.x;
@@ -74,7 +74,7 @@ public class PlayerDistanceMovement : NetworkBehaviour
 
         }
     }
-    */
+    
 
 
     private void OnTriggerEnter2D(Collider2D collider) {
@@ -85,7 +85,7 @@ public class PlayerDistanceMovement : NetworkBehaviour
 
         }
 
-        if (collider.gameObject.tag == "Player" && collider.gameObject.name != "PlayerbigCastle") {
+        if (collider.gameObject.tag == "Player" && collider.gameObject.name != "PlayerCastle") {
 
             walkBack = false;
             baseAnimation.IdleAnim();
@@ -105,7 +105,7 @@ public class PlayerDistanceMovement : NetworkBehaviour
         anim.ResetTrigger("SuperCast");
         
 
-        if (collidertwo.gameObject.tag == "Player") {
+        if (collidertwo.gameObject.tag == "Player" && collidertwo.gameObject.name != "PlayerCastle") {
            
             StartCoroutine(Wait());
 
@@ -125,6 +125,12 @@ public class PlayerDistanceMovement : NetworkBehaviour
          
 
 
+        }
+
+
+        if (walkBack) {
+            transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
+            baseAnimation.WalkingAnim();
         }
 
         if (canRun == true) {

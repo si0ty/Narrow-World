@@ -28,6 +28,9 @@ public class Intro : MonoBehaviour
 
     public float panelFadeOutLength;
 
+    public Animator planet;
+    public float planetStopPoint;
+
     void Awake() {
        
 
@@ -35,46 +38,58 @@ public class Intro : MonoBehaviour
 
         volume.SetActive(false);
         startPoint = new Vector2(transform.position.x, transform.position.y);
-        logo.DOFade(0, 0);
+       
         StartCoroutine(Delay2());
 
         button.gameObject.GetComponent<Button>().interactable = false;
 
-       
-     
+
+
+
       
-    
        
         
+    }
+
+    private void Start() {
+        StopPlanet();
+    }
+
+    public void StopPlanet() {
+
+        StartCoroutine(Stop());
+        
+    }
+
+    IEnumerator Stop() {
+        yield return new WaitForSeconds(planetStopPoint);
+        planet.speed = 0;
     }
 
     IEnumerator Delay2() {
       
-        yield return new WaitForSeconds(1);
-        logo.DOFade(1, logoFadeInLength).SetEase(Ease.InOutSine);
-        yield return new WaitForSeconds(logoFadeInLength);
-        logo.DOFade(0, logoFadeOutLength).SetEase(Ease.InOutSine);
+        
+     
+        yield return new WaitForSeconds(logoFadeInLength - 1 );
+       
 
         RideDown();
 
-        yield return new WaitForSeconds(logoFadeInLength + logoFadeOutLength);
+        yield return new WaitForSeconds(3);
 
         volume.SetActive(true);
         panel.DOFade(0, panelFadeOutLength);
 
-        yield return new WaitForSeconds(beginPanLength);
+       
         
 
     }
         
-       
 
-       
-    
 
     private void RideDown() {
-        transform.DOMoveY(endHeight, beginPanLength).SetEase(Ease.InOutSine);
-        transform.GetComponent<CinemachineShake>().ShakeCamera(3f, beginPanLength, true);
+        transform.DOMoveY(endHeight, beginPanLength).SetEase(Ease.OutSine);
+        transform.GetComponent<CinemachineShake>().ShakeCamera(3f, beginPanLength + 2, true);
 
       
     }
@@ -100,7 +115,7 @@ public class Intro : MonoBehaviour
             if (random == 1) {
 
             
-               audioManager.Play("SlowTheme2");
+               AudioManager.instance.Play("SlowTheme2");
 
               
             
@@ -108,8 +123,8 @@ public class Intro : MonoBehaviour
             }
             if (random == 2) {
 
-              
-              audioManager.Play("FastTheme2");
+
+                AudioManager.instance.Play("FastTheme2");
 
              
             }

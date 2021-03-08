@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4699970889368195026}
   - component: {fileID: 6252519137996897138}
   - component: {fileID: 7250380795266983494}
+  - component: {fileID: -6342678091346990659}
   m_Layer: 10
   m_Name: StoneDemon
   m_TagString: Enemy
@@ -36,7 +37,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4573409570545928557}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 40.363113}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4573409572300361935}
@@ -176,6 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee09f1db9e5554da86b63d1725be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: RockDemon
   melee: 1
   mage: 0
@@ -198,6 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fb960720d91a04997661bed4b4ee5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   dropShadow: {fileID: 4573409571251116721}
   deathCount: 2
   idleCount: 2
@@ -340,6 +345,47 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 0
   animator: {fileID: 0}
+--- !u!114 &-6342678091346990659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573409570545928557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825008aefb41e1d428c737ec62b196c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  t1: 0
+  t2: 0
+  t3: 1
+  legend: 0
+  imp: 0
+  shaman: 0
+  skeletonBroadsword: 0
+  skeletonArcher: 0
+  stoneDemon: 0
+  clawDemon: 0
+  axeDemon: 0
+  ghostDemon: 0
+  redStoneDemon: 1
+  heroMage: 0
+  heroDemon: 0
+  epReward: 100
+  buildTime: 1
+  unitPrice: 200
+  smallGold: 0
+  mediumGold: 0
+  largeGold: 1
+  largerGold: 0
+  smallGoldDrop: {fileID: 0}
+  mediumGoldDrop: {fileID: 0}
+  largeGoldDrop: {fileID: 3461468207964248443, guid: 78d48d0627c587f4996dc34207bc354f,
+    type: 3}
+  largerGoldDrop: {fileID: 0}
 --- !u!1 &4573409570699721443
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927866a59369a4583523927d311b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 4573409571451201113}
   fill: {fileID: 4573409570798317501}

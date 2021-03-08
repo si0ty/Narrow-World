@@ -38,7 +38,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8588359429941848895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25.053114}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 8588359430213778060}
@@ -136,7 +136,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0029557645, y: -0.014881879}
+  m_Offset: {x: 0.0029557645, y: -0.014103547}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -147,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13469696, y: 0.33458728}
+  m_Size: {x: 0.13469696, y: 0.3330306}
   m_EdgeRadius: 0
 --- !u!95 &8588359429941848903
 Animator:
@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee09f1db9e5554da86b63d1725be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: ShamanDemon
   melee: 0
   mage: 1
@@ -289,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd273825fa2948468bfefe1b5c60e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   sightStart: {fileID: 8588359431313850370}
   sightEnd: {fileID: 8588359431643212297}
   enemySpotted: 0
@@ -306,6 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825008aefb41e1d428c737ec62b196c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   t1: 1
   t2: 0
   t3: 0
@@ -324,11 +330,12 @@ MonoBehaviour:
   epReward: 100
   buildTime: 5
   unitPrice: 10
-  smallGold: 0
+  smallGold: 1
   mediumGold: 0
   largeGold: 0
   largerGold: 0
-  smallGoldDrop: {fileID: 0}
+  smallGoldDrop: {fileID: 1716674455474879665, guid: 69be826ffd6f0664a8a546fa592b95fb,
+    type: 3}
   mediumGoldDrop: {fileID: 0}
   largeGoldDrop: {fileID: 0}
   largerGoldDrop: {fileID: 0}
@@ -810,6 +817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927866a59369a4583523927d311b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 8588359430553768692}
   fill: {fileID: 8588359431414158376}

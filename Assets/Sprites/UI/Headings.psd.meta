@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -3765269551696812419
     second: Headings_7
+  - first:
+      213: -4381932230162030308
+    second: Headings_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -79,6 +82,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -271,7 +276,7 @@ TextureImporter:
         width: 127
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,7 +297,7 @@ TextureImporter:
         width: 178
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,6 +305,27 @@ TextureImporter:
       bones: []
       spriteID: d76648fba431fbbc0800000000000000
       internalID: -3765269551696812419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Headings_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 346
+        width: 146
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c116b576adf3033c0800000000000000
+      internalID: -4381932230162030308
       vertices: []
       indices: 
       edges: []

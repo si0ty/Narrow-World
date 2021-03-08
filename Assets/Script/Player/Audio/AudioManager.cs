@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
 	public static AudioManager instance;
 
 	public Sound[] sounds;
+	public float fadeOutTime;
 
 	void Awake() {
 		if (instance != null) {
@@ -45,6 +46,30 @@ public class AudioManager : MonoBehaviour
 	}
 
 
+	public void AudioFadeOut ()
+	{
+			foreach (Sound s in sounds) {
+			if(s.source.isPlaying) {
+				StartCoroutine(FadeOut(s.source, fadeOutTime));
+            }
+			}
+
+	}
+
+	public IEnumerator FadeOut(AudioSource audioSource, float fadeOutTime) {
+		float startVolume = audioSource.volume;
+
+		while (audioSource.volume > 0) {
+			audioSource.volume -= startVolume * Time.deltaTime / fadeOutTime;
+
+			yield return null;
+		}
+
+		audioSource.Stop();
+		audioSource.volume = startVolume;
+		
+	}
+
 	public void PlayRandomSong() {
 		int random = new int();
 		random = UnityEngine.Random.Range(1, 6);
@@ -80,7 +105,7 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	public void RandomGoldSound() {
+	public void RandomGoldPickSound() {
 		int random = new int();
 		random = UnityEngine.Random.Range(1, 6);
 
@@ -109,7 +134,7 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	public void RandomArmorhitSound() {
+	public void RandomSwordHeavyImpact() {
 		int random = new int();
 		random = UnityEngine.Random.Range(1, 6);
 
@@ -162,6 +187,34 @@ public class AudioManager : MonoBehaviour
 		else if (random == 5) {
 
 			FindObjectOfType<AudioManager>().Play("SwordhitBody5");
+		}
+	}
+
+	public void RandomSwordswing() {
+		int random = new int();
+		random = UnityEngine.Random.Range(1, 6);
+
+		if (random == 1) {
+			FindObjectOfType<AudioManager>().Play("Sword1");
+		}
+		else if (random == 2) {
+
+			FindObjectOfType<AudioManager>().Play("Sword2");
+		}
+
+		else if (random == 3) {
+
+			FindObjectOfType<AudioManager>().Play("Sword3");
+		}
+
+		else if (random == 4) {
+
+			FindObjectOfType<AudioManager>().Play("Sword4");
+		}
+
+		else if (random == 5) {
+
+			FindObjectOfType<AudioManager>().Play("Sword5");
 		}
 	}
 

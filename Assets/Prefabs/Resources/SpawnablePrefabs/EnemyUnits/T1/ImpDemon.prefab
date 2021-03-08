@@ -426,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295399459372679997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 38.52}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 295399459985985347}
@@ -610,6 +610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fb960720d91a04997661bed4b4ee5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   dropShadow: {fileID: 295399459334355340}
   deathCount: 1
   idleCount: 1
@@ -649,6 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee09f1db9e5554da86b63d1725be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: 
   melee: 1
   mage: 0
@@ -671,6 +675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825008aefb41e1d428c737ec62b196c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   t1: 1
   t2: 0
   t3: 0
@@ -689,11 +695,12 @@ MonoBehaviour:
   epReward: 100
   buildTime: 10
   unitPrice: 10
-  smallGold: 0
+  smallGold: 1
   mediumGold: 0
   largeGold: 0
   largerGold: 0
-  smallGoldDrop: {fileID: 0}
+  smallGoldDrop: {fileID: 1716674455474879665, guid: 69be826ffd6f0664a8a546fa592b95fb,
+    type: 3}
   mediumGoldDrop: {fileID: 0}
   largeGoldDrop: {fileID: 0}
   largerGoldDrop: {fileID: 0}
@@ -870,6 +877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927866a59369a4583523927d311b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 295399459228560175}
   fill: {fileID: 295399459283237458}

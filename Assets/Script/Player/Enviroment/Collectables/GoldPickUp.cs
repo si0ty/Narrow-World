@@ -42,7 +42,15 @@ public class GoldPickUp : NetworkBehaviour
                     collision.gameObject.GetComponent<PlayerValueSetter>().GoldPickup(goldAmount);
                 }
 
-             
+
+                if (collision.gameObject.GetComponent<EnemyValueSetter>() != null) {
+                    collision.gameObject.GetComponent<EnemyValueSetter>().GoldPickup(goldAmount);
+                }
+
+                Debug.LogError(collision.gameObject.name + "picked up " + goldAmount.ToString() + "gold");
+
+                AudioManager.instance.RandomGoldPickSound();
+
                 anim.SetBool("Pickup", true);
                 // GetComponent<Collider2D>().enabled = false;
 

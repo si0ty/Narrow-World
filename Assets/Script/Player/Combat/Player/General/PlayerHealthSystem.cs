@@ -2,28 +2,32 @@
 using UnityEngine.UI;
 using TMPro;
 using Mirror;
+using System;
+
+
+namespace NarrowWorld.Combat
+{
 
 public class PlayerHealthSystem : NetworkBehaviour
 {
     public string unitName;
     public bool melee, mage, distance;
-
+        private int damage;
+    
     public int maxHealth;
 
     [SyncVar]
-    public int currentHealth;
+   public int currentHealth;
 
-    public delegate void HealthChangedDelegate(int currentHealth, int maxHealth);
+        public delegate void HealthChangedDelegate(int currentHealth, int maxHealth);
 
-    public event HealthChangedDelegate EventHealthChanged;
+        public event HealthChangedDelegate EventHealthChanged;
 
-   
-    [Server]
-    private void SetHealth(int value) {
-        currentHealth = value;
-        EventHealthChanged?.Invoke(currentHealth, maxHealth);
-    }
 
+
+
+    public bool IsDead => currentHealth == 0f;
+   // public int Health => currentHealth;
 
     private SpriteRenderer spriteRenderer;
 
@@ -42,6 +46,8 @@ public class PlayerHealthSystem : NetworkBehaviour
 
     public float positionOffset;
     public int pushback = -40;
+
+   
 
     void Start() {
 
@@ -67,14 +73,20 @@ public class PlayerHealthSystem : NetworkBehaviour
             playerDistanceMovement = GetComponent<PlayerDistanceMovement>();
         }
 
-
+            CmdHealthSet();
     }
 
-    private void Awake() {
-       
-    }
+        [Command]
+        private void CmdHealthSet() {
+            HealthSet();
+        }
 
-    public void NormalDmgEffect(int damage) {
+        [ClientRpc]
+        private void HealthSet() {
+            currentHealth = maxHealth;
+        }
+
+        public void NormalDmgEffect(int damage) {
         GameObject points = Instantiate(damagePopUp, transform.position + new Vector3(positionOffset, .5f, 0), Quaternion.identity);
         points.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Normal");
         points.transform.SetParent(worldCanvas.transform, true);
@@ -102,85 +114,105 @@ public class PlayerHealthSystem : NetworkBehaviour
         points.transform.GetChild(0).GetComponent<TMP_Text>().SetText(damage.ToString());
     }
 
-    [Command]
+
+   [Command]
     public void CmdDealDamage(int damage) {
+         
 
-       
-        currentHealth -= damage;
+            this.damage = damage;
+            currentHealth -= damage;
 
-        SetHealth(Mathf.Max(currentHealth - damage, 0));
+            DamageAnimations();
 
-        if (healthBar.transform.GetChild(0).GetComponentInChildren<Image>().enabled == false) {
-            healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
         }
 
-        if (melee == true) {
+        [ClientRpc]
+        public void DamageAnimations() {
 
-            if(playerMeleeAnimations != null) {
-                playerMeleeAnimations.HurtAnim();
+            ImpactSound();
+
+            if (healthBar.transform.GetChild(0).GetComponentInChildren<Image>().enabled == false) {
+                healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
+            }
+
+            GameObject points = Instantiate(damagePopUp, transform.position + new Vector3(0.5f, .5f, 0), Quaternion.identity) as GameObject;
+            points.transform.SetParent(worldCanvas.transform, true);
+            points.transform.GetChild(0).GetComponent<TMP_Text>().SetText(damage.ToString());
+
+            if (melee == true) {
+
+                if (playerMeleeAnimations != null) {
+                    playerMeleeAnimations.HurtAnim();
+                    if (currentHealth > 0) {
+                        if (GetComponent<PlayerMeleeMovement>() != null) {
+                            GetComponent<PlayerMeleeMovement>().PushBack(pushback + 10);
+                        }
+                        else {
+                            GetComponent<PlayerDistanceMovement>().PushBack(pushback + 10);
+                        }
+
+                    }
+
+                }
+
+                healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
+
+
+                if (currentHealth <= 0) {
+                    playerMeleeAnimations.Die();
+                }
+            }
+
+            if (distance == true) {
+
+                playerDistanceAnimations.HurtAnim();
+                healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
                 if (currentHealth > 0) {
                     if (GetComponent<PlayerMeleeMovement>() != null) {
-                        GetComponent<PlayerMeleeMovement>().PushBack(pushback + 10);
+                        GetComponent<PlayerMeleeMovement>().PushBack(pushback);
                     }
                     else {
-                        GetComponent<PlayerDistanceMovement>().PushBack(pushback + 10);
+                        GetComponent<PlayerDistanceMovement>().PushBack(pushback);
                     }
 
                 }
 
-            }
 
-            healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
-    
-
-            if (currentHealth <= 0) {
-                playerMeleeAnimations.Die();
-            }
-        }
-
-        if (distance == true) {
-
-            playerDistanceAnimations.HurtAnim();
-            healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
-            if (currentHealth > 0) {
-                if(GetComponent<PlayerMeleeMovement>() != null) {
-                    GetComponent<PlayerMeleeMovement>().PushBack(pushback);
-                } else {
-                    GetComponent<PlayerDistanceMovement>().PushBack(pushback);
+                if (currentHealth <= 0) {
+                    playerDistanceAnimations.Die();
                 }
-               
             }
 
+            if (mage == true) {
 
-            if (currentHealth <= 0) {
-                playerDistanceAnimations.Die();
-            }
-        }
+                playerDistanceAnimations.HurtAnim();
+                healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
 
-        if (mage == true) {
+                if (currentHealth > 0) {
+                    if (GetComponent<PlayerMeleeMovement>() != null) {
+                        GetComponent<PlayerMeleeMovement>().PushBack(pushback);
+                    }
+                    else {
+                        GetComponent<PlayerDistanceMovement>().PushBack(pushback);
+                    }
 
-            playerDistanceAnimations.HurtAnim();
-            healthBar.GetComponent<PlayerUnitHealthBar>().HealthUpdate();
-
-              if (currentHealth > 0) {
-                if(GetComponent<PlayerMeleeMovement>() != null) {
-                    GetComponent<PlayerMeleeMovement>().PushBack(pushback);
-                } else {
-                    GetComponent<PlayerDistanceMovement>().PushBack(pushback);
                 }
-               
+
+                if (currentHealth <= 0) {
+                    playerDistanceAnimations.Die();
+                }
             }
 
-            if (currentHealth <= 0) {
-                playerDistanceAnimations.Die();
+        }
+
+        public void ImpactSound() {
+            if (GetComponent<PlayerCloseCombat>()) {
+                AudioManager.instance.RandomSwordHeavyImpact();
+            } else if (GetComponent<PlayerDistanceCombat>()) {
+                AudioManager.instance.RandomBodyhitSound();
             }
         }
 
-        
 
     }
-
-
-   
-
 }

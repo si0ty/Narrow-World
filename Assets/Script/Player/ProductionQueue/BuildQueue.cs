@@ -53,9 +53,9 @@ public class BuildQueue : NetworkBehaviour
        
 
 
-        if (!player.demon) {
+        
             gate = progressBar.gate;
-        }
+        
       
 
         currentBuildTime = 0;
@@ -103,7 +103,7 @@ public class BuildQueue : NetworkBehaviour
 
 
 
-                if (gate) {
+                if (gate && buildQueue[0].GetComponent<Icon>().unitPrefab.GetComponent<NarrowWorld.Combat.PlayerHealthSystem>() != null) {
                     gate.OpenGate();
                 }
 

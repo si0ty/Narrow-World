@@ -3,19 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Mirror;
+using System;
 
-public class EnemyHealthSystem : MonoBehaviour
+
+namespace NarrowWorld.Combat { 
+public class EnemyHealthSystem : NetworkBehaviour
 {
     public string unitName;
     public bool melee, mage, distance;
 
     public GameObject healthBar;
+        private int damage;
 
+    public int maxHealth;
 
-    public float maxHealth;
-    public float currentHealth;
+    [SyncVar]
+    public int currentHealth;
 
-    private SpriteRenderer spriteRenderer;
+        public delegate void HealthChangedDelegate(int currentHealth, int maxHealth);
+
+        public event HealthChangedDelegate EventHealthChanged;
+
+        private SpriteRenderer spriteRenderer;
 
     private EnemyMeleeAnimations enemyMeleeAnimations;
     private EnemyDistanceAnimations enemyDistanceAnimations;
@@ -30,10 +40,12 @@ public class EnemyHealthSystem : MonoBehaviour
     public float positionOffset;
 
 
+
+
     void Start() {
         worldCanvas = GameObject.Find("WorldUI").transform.gameObject;
 
-        currentHealth = maxHealth;
+      
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (melee == true) {
@@ -52,12 +64,22 @@ public class EnemyHealthSystem : MonoBehaviour
             enemyDistanceAnimations = GetComponent<EnemyDistanceAnimations>();
             enemyDistanceMovement = GetComponent<EnemyDistanceMovement>();
         }
+            CmdHealthSet();
+
+        }
+
+        [Command]
+        private void CmdHealthSet() {
+            HealthSet();
+        }
+
+        [ClientRpc]
+        private void HealthSet() {
+            currentHealth = maxHealth;
+        }
 
 
-    }
-
-
-    public void NormalDmgEffect(int damage) {
+        public void NormalDmgEffect(int damage) {
         GameObject points = Instantiate(damagePopUp, transform.position + new Vector3(positionOffset, .5f, 0), Quaternion.identity) as GameObject;
         points.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Normal");
         points.transform.SetParent(worldCanvas.transform, true);
@@ -85,78 +107,97 @@ public class EnemyHealthSystem : MonoBehaviour
         points.transform.GetChild(0).GetComponent<TMP_Text>().SetText(damage.ToString());
     }
 
+    [Command]
+    public void CmdTakeDamage(int damage) {
+   
+            this.damage = damage;
+           currentHealth -= damage;
 
-    public void TakeDamage(int damage) {
+            DamageAnimations();
 
-        currentHealth -= damage;
-       
+            // EventHealthChanged?.Invoke(currentHealth, maxHealth);
 
-        if (healthBar.transform.GetChild(0).GetComponentInChildren<Image>().enabled == false) {
-            healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
+
+
         }
 
-       
+        [ClientRpc]
+        public void DamageAnimations() {
 
-        GameObject points = Instantiate(damagePopUp, transform.position + new Vector3(0.5f, .5f, 0), Quaternion.identity) as GameObject;
-        points.transform.SetParent(worldCanvas.transform, true);
-        points.transform.GetChild(0).GetComponent<TMP_Text>().SetText(damage.ToString()); 
+            ImpactSound();
 
-        if (melee == true) {
-
-            enemyMeleeAnimations.HurtAnim();
-            healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
-
-            if(currentHealth > 0) {
-                GetComponent<EnemyMeleeMovement>().PushBack(60f);
+            if (healthBar.transform.GetChild(0).GetComponentInChildren<Image>().enabled == false) {
+                healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
             }
 
-          
 
-            if (currentHealth <= 0) {
-                enemyMeleeAnimations.Die();
+            GameObject points = Instantiate(damagePopUp, transform.position + new Vector3(0.5f, .5f, 0), Quaternion.identity) as GameObject;
+            points.transform.SetParent(worldCanvas.transform, true);
+            points.transform.GetChild(0).GetComponent<TMP_Text>().SetText(damage.ToString());
+
+            if (melee == true) {
+
+                enemyMeleeAnimations.HurtAnim();
+                healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
+
+                if (currentHealth > 0) {
+                    GetComponent<EnemyMeleeMovement>().PushBack(60f);
+                }
+
+
+
+                if (currentHealth <= 0) {
+                    enemyMeleeAnimations.Die();
+                }
+
             }
-            
+
+
+            if (distance == true) {
+
+                enemyDistanceAnimations.HurtAnim();
+                healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
+
+
+                if (currentHealth > 0) {
+                    GetComponent<EnemyDistanceMovement>().PushBack(70f);
+                }
+
+
+                if (currentHealth <= 0) {
+                    enemyDistanceAnimations.Die();
+                }
+            }
+
+
+
+            if (mage == true) {
+
+                enemyDistanceAnimations.HurtAnim();
+                healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
+                GetComponent<EnemyDistanceMovement>().PushBack(3f);
+
+                if (currentHealth > 0) {
+                    GetComponent<EnemyDistanceMovement>().PushBack(70f);
+                }
+
+
+                if (currentHealth <= 0) {
+                    enemyDistanceAnimations.Die();
+                }
+            }
+
         }
 
-     
-          if (distance == true) {
 
-              enemyDistanceAnimations.HurtAnim();
-            healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
-          
-
-            if (currentHealth > 0) {
-                GetComponent<EnemyDistanceMovement>().PushBack(70f);
+        public void ImpactSound() {
+            if (GetComponent<EnemyCloseCombat>()) {
+                AudioManager.instance.RandomSwordHeavyImpact();
             }
-
-
-            if (currentHealth <= 0) {
-                  enemyDistanceAnimations.Die();
-              }
-          }
-
-
-
-        if (mage == true) {
-
-            enemyDistanceAnimations.HurtAnim();
-            healthBar.GetComponent<EnemyUnitHealthBar>().HealthUpdate();
-            GetComponent<EnemyDistanceMovement>().PushBack(3f);
-
-            if (currentHealth > 0) {
-                GetComponent<EnemyDistanceMovement>().PushBack(70f);
-            }
-
-
-            if (currentHealth <= 0) {
-                enemyDistanceAnimations.Die();
+            else if (GetComponent<EnemyDistanceCombat>()) {
+                AudioManager.instance.RandomBodyhitSound();
             }
         }
-
 
     }
-
-
-
-
 }

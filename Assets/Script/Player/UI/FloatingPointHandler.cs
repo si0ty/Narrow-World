@@ -7,7 +7,7 @@ public class FloatingPointHandler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Destroy(this, 3f);
+        Destroy(gameObject, 3f);
 
     }
 

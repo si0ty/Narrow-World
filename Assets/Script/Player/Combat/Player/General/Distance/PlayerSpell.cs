@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NarrowWorld.Combat;
+using Mirror;
 
 
-public class PlayerSpell : MonoBehaviour
+public class PlayerSpell : NetworkBehaviour
 {
     public string spellName;
 
@@ -42,7 +44,7 @@ public class PlayerSpell : MonoBehaviour
             
             hitSomething = true;
             spellAnim.SetTrigger("Hit");
-            collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
+            collider.GetComponent<EnemyHealthSystem>().CmdTakeDamage(damage);
             collider.gameObject.GetComponent<EnemyMeleeMovement>().moveSpeed = collider.gameObject.GetComponent<EnemyMeleeMovement>().walkSpeed - 0.10f; 
            
             rBody.isKinematic = true;

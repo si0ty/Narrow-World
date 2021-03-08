@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NarrowWorld.Combat; 
 
 public class EnemySpell : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class EnemySpell : MonoBehaviour
 
             hitSomething = true;
             spellAnim.SetTrigger("Hit");
-            collider.GetComponent<EnemyHealthSystem>().TakeDamage(damage);
+            collider.GetComponent<EnemyHealthSystem>().CmdTakeDamage(damage);
             collider.gameObject.GetComponent<EnemyMeleeMovement>().moveSpeed = collider.gameObject.GetComponent<EnemyMeleeMovement>().moveSpeed - 0.10f;
 
             rBody.isKinematic = true;

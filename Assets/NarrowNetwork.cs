@@ -156,18 +156,12 @@ public class NarrowNetwork : NetworkManager
 
             NetworkRoomPlayerLobby roomPlayerInstance = Instantiate(roomPlayerPrefab);
 
-            
-
             roomPlayerInstance.IsLeader = isLeader;
 
            NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);
 
-            
-            
-
         }
-      
-        
+
     }
 
     public override void OnServerDisconnect(NetworkConnection conn) {
@@ -201,7 +195,6 @@ public class NarrowNetwork : NetworkManager
         yield return new WaitForSeconds(0.5f);
 
         //  gamePlayerPrefab.GetComponent<IngamePlayer>().InitializePlayer();
-
     }
 
     public void BuildQueue() {
@@ -215,17 +208,14 @@ public class NarrowNetwork : NetworkManager
                 return;
             }
 
-        resources =  GameObject.Find("Player").GetComponent<PlayerResourceManager>();
+            resources =  GameObject.Find("Player").GetComponent<PlayerResourceManager>();
             
             resources.SaveResources();
             ServerChangeScene("War of Ages");
-           
 
             Debug.Log("Game should start");
-      
 
     }
-
 
 
     public override void ServerChangeScene(string newSceneName) {
@@ -242,8 +232,8 @@ public class NarrowNetwork : NetworkManager
 
                 NetworkServer.ReplacePlayerForConnection(conn, gameplayerInstance.gameObject, true);
 
-               // conn.identity.gameObject.GetComponent<NetworkIdentity>().AssignClientAuthority(conn);
-
+                // conn.identity.gameObject.GetComponent<NetworkIdentity>().AssignClientAuthority(conn);
+               
             }
         }
 
@@ -251,5 +241,6 @@ public class NarrowNetwork : NetworkManager
 
     }
 
-
+   
+   
 }

@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2712623736412622551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 40.363113}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 2712623736944776796}
@@ -292,6 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee09f1db9e5554da86b63d1725be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: 
   melee: 1
   mage: 0
@@ -333,6 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fb960720d91a04997661bed4b4ee5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   dropShadow: {fileID: 2712623737438664193}
   deathCount: 2
   idleCount: 1
@@ -353,6 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825008aefb41e1d428c737ec62b196c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   t1: 0
   t2: 1
   t3: 0
@@ -629,6 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927866a59369a4583523927d311b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 2712623736506364251}
   fill: {fileID: 2712623737549789785}

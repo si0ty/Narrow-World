@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using NarrowWorld.Combat; 
 
 public class PlayerMeleeMovement : NetworkBehaviour
 {
@@ -65,10 +66,10 @@ public class PlayerMeleeMovement : NetworkBehaviour
 
 
 
-    /*
+   
 
     private void OnTriggerStay2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Player" && collision.gameObject.name != "PlayerCastle") {
 
 
             distanceXBetween = transform.position.x - collision.gameObject.transform.position.x;
@@ -80,8 +81,9 @@ public class PlayerMeleeMovement : NetworkBehaviour
         }
     }
 
-    */
+   
 
+    
     private void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.tag == "Enemy") {
            
@@ -91,7 +93,7 @@ public class PlayerMeleeMovement : NetworkBehaviour
 
         }
 
-        if (collider.gameObject.tag == "Player" && collider.GetComponent<PlayerHealthSystem>() != null /* && collider.gameObject.GetComponent<PlayerDistanceCombat>() == null*/) {
+        if (collider.gameObject.tag == "Player" && collider.gameObject.name != "PlayerCastle" /* && collider.gameObject.GetComponent<PlayerDistanceCombat>() == null*/) {
 
             walkBack = false;
             baseAnimation.IdleAnim();
@@ -112,9 +114,9 @@ public class PlayerMeleeMovement : NetworkBehaviour
         anim.ResetTrigger("Attack3");
         anim.ResetTrigger("Attack4");
 
+        baseAnimation.WalkingAnim();
 
-
-        if (collidertwo.gameObject.tag == "Player") {
+        if (collidertwo.gameObject.tag == "Player" && collidertwo.gameObject.name != "PlayerCastle") {
 
             StartCoroutine(Wait());
 

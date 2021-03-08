@@ -49,9 +49,14 @@ public class MenuButton : MonoBehaviour
 
 
 
-            GetComponent<Button>().onClick.AddListener(() =>
+            GetComponent<Button>().onClick.AddListener(() => {
+                button.interactable = false;
+                SceneSwitch(sceneIndex);
+
+
+            }
              
-            SceneSwitch(sceneIndex)); 
+           ); 
 
            
        } 
@@ -96,7 +101,7 @@ public class MenuButton : MonoBehaviour
             loader.LoadScene(2);
         } else {
             GameObject.Find("PopUpSystem").GetComponent<PopUpSystem>().SimplePopUp("Maximum 10 characters allowed", 90f);
-
+            button.interactable = true;
         }
 
 

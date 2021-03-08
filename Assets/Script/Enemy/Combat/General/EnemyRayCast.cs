@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class EnemyRayCast : MonoBehaviour
+public class EnemyRayCast : NetworkBehaviour
 {
     public Transform sightStart, sightEnd;
 

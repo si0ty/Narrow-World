@@ -201,6 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6927866a59369a4583523927d311b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   castle: 0
   image: {fileID: 1447797347920137989}
   fill: {fileID: 1447797347820214704}
@@ -427,6 +429,7 @@ GameObject:
   - component: {fileID: 3448660434640862841}
   - component: {fileID: 705252233779073293}
   - component: {fileID: 7329437427023176727}
+  - component: {fileID: 8679364207870333243}
   m_Layer: 10
   m_Name: HeroMageDemon
   m_TagString: Enemy
@@ -442,7 +445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447797347339295249}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.19968796}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 3.6183705, y: 3.618371, z: 1.206123}
   m_Children:
   - {fileID: 1447797346945080776}
@@ -565,6 +568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ee09f1db9e5554da86b63d1725be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   unitName: HeroDemon
   melee: 1
   mage: 0
@@ -606,6 +611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd273825fa2948468bfefe1b5c60e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   sightStart: {fileID: 1447797347949223317}
   sightEnd: {fileID: 1447797348264013398}
   enemySpotted: 0
@@ -768,6 +775,47 @@ MonoBehaviour:
   syncAngularVelocity: 1
   clearAngularVelocity: 0
   angularVelocitySensitivity: 0.1
+--- !u!114 &8679364207870333243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447797347339295249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825008aefb41e1d428c737ec62b196c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  t1: 0
+  t2: 0
+  t3: 1
+  legend: 0
+  imp: 0
+  shaman: 0
+  skeletonBroadsword: 0
+  skeletonArcher: 0
+  stoneDemon: 0
+  clawDemon: 0
+  axeDemon: 0
+  ghostDemon: 0
+  redStoneDemon: 0
+  heroMage: 1
+  heroDemon: 0
+  epReward: 100
+  buildTime: 1
+  unitPrice: 100
+  smallGold: 0
+  mediumGold: 0
+  largeGold: 1
+  largerGold: 0
+  smallGoldDrop: {fileID: 0}
+  mediumGoldDrop: {fileID: 0}
+  largeGoldDrop: {fileID: 3461468207964248443, guid: 78d48d0627c587f4996dc34207bc354f,
+    type: 3}
+  largerGoldDrop: {fileID: 0}
 --- !u!1 &1447797347820214704
 GameObject:
   m_ObjectHideFlags: 0

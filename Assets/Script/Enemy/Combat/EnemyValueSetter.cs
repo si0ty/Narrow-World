@@ -1,8 +1,9 @@
 ﻿using RTS;
 using UnityEngine;
+using Mirror;
+using NarrowWorld.Combat;
 
-
-public class EnemyValueSetter : MonoBehaviour
+public class EnemyValueSetter : NetworkBehaviour
 {
 
     public bool t1, t2, t3, legend;
@@ -49,9 +50,15 @@ public class EnemyValueSetter : MonoBehaviour
     private PlayerResourceManager resourceManager;
     private Transform spawnStore;
 
+    public ResourceDisplay display;
+    public IngamePlayer ingamePlayer;
+
     private void Start() {
 
         spawnStore = GameObject.Find("Demons").transform;
+        ingamePlayer = GameObject.FindGameObjectWithTag("DemonPlayer").GetComponent<IngamePlayer>();
+        display = GameObject.Find("IngameResourceDisplay").GetComponent<ResourceDisplay>();
+
         transform.SetParent(spawnStore);
         Vector3 spawnPoint = new Vector3();
         spawnPoint = new Vector3(-0.73f, 0.18f, 0);
@@ -113,26 +120,41 @@ public class EnemyValueSetter : MonoBehaviour
 
     }
 
+    [Command]
     public void DropGold(string amount) {
         if (amount == "small") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(smallGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(smallGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
 
         if (amount == "medium") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(mediumGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(mediumGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
 
         if (amount == "large") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(largeGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(largeGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
 
         if (amount == "larger") {
             Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            Instantiate(largerGoldDrop, dropPosition, Quaternion.identity);
+            GameObject gold = Instantiate(largerGoldDrop, dropPosition, Quaternion.identity);
+            NetworkServer.Spawn(gold, connectionToClient);
         }
+    }
+
+    [Command]
+    public void GoldPickup(int amount) {
+        ingamePlayer.AddResource(ResourceType.Money, amount, display);
+        display.UpdateDisplay(amount, ResourceType.Money, false);
+    }
+
+    public void ExpPickUp(int amount) {
+        ingamePlayer.AddResource(ResourceType.Knowledge, amount, display);
     }
 
 
@@ -152,8 +174,11 @@ public class EnemyValueSetter : MonoBehaviour
             enemyCombat.critRate = resourceManager.impCritRate;
           
             enemyCombat.startTimeBtwAttack = resourceManager.impAttackSpeed;
-          
-        
+
+            enemyCombat.attackRangeAddition1 = resourceManager.impRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.impRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.impRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.impRange;
 
             return;
         }
@@ -169,6 +194,11 @@ public class EnemyValueSetter : MonoBehaviour
             enemyCombat.critRate = resourceManager.skeletonBroadswordCritRate;
           
             enemyCombat.startTimeBtwAttack = resourceManager.skeletonBroadswordAttackSpeed;
+
+            enemyCombat.attackRangeAddition1 = resourceManager.skeletonBroadswordRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.skeletonBroadswordRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.skeletonBroadswordRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.skeletonBroadswordRange;
 
             return;
         }
@@ -191,6 +221,11 @@ public class EnemyValueSetter : MonoBehaviour
          
             enemyCombat.startTimeBtwAttack = resourceManager.stoneDemonAttackSpeed;
 
+            enemyCombat.attackRangeAddition1 = resourceManager.stoneDemonRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.stoneDemonRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.stoneDemonRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.stoneDemonRange;
+
             return;
         }
 
@@ -207,6 +242,11 @@ public class EnemyValueSetter : MonoBehaviour
           
             enemyCombat.startTimeBtwAttack = resourceManager.clawDemonAttackSpeed;
 
+            enemyCombat.attackRangeAddition1 = resourceManager.clawDemonRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.clawDemonRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.clawDemonRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.clawDemonRange;
+
             return;
         }
 
@@ -222,6 +262,11 @@ public class EnemyValueSetter : MonoBehaviour
 
             enemyCombat.startTimeBtwAttack = resourceManager.axeDemonAttackSpeed;
 
+            enemyCombat.attackRangeAddition1 = resourceManager.axeDemonRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.axeDemonRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.axeDemonRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.axeDemonRange;
+
             return;
         }
 
@@ -236,6 +281,11 @@ public class EnemyValueSetter : MonoBehaviour
             enemyCombat.critRate = resourceManager.ghostDemonCritRate;
          
             enemyCombat.startTimeBtwAttack = resourceManager.ghostDemonAttackSpeed;
+
+            enemyCombat.attackRangeAddition1 = resourceManager.ghostDemonRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.ghostDemonRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.ghostDemonRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.ghostDemonRange;
 
             return;
         }
@@ -257,6 +307,10 @@ public class EnemyValueSetter : MonoBehaviour
           
             enemyCombat.startTimeBtwAttack = resourceManager.redStoneDemonAttackSpeed;
 
+            enemyCombat.attackRangeAddition1 = resourceManager.redStoneDemonRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.redStoneDemonRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.redStoneDemonRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.redStoneDemonRange;
 
             return;
         }
@@ -272,6 +326,11 @@ public class EnemyValueSetter : MonoBehaviour
             enemyCombat.critRate = resourceManager.heroDemonCritRate;
          
             enemyCombat.startTimeBtwAttack = resourceManager.heroDemonAttackSpeed;
+
+            enemyCombat.attackRangeAddition1 = resourceManager.heroDemonRange;
+            enemyCombat.attackRangeAddition2 = resourceManager.heroDemonRange;
+            enemyCombat.attackRangeAddition3 = resourceManager.heroDemonRange;
+            enemyCombat.attackRangeAddition4 = resourceManager.heroDemonRange;
 
             return;
         }

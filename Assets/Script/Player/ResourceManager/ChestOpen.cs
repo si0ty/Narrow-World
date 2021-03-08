@@ -12,6 +12,7 @@ public class ChestOpen : MonoBehaviour
     private Animator anim;
     public GameObject gold;
     private GameObject goldSpawn;
+    public float goldSpawnDelay;
 
     public Transform spawnPoint;
     private PlayerResourceManager resourceManager;
@@ -122,17 +123,20 @@ public class ChestOpen : MonoBehaviour
             timer.DOFade(1, 2);
         }
 
-       
+    }
 
+    IEnumerator SpawnDelay() {
+        yield return new WaitForSeconds(goldSpawnDelay);
+        goldSpawn = Instantiate(gold, spawnPoint.transform.position, Quaternion.identity);
+        goldSpawn.transform.SetParent(gameObject.transform);
 
     }
 
     private void GoldSpawn() {
-        
-        GameObject goldSpawn = Instantiate(gold, spawnPoint.transform.position, Quaternion.identity);
 
-        this.goldSpawn = goldSpawn;
-        goldSpawn.transform.SetParent(gameObject.transform);
+        StartCoroutine(SpawnDelay());
+       
+        
     }
 
     private void DestroyGold() {

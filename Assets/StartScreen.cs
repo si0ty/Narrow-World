@@ -86,11 +86,29 @@ public class StartScreen : NetworkBehaviour
 
             knightNameDisplay.SetText(network.GamePlayers[0].playerName);
             knightLevelDisplay.SetText(network.GamePlayers[0].playerLevel.ToString());
+
         }
 
+        if (knightNameDisplay.text.Length > 5) {
+            knightNameDisplay.fontSize = 90;
+        }
+        else if (knightNameDisplay.text.Length > 9) {
+            knightNameDisplay.fontSize = 70;
+        }
 
-        readyButton.onClick.AddListener(() =>
-        ingamePlayer.CmdReadyUp());
+        if (demonNameDisplay.text.Length > 5) {
+            demonNameDisplay.fontSize = 90;
+        }
+        else if (demonNameDisplay.text.Length > 9) {
+            demonNameDisplay.fontSize = 70;
+        }
+
+        readyButton.onClick.AddListener(() => {
+            ReadyUp();
+            
+            }
+        );
+       
 
         Debug.Log("Names should be set");
 
@@ -98,6 +116,15 @@ public class StartScreen : NetworkBehaviour
 
         ingamePlayer.playerReadyTexts = playerReadyTexts;
         ingamePlayer.UpdateDisplay();
+
+      
+        AudioManager.instance.AudioFadeOut();
+        AudioManager.instance.Play("EpicTheme1");
+    }
+
+    private void ReadyUp() {
+        ingamePlayer.CmdReadyUp();
+        readyButton.interactable = false;
     }
    
     public void Intro() {
@@ -106,7 +133,6 @@ public class StartScreen : NetworkBehaviour
     public IEnumerator FadeOut() {
      
 
-     
         canvasGroup.DOFade(0, fadeOutDuration);
 
         if (player.demon) {
@@ -130,7 +156,7 @@ public class StartScreen : NetworkBehaviour
       
             if (ingamePlayer.isLocalPlayer && ingamePlayer.index == 1) {
                 ingamePlayer.AddStartResources();
-
+            GameObject.Find("Timer").GetComponent<Timer>().counting = true;
             }
        
         Destroy(this.gameObject, 5f);

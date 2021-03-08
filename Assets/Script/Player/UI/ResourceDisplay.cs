@@ -90,38 +90,42 @@ public class ResourceDisplay : MonoBehaviour
             }
         }
 
-        /*
-        UpdateDisplay(0, ResourceType.Money, false);
-        UpdateDisplay(0, ResourceType.RedStone, false);
        
-        UpdateDisplay(0, ResourceType.Knowledge, false);
-        */
     }
  
 
     IEnumerator CountUpEffect(int value, ResourceType resource) {
+
         
-        if(!counting && ingameMenu) {
-            displayScore = ingamePlayer.ingameResources[resource] - value;
+
+        if (!counting && ingameMenu) {
+            
+            int check = ingamePlayer.ingameResources[resource] - value;
+
+            if (check <= 0) {
+                displayScore = 0;
+            } else {
+                displayScore = ingamePlayer.ingameResources[resource] - value;
+
+            }
+
             counting = true;
+
+            Debug.LogError("Amount of " + resource.ToString() + ":" + ingamePlayer.ingameResources[resource].ToString());
+
+
         }
 
 
-        if(ingameMenu) {
+
+        if (ingameMenu) {
             while (true) {
                 if (counting) {
 
-                    displayScore++;
-
-                    if (ingamePlayer.ingameResources[resource] == displayScore) {
-                        counting = false;
-                        Debug.Log("Stopped");
-                        StopAllCoroutines();
-                    }
 
                     //Increment the display score by 1
 
-                   
+                    displayScore++;
 
                     if (resource == ResourceType.Money) {
                         goldText.SetText(displayScore.ToString());
@@ -139,7 +143,16 @@ public class ResourceDisplay : MonoBehaviour
                         skillPointsText.SetText(displayScore.ToString());
                     }
 
-               
+
+
+                    if (ingamePlayer.ingameResources[resource] == displayScore) {
+                        counting = false;
+                        goldText.SetText(ingamePlayer.ingameResources[ResourceType.Money].ToString());
+                        redStoneText.SetText(ingamePlayer.ingameResources[ResourceType.RedStone].ToString());
+                        knowledgeText.SetText(ingamePlayer.ingameResources[ResourceType.Knowledge].ToString());
+
+                        StopAllCoroutines();
+                    }
 
                 }
                 if (value < 500) {
@@ -158,23 +171,36 @@ public class ResourceDisplay : MonoBehaviour
             }
         } else {
 
+          
+
             if (!counting && !ingameMenu) {
-                displayScore = Player.bankResources[resource] - value;
+              
+
+                int check = Player.bankResources[resource] - value;
+
+                if (check <= 0) {
+                    displayScore = 0;
+                }
+                else {
+                    displayScore = Player.bankResources[resource] - value;
+
+                }
+
+
                 counting = true;
+
+                Debug.LogError("Amount of " + resource.ToString() + ":" + Player.bankResources[resource].ToString());
+                
+
             }
 
             while (true) {
                 if (counting) {
+
+
                     displayScore++;
 
-                    if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore) {
-                        counting = false;
-                        StopAllCoroutines();
-
-                    }
-
-
-                    if (resource == ResourceType.BankMoney && Player.bankResources[ResourceType.BankMoney] > displayScore) {
+                    if (resource == ResourceType.BankMoney) {
                       
 
 
@@ -183,7 +209,7 @@ public class ResourceDisplay : MonoBehaviour
                      
                     }
 
-                    if (resource == ResourceType.BankStone && Player.bankResources[ResourceType.BankStone] > displayScore) {
+                    if (resource == ResourceType.BankStone) {
                         
 
 
@@ -192,7 +218,7 @@ public class ResourceDisplay : MonoBehaviour
                         
                     }
 
-                    if (resource == ResourceType.SkillPoints && Player.bankResources[ResourceType.SkillPoints] > displayScore) {
+                    if (resource == ResourceType.SkillPoints) {
                         
 
 
@@ -201,7 +227,16 @@ public class ResourceDisplay : MonoBehaviour
                        
                     }
 
-                
+
+                    if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore) {
+                        counting = false;
+                        
+                        goldText.SetText(Player.bankResources[ResourceType.BankMoney].ToString());
+                        redStoneText.SetText(Player.bankResources[ResourceType.BankStone].ToString());
+                        skillPointsText.SetText(Player.bankResources[ResourceType.SkillPoints].ToString());
+
+                        StopAllCoroutines();
+                    }
 
                 }
 
@@ -221,38 +256,43 @@ public class ResourceDisplay : MonoBehaviour
             }
 
 
-
         }
 
-
+     
     }
 
     IEnumerator CountDownEffect(int value, ResourceType resource) {
 
         if (!counting && ingameMenu) {
-            displayScore = new int();
-            displayScore = ingamePlayer.ingameResources[resource] + value;
+           
+
+            if (ingamePlayer.ingameResources[resource] < value) {
+                int i = new int();
+                i = ingamePlayer.ingameResources[resource] - value;
+
+                displayScore = ingamePlayer.ingameResources[resource] + i;
+            }
+
+
+            else {
+                displayScore = ingamePlayer.ingameResources[resource] + value;
+
+            }
+
             counting = true;
         }
 
         if (ingameMenu) {
            
 
-
             while (true) {
                 if (counting) {
                     //Increment the display score by 
 
+                    
+               
+
                     displayScore--;
-                    if (ingamePlayer.ingameResources[resource] == displayScore) {
-                        counting = false;
-                        Debug.Log("Stopped");
-                        StopAllCoroutines();
-                    }
-
-
-                  
-
 
                     if (resource == ResourceType.Money) {
                         goldText.SetText(displayScore.ToString());
@@ -270,7 +310,16 @@ public class ResourceDisplay : MonoBehaviour
                         skillPointsText.SetText(displayScore.ToString());
                     }
 
+                    if (ingamePlayer.ingameResources[resource] == displayScore || displayScore == 0) {
+                        counting = false;
+                        Debug.Log("Stopped");
 
+                        goldText.SetText(ingamePlayer.ingameResources[ResourceType.Money].ToString());
+                        redStoneText.SetText(ingamePlayer.ingameResources[ResourceType.RedStone].ToString());
+                        knowledgeText.SetText(ingamePlayer.ingameResources[ResourceType.Knowledge].ToString());
+
+                        StopAllCoroutines();
+                    }
 
                 }
 
@@ -284,17 +333,34 @@ public class ResourceDisplay : MonoBehaviour
                // I used .2 secs but you can update it as fast as you want
             }
         } else {
-            if(!counting) {
+            if (!counting) {
                 displayScore = new int();
-                displayScore = Player.bankResources[resource] + value;
+
+
+                if (Player.bankResources[resource] <= value) {
+                    int i = new int();
+                    i = Player.bankResources[resource] - value;
+
+                  displayScore = Player.bankResources[resource] + i;
+                        }
+                   
+                
+                else {
+                    displayScore = Player.bankResources[resource] + value;
+
+                }
+
+
                 counting = true;
             }
-            
+
             while (true) {
                 if(counting) {
-                  
-                        displayScore--;
 
+
+                   
+
+                    displayScore--;
 
 
                     if (resource == ResourceType.BankMoney && Player.bankResources[ResourceType.BankMoney] < displayScore) {
@@ -317,20 +383,20 @@ public class ResourceDisplay : MonoBehaviour
 
                     if (resource == ResourceType.SkillPoints && Player.bankResources[ResourceType.SkillPoints] < displayScore) {
                        
-                            
-
-                            skillPointsText.SetText(displayScore.ToString());
+              skillPointsText.SetText(displayScore.ToString());
                       
 
                     }
 
-
-
-                    if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore) {
+                    if (Player.bankResources[ResourceType.BankMoney] == displayScore || Player.bankResources[ResourceType.BankStone] == displayScore || Player.bankResources[ResourceType.SkillPoints] == displayScore || displayScore == 0) {
                         counting = false;
                         Debug.Log("Stopped");
-                        StopAllCoroutines();
 
+                        goldText.SetText(Player.bankResources[ResourceType.BankMoney].ToString());
+                        redStoneText.SetText(Player.bankResources[ResourceType.BankStone].ToString());
+                        skillPointsText.SetText(Player.bankResources[ResourceType.SkillPoints].ToString());
+
+                        StopAllCoroutines();
                     }
 
                 }
@@ -355,9 +421,6 @@ public class ResourceDisplay : MonoBehaviour
     
     }
 
-      
-
-
 
 
     public void UpdateDisplay(int value, ResourceType resource, bool minus) {
@@ -375,7 +438,7 @@ public class ResourceDisplay : MonoBehaviour
                 text = 
                 Instantiate(plusEffect, transform.position, Quaternion.identity);
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
-                text.transform.SetParent(this.transform, false);
+                text.transform.SetParent(this.transform);
                 text.GetComponent<RectTransform>().localPosition = goldEffect.GetComponent<RectTransform>().transform.localPosition;
             }
 
@@ -384,7 +447,7 @@ public class ResourceDisplay : MonoBehaviour
                 text =
                 Instantiate(plusEffect, transform.position, Quaternion.identity);
                 text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
-                text.transform.SetParent(this.transform, false);
+                text.transform.SetParent(this.transform);
                 text.GetComponent<RectTransform>().localPosition = redStoneEffect.GetComponent<RectTransform>().transform.localPosition;
             }
 
@@ -419,7 +482,7 @@ public class ResourceDisplay : MonoBehaviour
                  text = 
                 Instantiate(minusEffect, transform.position, Quaternion.identity);
 
-                text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
+                text.GetComponent<TMP_Text>().SetText("-" + value.ToString());
                 text.transform.SetParent(this.transform);
                 text.GetComponent<RectTransform>().localPosition = goldEffect.GetComponent<RectTransform>().transform.localPosition;
 
@@ -429,7 +492,7 @@ public class ResourceDisplay : MonoBehaviour
                 GameObject text = new GameObject();
                 text =
                 Instantiate(minusEffect, transform.position, Quaternion.identity);
-                text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
+                text.GetComponent<TMP_Text>().SetText("-" + value.ToString());
                 text.transform.SetParent(this.transform);
                 text.GetComponent<RectTransform>().localPosition = redStoneEffect.GetComponent<RectTransform>().transform.localPosition;
 
@@ -439,7 +502,7 @@ public class ResourceDisplay : MonoBehaviour
                 GameObject text = new GameObject();
                 text =
                 Instantiate(minusEffect, transform.position, Quaternion.identity);
-                text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
+                text.GetComponent<TMP_Text>().SetText("-" + value.ToString());
                 text.transform.SetParent(this.transform);
                 text.GetComponent<RectTransform>().localPosition = knowledgeEffect.GetComponent<RectTransform>().transform.localPosition;
             }
@@ -449,7 +512,7 @@ public class ResourceDisplay : MonoBehaviour
                 text =
                 Instantiate(minusEffect, transform.position, Quaternion.identity);
 
-                text.GetComponent<TMP_Text>().SetText("+" + value.ToString());
+                text.GetComponent<TMP_Text>().SetText("-" + value.ToString());
                 text.transform.SetParent(this.transform);
                 text.GetComponent<RectTransform>().localPosition = skillEffect.GetComponent<RectTransform>().transform.localPosition;
 

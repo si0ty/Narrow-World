@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
+using NarrowWorld.Combat;
 
-public class EnemyMeleeAnimations : MonoBehaviour
+public class EnemyMeleeAnimations : NetworkBehaviour
 {
     private Animator anim;
    
@@ -84,7 +86,14 @@ public class EnemyMeleeAnimations : MonoBehaviour
         this.tintFadeSpeed = tintFadeSpeed;
     }
 
+
+    [Command]
     public void WalkingAnim() {
+        WalkingAnimEffect();
+    }
+  
+    [ClientRpc]
+    public void WalkingAnimEffect() {
         enemyMovement.moveSpeed = enemyMovement.walkSpeed;
 
         anim.SetBool("Idle1", false);
@@ -100,7 +109,13 @@ public class EnemyMeleeAnimations : MonoBehaviour
         anim.SetBool("Walking", true);
     }
 
+    [Command]
     public void RunningAnim() {
+        RunningAnimEffect();
+    }
+
+    [ClientRpc]
+    public void RunningAnimEffect() {
         enemyMovement.moveSpeed = enemyMovement.runSpeed;
 
         anim.SetBool("Idle1", false);
@@ -116,7 +131,13 @@ public class EnemyMeleeAnimations : MonoBehaviour
         anim.SetTrigger("Roll");
     }
 
+    [Command]
     public void IdleAnim() {
+        IdleAnimEffect();
+    }
+    
+    [ClientRpc]
+    public void IdleAnimEffect() {
         enemyMovement.moveSpeed = 0f;
 
         anim.SetBool("Walking", false);
@@ -180,8 +201,15 @@ public class EnemyMeleeAnimations : MonoBehaviour
         }
     }
 
+    [Command]
     public void FightingAnim() {
+        FightingAnimEffect();
+    }
+   
+    [ClientRpc]
+    public void FightingAnimEffect() {
 
+        AudioManager.instance.RandomSwordswing();
         enemyMovement.moveSpeed = 0f;
         int combo = new int();
         combo = Random.Range(1, attackAmount + 1);
@@ -214,8 +242,13 @@ public class EnemyMeleeAnimations : MonoBehaviour
         }
     }
 
+  [Command]
+  public void NormalCastAnim() {
+        NormalCastAnimEffect();
+    }
 
-    public void NormalCastAnim() {
+    [ClientRpc]
+    public void NormalCastAnimEffect() {
         enemyMovement.moveSpeed = 0f;
         anim.SetBool("Walking", false);
         anim.SetBool("Running", false);
@@ -228,7 +261,14 @@ public class EnemyMeleeAnimations : MonoBehaviour
 
     }
 
+    [Command]
     public void SuperCastAnim() {
+
+        SuperCastAnimEffect();
+    }
+
+    [ClientRpc]
+    public void SuperCastAnimEffect() {
         enemyMovement.moveSpeed = 0f;
         anim.SetBool("Walking", false);
         anim.SetBool("Running", false);
@@ -243,11 +283,16 @@ public class EnemyMeleeAnimations : MonoBehaviour
 
 
 
+    [Command]
     public void HurtAnim() {
 
+        HurtAnimEffect();
+
+    }
+
+    [ClientRpc]
+    public void HurtAnimEffect() {
         SetTintColor(new Color(1, 0, 0, 1f));
-
-
     }
 
 
@@ -260,6 +305,7 @@ public class EnemyMeleeAnimations : MonoBehaviour
         particles.transform.SetParent(gameObject.transform);
     }
 
+   
     IEnumerator Dissolving() {
 
 
@@ -280,14 +326,23 @@ public class EnemyMeleeAnimations : MonoBehaviour
         }
 
         if (dissolveRate == 1) {
-            Destroy(this, 1);
+            
+            Destroy(gameObject);
             StopAllCoroutines();
           
 
         }
     }
 
+
+
+    [Command]
     public void Die() {
+        DieEffect();
+    }
+
+    [ClientRpc]
+    public void DieEffect() {
         anim.ResetTrigger("Attack1");
         anim.ResetTrigger("Attack2");
         anim.ResetTrigger("Attack3");
